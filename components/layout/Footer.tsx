@@ -98,7 +98,7 @@ export function Footer() {
             >
               <div className="w-8 h-8 rounded-lg bg-gradient-brand flex items-center justify-center">
                 {/* <Zap className="w-4 h-4 text-white" strokeWidth={2.5} /> */}
-                <img className="w-8 h-8 strokeWidth={2.5}" src="Logo-projoywebsloutions.png" alt="" />
+                <img className="w-8 h-8" src="/Logo-projoywebsloutions.png" alt="Projoy Web Solutions" />
               </div>
               <span className="font-display font-bold text-white text-[0.9375rem]">
                 Projoy{" "}

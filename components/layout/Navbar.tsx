@@ -102,7 +102,7 @@ export function Navbar() {
             >
               <div className="w-8 h-8 rounded-lg bg-gradient-brand flex items-center justify-center shadow-sm">
                 {/* <Zap className="w-4 h-4 text-white" strokeWidth={2.5} /> */}
-                <img className="w-8 h-8 strokeWidth={2.5}" src="Logo-projoywebsloutions.png" alt="" />
+                <img className="w-8 h-8" src="/Logo-projoywebsloutions.png" alt="Projoy Web Solutions" />
               </div>
               <span className="font-display font-bold text-slate-900 text-[0.9375rem] leading-tight">
                 Projoy
@@ -300,9 +300,9 @@ export function Navbar() {
               className="flex items-center gap-2"
               onClick={() => setMobileOpen(false)}
             >
-              <div className="w-7 h-7 rounded-lg bg-gradient-brand flex items-center justify-center">
-                <Zap className="w-3.5 h-3.5 text-white" strokeWidth={2.5} />
-              </div>
+<div className="w-7 h-7 rounded-lg bg-gradient-brand flex items-center justify-center">
+                <img className="w-7 h-7" src="/Logo-projoywebsloutions.png" alt="Projoy Web Solutions" />
+               </div>
               <span className="font-display font-bold text-slate-900 text-sm">
                 Projoy <span className="text-brand-600">Web</span>
               </span>
