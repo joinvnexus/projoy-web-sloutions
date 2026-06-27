@@ -12,7 +12,6 @@ import { createBreadcrumbSchema, createArticleSchema } from "@/lib/schemas";
 import { blogPosts, getPostBySlug } from "@/lib/data/blog";
 import { SITE_CONFIG } from "@/lib/constants";
 import { formatDate } from "@/lib/utils";
-import { cn } from "@/lib/utils";
 
 /* ─── Static Params ──────────────────────────────────────── */
 export function generateStaticParams() {

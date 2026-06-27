@@ -46,6 +46,7 @@ export interface CaseStudy {
   publishedAt: string;
   featured?: boolean;
   coverImage?: string;
+  coverImageAlt?: string;
 }
 
 export interface CaseStudyMetric {
@@ -75,6 +76,7 @@ export interface BlogPost {
   readingTime: number;
   category: string;
   coverImage?: string;
+  coverImageAlt?: string;
   author: string;
 }
 
@@ -86,6 +88,7 @@ export interface Project {
   category: "web-app" | "landing-page" | "saas" | "dashboard" | "ecommerce";
   liveUrl?: string;
   coverImage?: string;
+  coverImageAlt?: string;
   featured?: boolean;
 }
 

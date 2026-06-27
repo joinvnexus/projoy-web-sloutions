@@ -12,6 +12,8 @@ export interface BlogPost {
   tags: string[];
   author: string;
   featured: boolean;
+  coverImage?: string;
+  coverImageAlt?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -27,6 +29,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["Google Maps", "Local SEO", "GBP", "Ranking"],
     author: "Projoy Web Solutions",
     featured: true,
+    coverImage: "/images/services/local-seo-hero.png",
+    coverImageAlt: "Google Maps and local SEO illustration",
   },
   {
     slug: "nextjs-vs-wordpress-for-seo",
@@ -40,6 +44,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["Next.js", "WordPress", "SEO", "Performance"],
     author: "Projoy Web Solutions",
     featured: true,
+    coverImage: "/images/services/web-dev-hero-bg.jpg",
+    coverImageAlt: "Modern web development illustration",
   },
   {
     slug: "google-business-profile-optimization-guide",

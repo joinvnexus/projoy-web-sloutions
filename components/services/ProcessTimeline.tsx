@@ -41,9 +41,6 @@ export function ProcessTimeline({
   const accentText =
     accentColor === "brand" ? "text-brand-600" : "text-accent-600";
 
-  const accentBg =
-    accentColor === "brand" ? "bg-brand-600" : "bg-accent-600";
-
   return (
     <section
       className={cn(

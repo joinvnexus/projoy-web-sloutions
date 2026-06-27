@@ -1,6 +1,5 @@
 // app/projects/page.tsx
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";

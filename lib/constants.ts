@@ -23,6 +23,14 @@ export const SITE_CONFIG = {
   },
 } as const;
 
+export const IMAGE_ASSETS = {
+  services: {
+    webDevelopment: "/images/services/web-dev-hero-bg.jpg",
+    localSeo: "/images/services/local-seo-hero.png",
+    aiSolutions: "/images/services/ai-solutions-hero.png",
+  },
+} as const;
+
 export const NAV_LINKS = [
   {
     label: "Services",

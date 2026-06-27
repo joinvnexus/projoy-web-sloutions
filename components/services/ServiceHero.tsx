@@ -1,5 +1,6 @@
 // components/services/ServiceHero.tsx
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -18,7 +19,9 @@ interface ServiceHeroProps {
   stats?: readonly ServiceHeroStat[];
   accentColor?: "brand" | "accent";
   badge?: string;
-  backgroundImage?: string; // kept but NOT used anymore
+  backgroundImage?: string;
+  backgroundImageAlt?: string;
+  imagePriority?: boolean;
 }
 
 export function ServiceHero({
@@ -32,6 +35,8 @@ export function ServiceHero({
   accentColor = "brand",
   badge,
   backgroundImage,
+  backgroundImageAlt,
+  imagePriority = false,
 }: ServiceHeroProps) {
   const gradientClasses = {
     brand: "from-brand-600 to-accent-500",
@@ -150,14 +155,23 @@ export function ServiceHero({
                 )}
               />
 
-              <div className="relative bg-white rounded-[32px] shadow-2xl border border-slate-100 overflow-hidden">
-
-                <img
-                  src={backgroundImage || "/images/service-hero-placeholder.jpg"}
-                  alt="Service Preview"
-                  className="w-full h-auto object-cover bg-transparent"
-                />
-
+                  <div className="relative bg-white rounded-[32px] shadow-2xl border border-slate-100 overflow-hidden">
+                {backgroundImage ? (
+                  <div className="relative w-full h-[320px] sm:h-[360px] lg:h-[420px]">
+                    <Image
+                      src={backgroundImage}
+                      alt={backgroundImageAlt ?? "Service preview image"}
+                      fill
+                      className="object-cover"
+                      priority={imagePriority}
+                      sizes="(max-width: 1024px) 100vw, 560px"
+                    />
+                  </div>
+                ) : (
+                  <div className="min-h-[320px] flex items-center justify-center bg-slate-100 text-slate-500 text-sm font-semibold tracking-wide">
+                    Service image placeholder
+                  </div>
+                )}
               </div>
 
             </div>

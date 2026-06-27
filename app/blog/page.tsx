@@ -1,5 +1,6 @@
 // app/blog/page.tsx
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
 import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
@@ -80,7 +81,17 @@ export default function BlogPage() {
             {featured[0] && (
               <StaggerItem className="lg:col-span-2">
                 <Link href={`/blog/${featured[0].slug}`} className="card card-hover overflow-hidden group flex flex-col h-full block">
-                  <div className="h-52 bg-gradient-to-br from-brand-100 to-accent-50 relative overflow-hidden flex-shrink-0">
+                  <div className="relative h-52 bg-slate-100 overflow-hidden flex-shrink-0">
+                    {featured[0].coverImage && (
+                      <Image
+                        src={featured[0].coverImage}
+                        alt={featured[0].coverImageAlt ?? featured[0].title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 560px"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 to-transparent" />
                     <div className="absolute inset-0 flex items-end p-6">
                       <Tag variant={categoryTagMap[featured[0].category] ?? "slate"}>
                         {featured[0].category}
@@ -118,6 +129,17 @@ export default function BlogPage() {
                     href={`/blog/${post.slug}`}
                     className="card card-hover p-6 group flex flex-col flex-1 block"
                   >
+                    {post.coverImage && (
+                      <div className="relative h-36 mb-4 overflow-hidden rounded-3xl bg-slate-100">
+                        <Image
+                          src={post.coverImage}
+                          alt={post.coverImageAlt ?? post.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 360px"
+                        />
+                      </div>
+                    )}
                     <Tag variant={categoryTagMap[post.category] ?? "slate"} className="mb-3 w-fit">
                       {post.category}
                     </Tag>

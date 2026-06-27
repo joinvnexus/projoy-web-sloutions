@@ -3,7 +3,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { ArrowRight, MapPin, Code2, Cpu } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { CaseStudy } from "@/lib/data/case-studies";
 import { Tag } from "@/components/shared/Typography";
 import { StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
@@ -16,11 +16,7 @@ const filterOptions = [
   { label: "AI Solutions", value: "ai-solutions" },
 ] as const;
 
-const serviceIcon: Record<string, React.ElementType> = {
-  "local-seo": MapPin,
-  "web-development": Code2,
-  "ai-solutions": Cpu,
-};
+// serviceIcon removed (unused)
 
 const serviceGradient: Record<string, string> = {
   "local-seo": "from-accent-500 to-brand-600",

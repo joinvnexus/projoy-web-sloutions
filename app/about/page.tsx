@@ -192,7 +192,7 @@ export default function AboutPage() {
               </h2>
               <div className="relative space-y-0">
                 <div className="absolute left-[0.6875rem] top-2 bottom-2 w-px bg-gradient-to-b from-brand-300 via-brand-200 to-transparent" aria-hidden="true" />
-                {timeline.map((item, i) => (
+                {timeline.map((item) => (
                   <div key={item.year} className="relative flex gap-5 pb-7 last:pb-0">
                     <div className="w-[1.375rem] h-[1.375rem] rounded-full bg-brand-600 border-4 border-white shadow-sm flex-shrink-0 z-10 mt-1" />
                     <div>

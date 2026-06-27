@@ -29,7 +29,7 @@ import {
   StaggerItem,
 } from "@/components/shared/RevealWrapper";
 import { createBreadcrumbSchema, createFaqSchema } from "@/lib/schemas";
-import { SITE_CONFIG } from "@/lib/constants";
+import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 
 /* ─── Metadata ───────────────────────────────────────────── */
 export const metadata: Metadata = {
@@ -46,12 +46,7 @@ export const metadata: Metadata = {
 };
 
 /* ─── Page Data ──────────────────────────────────────────── */
-const localSeoStats = [
-  { value: "46%", label: "Of Google searches are local" },
-  { value: "76%", label: "Local searchers visit within 24 hrs" },
-  { value: "700%", label: "More clicks for 3-pack vs organic" },
-  { value: "90 days", label: "Our avg. time to 3-pack" },
-];
+// localSeoStats removed (unused) — kept stats inline where needed
 
 const benefits = [
   {
@@ -358,8 +353,9 @@ export default function LocalSEOPage() {
             <GradientText>Local SEO That Drives Calls,</GradientText> Visits &amp; Revenue
           </>
         }
-        backgroundImage="/images/services/local-seo-hero.png"
-        
+        backgroundImage={IMAGE_ASSETS.services.localSeo}
+        backgroundImageAlt="Local SEO map and search ranking illustration"
+        imagePriority
         subheading="We specialize in getting local businesses to the top of Google Maps and local search results. More visibility means more calls, more foot traffic, and more revenue — without paying for ads."
         primaryCTA={{ label: "Get Your Free Local SEO Audit", href: "/contact#audit" }}
         secondaryCTA={{ label: "See Local SEO Case Studies", href: "/case-studies?filter=local-seo" }}

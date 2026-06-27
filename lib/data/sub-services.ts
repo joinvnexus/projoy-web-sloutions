@@ -23,6 +23,8 @@ export interface SubServiceData {
   faqs: SubServiceFAQ[];
   ctaHeading: string;
   ctaSubheading: string;
+  heroImage?: string;
+  heroImageAlt?: string;
 }
 
 export const subServices: SubServiceData[] = [

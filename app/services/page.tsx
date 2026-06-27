@@ -178,7 +178,7 @@ export default function ServicesPage() {
         <div className="container mx-auto max-w-[1200px]">
           <h2 id="services-list-heading" className="sr-only">Our Services</h2>
           <StaggerContainer className="space-y-6">
-            {services.map((service, idx) => {
+            {services.map((service) => {
               const Icon = service.icon;
               return (
                 <StaggerItem key={service.id}>

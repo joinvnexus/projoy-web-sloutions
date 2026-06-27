@@ -1,7 +1,6 @@
 // components/layout/Footer.tsx
 import Link from "next/link";
 import {
-  Zap,
   Mail,
   MapPin,
   Phone,

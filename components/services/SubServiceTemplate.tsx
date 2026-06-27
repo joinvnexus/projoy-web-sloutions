@@ -1,4 +1,5 @@
 // components/services/SubServiceTemplate.tsx
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
@@ -7,7 +8,7 @@ import { FAQSection } from "@/components/services/FAQSection";
 import { FinalServiceCTA } from "@/components/services/FinalServiceCTA";
 import { RevealWrapper, StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
 import { createBreadcrumbSchema, createFaqSchema } from "@/lib/schemas";
-import { SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG, IMAGE_ASSETS } from "@/lib/constants";
 import type { SubServiceData } from "@/lib/data/sub-services";
 import { cn } from "@/lib/utils";
 
@@ -16,6 +17,16 @@ export function SubServiceTemplate({ data }: { data: SubServiceData }) {
     data.accentColor === "brand"
       ? "from-brand-600 to-accent-500"
       : "from-accent-500 to-brand-600";
+
+  // Choose a fallback hero image per parent service when a specific one isn't provided
+  const parentHeroMap: Record<SubServiceData['parentSlug'], string> = {
+    "web-development": IMAGE_ASSETS.services.webDevelopment,
+    "local-seo": IMAGE_ASSETS.services.localSeo,
+    "ai-solutions": IMAGE_ASSETS.services.aiSolutions,
+  };
+
+  const heroSrc = data.heroImage ?? parentHeroMap[data.parentSlug];
+  const heroAlt = data.heroImageAlt ?? `${data.title} hero image`;
 
   const breadcrumb = createBreadcrumbSchema([
     { name: "Services", href: "/services" },
@@ -58,28 +69,48 @@ export function SubServiceTemplate({ data }: { data: SubServiceData }) {
           aria-hidden="true"
         />
         <div className="container mx-auto max-w-[1200px] relative z-10">
-          <div className="max-w-3xl">
-            <span className="eyebrow">{data.parentLabel} · {data.title}</span>
-            <h1
-              className="font-display font-extrabold text-slate-900 leading-tight tracking-tight mb-5"
-              style={{ fontSize: "clamp(1.875rem, 4vw, 3rem)" }}
-            >
-              {data.heading}
-            </h1>
-            <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
-              {data.subheading}
-            </p>
-            <Link
-              href="/contact#audit"
-              className={cn(
-                "inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-white font-bold text-sm",
-                "shadow-sm hover:shadow-md hover:-translate-y-px transition-all duration-200",
-                `bg-gradient-to-r ${gradient}`
+          <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-start">
+            <div className="max-w-3xl">
+              <span className="eyebrow">{data.parentLabel} · {data.title}</span>
+              <h1
+                className="font-display font-extrabold text-slate-900 leading-tight tracking-tight mb-5"
+                style={{ fontSize: "clamp(1.875rem, 4vw, 3rem)" }}
+              >
+                {data.heading}
+              </h1>
+              <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
+                {data.subheading}
+              </p>
+              <Link
+                href="/contact#audit"
+                className={cn(
+                  "inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-white font-bold text-sm",
+                  "shadow-sm hover:shadow-md hover:-translate-y-px transition-all duration-200",
+                  `bg-gradient-to-r ${gradient}`
+                )}
+              >
+                Get a Free Consultation
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="rounded-[32px] overflow-hidden border border-slate-200 shadow-2xl bg-slate-50">
+              {heroSrc ? (
+                <div className="relative w-full h-[320px] sm:h-[360px] lg:h-[420px]">
+                  <Image
+                    src={heroSrc}
+                    alt={heroAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 420px"
+                  />
+                </div>
+              ) : (
+                <div className="min-h-[320px] flex items-center justify-center text-slate-500 text-sm font-semibold tracking-wide">
+                  Sub-service hero placeholder
+                </div>
               )}
-            >
-              Get a Free Consultation
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            </div>
           </div>
 
           {/* Stats */}

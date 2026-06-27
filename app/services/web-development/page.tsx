@@ -30,7 +30,7 @@ import {
   StaggerItem,
 } from "@/components/shared/RevealWrapper";
 import { createBreadcrumbSchema, createFaqSchema } from "@/lib/schemas";
-import { SITE_CONFIG } from "@/lib/constants";
+import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 
 /* ─── Metadata ───────────────────────────────────────────── */
 export const metadata: Metadata = {
@@ -310,8 +310,9 @@ export default function WebDevelopmentPage() {
             <GradientText>Converts Visitors</GradientText> Into Customers
           </>
         }
-        backgroundImage="/images/services/web-dev-hero-bg.jpg"
-
+        backgroundImage={IMAGE_ASSETS.services.webDevelopment}
+        backgroundImageAlt="Custom web development hero image"
+        imagePriority
         subheading="We build blazing-fast, SEO-optimized websites and web applications using Next.js 15, React, and TypeScript. Every pixel and every millisecond is engineered for one goal: your growth."
         primaryCTA={{ label: "Get a Free Development Audit", href: "/contact#audit" }}
         secondaryCTA={{ label: "View Our Projects", href: "/projects" }}

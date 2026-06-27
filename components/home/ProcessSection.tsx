@@ -68,7 +68,7 @@ export function ProcessSection() {
           />
 
           <StaggerContainer className="grid grid-cols-4 gap-6">
-            {steps.map((step, idx) => {
+            {steps.map((step) => {
               const Icon = step.icon;
               return (
                 <StaggerItem key={step.number}>

@@ -2,7 +2,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { ButtonLink } from "@/components/shared/Button";
 import { GradientText } from "@/components/shared/Typography";

@@ -12,7 +12,6 @@ import {
   X,
   ChevronDown,
   ArrowRight,
-  Zap,
 } from "lucide-react";
 import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
 import { cn } from "@/lib/utils";

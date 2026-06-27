@@ -26,7 +26,7 @@ import { FinalServiceCTA } from "@/components/services/FinalServiceCTA";
 import { SectionHeader, GradientText } from "@/components/shared/Typography";
 import { StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
 import { createBreadcrumbSchema, createFaqSchema } from "@/lib/schemas";
-import { SITE_CONFIG } from "@/lib/constants";
+import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 
 /* ─── Metadata ───────────────────────────────────────────── */
 export const metadata: Metadata = {
@@ -346,7 +346,10 @@ export default function AISolutionsPage() {
             <GradientText>Reduce Costs</GradientText> &amp; Grow Revenue
           </>
         }
-        backgroundImage="/images/services/ai-solutions-hero.png"        subheading="We integrate AI into your website and business workflows — chatbots, automation, content generation, and smart lead capture — so your business scales without linearly adding headcount."
+        backgroundImage={IMAGE_ASSETS.services.aiSolutions}
+        backgroundImageAlt="AI solutions dashboard and automation illustration"
+        imagePriority
+        subheading="We integrate AI into your website and business workflows — chatbots, automation, content generation, and smart lead capture — so your business scales without linearly adding headcount."
         primaryCTA={{ label: "Explore AI for My Business", href: "/contact#audit" }}
         secondaryCTA={{ label: "See How It Works", href: "#process" }}
         trustPoints={[
