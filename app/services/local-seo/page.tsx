@@ -358,7 +358,7 @@ export default function LocalSEOPage() {
             <GradientText>Local SEO That Drives Calls,</GradientText> Visits &amp; Revenue
           </>
         }
-        backgroundImage="/images/services/Glowing city map with blue icons.png"
+        backgroundImage="/images/services/local-seo-hero.png"
         
         subheading="We specialize in getting local businesses to the top of Google Maps and local search results. More visibility means more calls, more foot traffic, and more revenue — without paying for ads."
         primaryCTA={{ label: "Get Your Free Local SEO Audit", href: "/contact#audit" }}
