@@ -162,7 +162,7 @@ export function ServiceHero({
                       src={backgroundImage}
                       alt={backgroundImageAlt ?? "Service preview image"}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       priority={imagePriority}
                       sizes="(max-width: 1024px) 100vw, 560px"
                     />

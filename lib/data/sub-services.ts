@@ -73,6 +73,9 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Ready for a Website Built the Right Way?",
     ctaSubheading: "Get a free technical audit of your current site and a clear plan for what a Next.js rebuild would deliver.",
+    heroImage: "/images/sub-service/nextjs-development-hero.webp",
+    heroImageAlt: "Next.js development illustration",
+
   },
   {
     slug: "saas-development",
@@ -118,6 +121,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Have a SaaS Idea Ready to Build?",
     ctaSubheading: "Book a free scoping call. We'll help you define the leanest possible MVP and give you a realistic timeline and quote.",
+    heroImage: "/images/sub-service/saas-development-hero.webp",
+    heroImageAlt: "SaaS application development illustration",
   },
   {
     slug: "landing-pages",
@@ -162,6 +167,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Launching a Campaign and Need a Page That Converts?",
     ctaSubheading: "Tell us about your offer and traffic source — we'll show you exactly how we'd structure the page.",
+    heroImage: "/images/sub-service/landing-page-development-hero.webp",
+    heroImageAlt: "Landing page development illustration",
   },
   {
     slug: "custom-dashboards",
@@ -206,6 +213,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Drowning in Spreadsheets Instead of a Real Dashboard?",
     ctaSubheading: "Tell us what data you need to see and who needs to see it — we'll scope a dashboard that fits.",
+    heroImage: "/images/sub-service/custom-dashboard-development-hero.webp",
+    heroImageAlt: "Custom dashboard development illustration",
   },
   {
     slug: "ai-integrations",
@@ -250,6 +259,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Want AI Features That Actually Work for Your Business?",
     ctaSubheading: "Tell us what you're trying to automate or improve — we'll tell you honestly whether AI is the right tool for it.",
+    heroImage: "/images/sub-service/ai-integrations-hero.webp",
+    heroImageAlt: "AI integrations illustration",
   },
 
   /* ───────────────── LOCAL SEO SUB-SERVICES ───────────────── */
@@ -296,6 +307,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Want to See What's Missing From Your GBP?",
     ctaSubheading: "Get a free audit of your current Google Business Profile and a prioritized list of fixes.",
+    heroImage: "/images/sub-service/google-business-profile-optimization-hero.webp",
+    heroImageAlt: "Google Business Profile optimization illustration",
   },
   {
     slug: "google-maps-ranking",
@@ -340,6 +353,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Curious Where You Currently Rank?",
     ctaSubheading: "Get a free ranking check for your top keywords and a realistic timeline to improve them.",
+    heroImage: "/images/sub-service/google-maps-ranking-hero.webp",
+    heroImageAlt: "Google Maps ranking illustration",
   },
   {
     slug: "citation-building",
@@ -384,6 +399,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Not Sure If Your Citations Are Hurting You?",
     ctaSubheading: "Get a free citation audit and find out exactly where your listings are inconsistent.",
+    heroImage: "/images/sub-service/citation-building-hero.webp.webp",
+    heroImageAlt: "Citation building illustration",
   },
   {
     slug: "reputation-management",
@@ -428,6 +445,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Want More Reviews Without Doing the Asking Yourself?",
     ctaSubheading: "Get a free reputation audit and see exactly how your review profile compares to competitors.",
+    heroImage: "/images/sub-service/reputation-management-hero.webp",
+    heroImageAlt: "Reputation management illustration",
   },
   {
     slug: "geo-tagged-images",
@@ -472,6 +491,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Want This Easy Ranking Win Added to Your Strategy?",
     ctaSubheading: "This works best combined with full GBP optimization — let's talk about your complete local SEO picture.",
+    heroImage: "/images/sub-service/geo-tagged-image-strategy-hero.webp",
+    heroImageAlt: "Geo-tagged image strategy illustration",
   },
 
   /* ───────────────── AI SOLUTIONS SUB-SERVICES ───────────────── */
@@ -518,6 +539,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Tired of Answering the Same Questions Every Day?",
     ctaSubheading: "Let's see if an AI chatbot makes sense for your business — book a free 30-minute assessment.",
+    heroImage: "/images/sub-service/ai-chatbots-hero.webp",
+    heroImageAlt: "AI chatbot illustration",
   },
   {
     slug: "automation",
@@ -562,6 +585,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Spending Too Much Time on Manual, Repetitive Work?",
     ctaSubheading: "Tell us what's eating your team's time — we'll show you what's realistically automatable.",
+    heroImage: "/images/sub-service/business-process-automation-hero.webp",
+    heroImageAlt: "Business process automation illustration",
   },
   {
     slug: "ai-powered-saas",
@@ -606,6 +631,8 @@ export const subServices: SubServiceData[] = [
     ],
     ctaHeading: "Building an AI Product and Need a Technical Partner?",
     ctaSubheading: "Book a free scoping call — we'll give you an honest assessment of feasibility, timeline, and cost.",
+    heroImage: "/images/sub-service/ai-powered-saas-development-hero.webp",
+    heroImageAlt: "AI-powered SaaS development illustration",
   },
 ];
 

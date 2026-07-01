@@ -25,9 +25,9 @@ export const SITE_CONFIG = {
 
 export const IMAGE_ASSETS = {
   services: {
-    webDevelopment: "/images/services/web-dev-hero-bg.jpg",
-    localSeo: "/images/services/local-seo-hero.png",
-    aiSolutions: "/images/services/ai-solutions-hero.png",
+    webDevelopment: "/images/services-hero/web-dev-hero-bg.jpg",
+    localSeo: "/images/services-hero/local-seo-hero.png",
+    aiSolutions: "/images/services-hero/ai-solutions-hero.png",
   },
 } as const;
 

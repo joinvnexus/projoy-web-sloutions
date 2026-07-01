@@ -11,7 +11,9 @@ import {
   websiteSchema,
 } from "@/lib/schemas";
 import { SITE_CONFIG } from "@/lib/constants";
-import "@/styles/globals.css";
+// Ignore missing type declarations for global CSS side-effect import in TS
+// @ts-ignore
+import "../styles/globals.css";
 
 /* ─── Fonts ──────────────────────────────────────────────── */
 const jakarta = Plus_Jakarta_Sans({

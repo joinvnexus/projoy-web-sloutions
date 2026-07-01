@@ -96,12 +96,12 @@ export function SubServiceTemplate({ data }: { data: SubServiceData }) {
 
             <div className="rounded-[32px] overflow-hidden border border-slate-200 shadow-2xl bg-slate-50">
               {heroSrc ? (
-                <div className="relative w-full h-[320px] sm:h-[360px] lg:h-[420px]">
+                <div className="relative w-full h-[320px] sm:h-[360px] lg:h-[420px] ">
                   <Image
                     src={heroSrc}
                     alt={heroAlt}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     sizes="(max-width: 1024px) 100vw, 420px"
                   />
                 </div>

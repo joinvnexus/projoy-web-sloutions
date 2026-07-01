@@ -143,7 +143,7 @@ export default function ServicesPage() {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: "radial-gradient(circle, #E2E8F0 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, #297eec 1px, transparent 1px)",
             backgroundSize: "28px 28px",
             opacity: 0.35,
           }}
