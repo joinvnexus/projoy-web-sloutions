@@ -12,12 +12,19 @@ export function Eyebrow({ children, className, light }: EyebrowProps) {
   return (
     <span
       className={cn(
-        "eyebrow",
-        light &&
-          "text-brand-300 before:bg-gradient-to-r before:from-brand-300 before:to-accent-400",
+        "inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest mb-3",
+        light ? "text-brand-300" : "text-brand-600",
         className
       )}
     >
+      <span
+        className={cn(
+          "h-px flex-shrink-0",
+          light
+            ? "w-2 bg-gradient-to-r from-brand-300 to-accent-400"
+            : "w-8 bg-gradient-to-r from-brand-600 to-accent-500"
+        )}
+      />
       {children}
     </span>
   );
@@ -119,15 +126,20 @@ export function MetricDisplay({
 }: MetricDisplayProps) {
   return (
     <div className={cn("text-center", className)}>
-      <div
-        className={cn(
-          "metric-number font-display",
-          metricSizeMap[size],
-          light ? "text-white" : "gradient-text"
-        )}
-      >
-        {value}
-      </div>
+      {light ? (
+        <div className={cn("metric-number font-display", metricSizeMap[size], "text-white")}>
+          {value}
+        </div>
+      ) : (
+        <div
+          className={cn("metric-number font-display", metricSizeMap[size], "bg-clip-text text-transparent")}
+          style={{
+            backgroundImage: "linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%)",
+          }}
+        >
+          {value}
+        </div>
+      )}
       <p
         className={cn(
           "text-xs font-semibold uppercase tracking-widest mt-1.5",
@@ -148,7 +160,16 @@ export function GradientText({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <span className={cn("gradient-text", className)}>{children}</span>;
+  return (
+    <span
+      className={cn("bg-clip-text text-transparent", className)}
+      style={{
+        backgroundImage: "linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%)",
+      }}
+    >
+      {children}
+    </span>
+  );
 }
 
 /* ─── Tag / Badge ────────────────────────────────────────── */

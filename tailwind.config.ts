@@ -132,6 +132,16 @@ const config: Config = {
       transitionTimingFunction: {
         "spring": "cubic-bezier(0.175, 0.885, 0.32, 1.275)",
       },
+      zIndex: {
+        "base": "1",
+        "dropdown": "10",
+        "sticky": "20",
+        "fixed": "30",
+        "modal-backdrop": "40",
+        "modal": "50",
+        "tooltip": "60",
+        "notifications": "70",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

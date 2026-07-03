@@ -14,7 +14,12 @@ export default function NotFound() {
     <div className="min-h-[80vh] bg-gradient-subtle flex items-center">
       <div className="container mx-auto max-w-[700px] px-6 py-20 text-center">
         {/* 404 display */}
-        <div className="text-8xl font-black font-display gradient-text leading-none mb-4">
+        <div
+          className="text-8xl font-black font-display leading-none mb-4 bg-clip-text text-transparent"
+          style={{
+            backgroundImage: "linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%)",
+          }}
+        >
           404
         </div>
         <h1 className="font-display font-bold text-slate-900 text-2xl sm:text-3xl mb-4">

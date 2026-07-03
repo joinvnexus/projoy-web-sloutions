@@ -26,7 +26,15 @@ export function RevealWrapper({
   distance = 24,
 }: RevealWrapperProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, margin: "0px 0px -80px 0px" });
+  const isInView = useInView(ref, { 
+    once, 
+    margin: "0px 0px -60px 0px" // Responsive-friendly default (adjusted from -80px)
+  });
+
+  // Respect prefers-reduced-motion
+  const prefersReducedMotion = useRef(
+    typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false
+  ).current;
 
   const directionMap = {
     up: { y: distance, x: 0 },
@@ -36,15 +44,17 @@ export function RevealWrapper({
     none: { x: 0, y: 0 },
   };
 
-  const initial = { opacity: 0, ...directionMap[direction] };
-  const animate = isInView ? { opacity: 1, x: 0, y: 0 } : initial;
+  const initial = prefersReducedMotion ? { opacity: 1, ...directionMap.none } : { opacity: 0, ...directionMap[direction] };
+  const animate = isInView 
+    ? { opacity: 1, x: 0, y: 0 } 
+    : initial;
 
   return (
     <motion.div
       ref={ref}
       initial={initial}
       animate={animate}
-      transition={{ duration, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
+      transition={{ duration: prefersReducedMotion ? 0 : duration, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
       className={cn(className)}
     >
       {children}
@@ -69,14 +79,19 @@ export function StaggerContainer({
   once = true,
 }: StaggerContainerProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once, margin: "0px 0px -80px 0px" });
+  const isInView = useInView(ref, { once, margin: "0px 0px -60px 0px" });
+
+  // Respect prefers-reduced-motion
+  const prefersReducedMotion = useRef(
+    typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false
+  ).current;
 
   const container: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: staggerDelay,
+        staggerChildren: prefersReducedMotion ? 0 : staggerDelay,
         delayChildren: containerDelay,
       },
     },
@@ -109,10 +124,15 @@ export function StaggerItem({
   direction = "up",
   distance = 20,
 }: StaggerItemProps) {
+  // Respect prefers-reduced-motion
+  const prefersReducedMotion = useRef(
+    typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false
+  ).current;
+
   const initial = {
-    opacity: 0,
-    y: direction === "up" ? distance : 0,
-    x: direction === "left" ? distance : 0,
+    opacity: prefersReducedMotion ? 1 : 0,
+    y: direction === "up" && !prefersReducedMotion ? distance : 0,
+    x: direction === "left" && !prefersReducedMotion ? distance : 0,
   };
 
   const itemVariants: Variants = {
@@ -149,12 +169,17 @@ export function FadeIn({
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -60px 0px" });
 
+  // Respect prefers-reduced-motion
+  const prefersReducedMotion = useRef(
+    typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false
+  ).current;
+
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0 }}
+      initial={{ opacity: prefersReducedMotion ? 1 : 0 }}
       animate={{ opacity: isInView ? 1 : 0 }}
-      transition={{ duration, delay, ease: "easeOut" }}
+      transition={{ duration: prefersReducedMotion ? 0 : duration, delay, ease: "easeOut" }}
       className={cn(className)}
     >
       {children}

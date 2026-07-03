@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
+import { Eyebrow } from "@/components/shared/Typography";
 import { FAQSection } from "@/components/services/FAQSection";
 import { FinalServiceCTA } from "@/components/services/FinalServiceCTA";
 import { RevealWrapper, StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
@@ -71,7 +72,7 @@ export function SubServiceTemplate({ data }: { data: SubServiceData }) {
         <div className="container mx-auto max-w-[1200px] relative z-10">
           <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-start">
             <div className="max-w-3xl">
-              <span className="eyebrow">{data.parentLabel} · {data.title}</span>
+            <Eyebrow>{data.parentLabel} · {data.title}</Eyebrow>
               <h1
                 className="font-display font-extrabold text-slate-900 leading-tight tracking-tight mb-5"
                 style={{ fontSize: "clamp(1.875rem, 4vw, 3rem)" }}

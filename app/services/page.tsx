@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
-import { SectionHeader, Tag } from "@/components/shared/Typography";
+import { SectionHeader, Tag, Eyebrow, GradientText } from "@/components/shared/Typography";
 import { StaggerContainer, StaggerItem, RevealWrapper } from "@/components/shared/RevealWrapper";
 import { FinalServiceCTA } from "@/components/services/FinalServiceCTA";
 import {
@@ -150,13 +150,13 @@ export default function ServicesPage() {
           aria-hidden="true"
         />
         <div className="container mx-auto max-w-[1200px] relative z-10 text-center">
-          <span className="eyebrow">What We Offer</span>
+          <Eyebrow>What We Offer</Eyebrow>
           <h1
             className="font-display font-extrabold text-slate-900 leading-tight tracking-tight mb-5"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
           >
             Two Powerful Services.{" "}
-            <span className="gradient-text">One Growth Partner.</span>
+            <GradientText>One Growth Partner.</GradientText>
           </h1>
           <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto mb-8">
             Most agencies specialize in one thing. We bridge expert web development
