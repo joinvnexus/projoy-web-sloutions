@@ -10,10 +10,10 @@ export const SITE_CONFIG = {
   phone: "+880-XXX-XXXXXX", // TODO: replace
   location: "Sylhet, Bangladesh",
   social: {
-    twitter: "https://twitter.com/projoywebsol",
-    linkedin: "https://linkedin.com/company/projoywebsolutions",
-    facebook: "https://facebook.com/projoywebsolutions",
-    github: "https://github.com/projoywebsolutions",
+    twitter: "https://x.com/projoywebsol",
+    linkedin: "https://www.linkedin.com/in/projoywebsolutions/",
+    facebook: "https://www.facebook.com/projoywebsolutions/",
+    github: "https://github.com/joinvnexus",
   },
   openGraph: {
     image: "/og-image.jpg",
