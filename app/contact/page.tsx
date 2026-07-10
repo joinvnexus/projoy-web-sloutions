@@ -42,7 +42,7 @@ const contactMethods = [
     icon: MessageSquare,
     label: "WhatsApp",
     value: "Chat on WhatsApp",
-    href: "https://wa.me/880XXXXXXXXXX",
+    href: "https://wa.me/8801709437619?text=Hi,%20I%20want%20to%20get%20a%20Free%20Growth%20Audit%20for%20my%20local%20business%20and%20Google%20Maps%20ranking.%20Can%20we%20discuss%3F",
     detail: "Fastest response channel",
   },
   {
@@ -86,7 +86,7 @@ export default function ContactPage() {
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.28]"
           style={{
-            backgroundImage: "radial-gradient(circle, #CBD5E1 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, #1973e0 1px, transparent 1px)",
             backgroundSize: "28px 28px",
           }}
           aria-hidden="true"
@@ -237,7 +237,7 @@ export default function ContactPage() {
                 ))}
               </ul>
               <a
-                href="https://calendly.com/projoywebsolutions/30min"
+                href="https://calendly.com/projoynaidu-work/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-sm hover:shadow-md hover:-translate-y-px transition-all duration-200"

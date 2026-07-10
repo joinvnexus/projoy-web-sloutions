@@ -49,7 +49,7 @@ export default function ProjectsPage() {
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.28]"
           style={{
-            backgroundImage: "radial-gradient(circle, #CBD5E1 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, #1f75df 1px, transparent 1px)",
             backgroundSize: "28px 28px",
           }}
           aria-hidden="true"

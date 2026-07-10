@@ -131,7 +131,7 @@ export default function ThankYouPage() {
               Can&apos;t wait? Book a call right now:
             </p>
             <a
-              href="https://calendly.com/projoywebsolutions/30min"
+              href="https://calendly.com/projoynaidu-work/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-brand-200 text-brand-700 hover:bg-brand-50 font-semibold text-sm transition-colors"

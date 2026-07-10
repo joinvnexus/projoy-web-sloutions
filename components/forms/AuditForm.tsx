@@ -83,12 +83,28 @@ export function AuditForm({ variant = "default", className }: AuditFormProps) {
       return;
     }
     setSubmitting(true);
-    // Simulate submission — replace with actual API call / Formspree / Resend
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitting(false);
-    setSubmitted(true);
-    trackEvent("audit_form_submit", { service: formData.service || "not_specified" });
-    setTimeout(() => router.push("/thank-you"), 800);
+    try {
+      const response = await fetch("/api/audit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        console.error("Form submission error:", result.error);
+        return;
+      }
+
+      setSubmitting(false);
+      setSubmitted(true);
+      trackEvent("audit_form_submit", { service: formData.service || "not_specified" });
+      setTimeout(() => router.push("/thank-you"), 800);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {

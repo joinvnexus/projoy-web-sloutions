@@ -73,11 +73,28 @@ export function ContactForm({ className }: { className?: string }) {
       return;
     }
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setSubmitting(false);
-    setSubmitted(true);
-    trackEvent("contact_form_submit", { subject: formData.subject || "not_specified" });
-    setTimeout(() => router.push("/thank-you"), 800);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        console.error("Form submission error:", result.error);
+        return;
+      }
+
+      setSubmitting(false);
+      setSubmitted(true);
+      trackEvent("contact_form_submit", { subject: formData.subject || "not_specified" });
+      setTimeout(() => router.push("/thank-you"), 800);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
