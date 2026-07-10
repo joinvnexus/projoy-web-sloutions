@@ -26,7 +26,7 @@ function BackgroundOrbs() {
       <div
         className="absolute inset-0 opacity-[0.35]"
         style={{
-          backgroundImage: "radial-gradient(circle, #CBD5E1 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, #0a6ee7 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
@@ -131,7 +131,7 @@ function HeroVisual() {
 export function HeroSection() {
   return (
     <section
-      className="relative min-h-[calc(100vh-4rem)] flex items-center overflow-hidden bg-white"
+      className="relative min-h-[calc(100vh-4rem)] px-8 flex items-center overflow-hidden bg-white "
       aria-label="Hero"
     >
       <BackgroundOrbs />
@@ -221,7 +221,7 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="order-1 lg:order-2"
+            className="order-2 lg:order-2"
           >
             <HeroVisual />
           </motion.div>

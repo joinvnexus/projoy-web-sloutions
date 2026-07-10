@@ -110,14 +110,14 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 pointer-events-none opacity-30"
           style={{
-            backgroundImage: "radial-gradient(circle, #E2E8F0 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, #3a83c7 1px, transparent 1px)",
             backgroundSize: "28px 28px",
           }}
           aria-hidden="true"
         />
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-brand-500/[0.05] blur-3xl pointer-events-none" aria-hidden="true" />
 
-        <div className="container mx-auto max-w-[1200px] relative z-10">
+        <div className="container mx-auto max-w-[1200px] relative z-10 px-8">
           <div className="max-w-3xl">
             <Eyebrow>Our Story</Eyebrow>
             <h1
@@ -140,7 +140,7 @@ export default function AboutPage() {
       {/* ── Stats ── */}
       <section className="py-12 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto max-w-[1200px]">
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-5 px-8 ">
             {TRUST_STATS.map((stat) => (
               <StaggerItem key={stat.label}>
                 <StatCard value={stat.value} label={stat.label} />

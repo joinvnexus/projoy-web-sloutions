@@ -44,7 +44,7 @@ export default function BlogPage() {
       <Breadcrumbs items={[{ name: "Blog", href: "/blog" }]} />
 
       {/* ── Hero ── */}
-      <section className="relative bg-white pt-8 pb-14 overflow-hidden">
+      <section className="relative bg-white px-8 pt-8 pb-14 overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.28]"
           style={{
@@ -70,7 +70,7 @@ export default function BlogPage() {
       </section>
 
       {/* ── Featured Posts ── */}
-      <section className="section-padding bg-slate-50" aria-labelledby="featured-posts-heading">
+      <section className="section-padding px-8 bg-slate-50" aria-labelledby="featured-posts-heading">
         <div className="container mx-auto max-w-[1200px]">
           <h2 id="featured-posts-heading" className="font-display font-bold text-slate-900 text-xl mb-8">
             Featured Articles

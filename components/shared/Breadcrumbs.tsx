@@ -25,7 +25,7 @@ export function Breadcrumbs({ items, className }: BreadcrumbsProps) {
       aria-label="Breadcrumb"
       className={className ?? "bg-slate-50 border-b border-slate-100"}
     >
-      <div className="container mx-auto max-w-[1200px] py-3">
+      <div className="container mx-auto max-w-[1200px] py-3 px-8">
         <ol className="flex items-center gap-1.5 flex-wrap text-xs" role="list">
           {allItems.map((item, i) => {
             const isLast = i === allItems.length - 1;

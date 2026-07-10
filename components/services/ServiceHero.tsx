@@ -46,7 +46,7 @@ export function ServiceHero({
   return (
     <section
       className={cn(
-        "relative overflow-hidden pt-6 pb-16 lg:pt-10 lg:pb-20",
+        "relative overflow-hidden pt-6 pb-16 lg:pt-10 lg:pb-20 px-8",
         "bg-white"
       )}
       aria-label="Service overview"

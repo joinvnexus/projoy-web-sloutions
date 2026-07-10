@@ -65,7 +65,7 @@ export default async function CaseStudiesPage({
       <Breadcrumbs items={[{ name: "Case Studies", href: "/case-studies" }]} />
 
       {/* ── Hero ── */}
-      <section className="relative bg-white pt-8 pb-16 overflow-hidden">
+      <section className="relative bg-white px-8 pt-8 pb-16 overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.28]"
           style={{

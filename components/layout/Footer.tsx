@@ -49,7 +49,7 @@ export function Footer() {
     >
       {/* ── Pre-footer CTA band ── */}
       <div className="border-b border-slate-800">
-        <div className="container mx-auto max-w-[1200px] py-12 lg:py-16">
+        <div className="container px-12 py-12 lg:py-16">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="max-w-xl">
               <p className="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-2">
@@ -84,7 +84,7 @@ export function Footer() {
       </div>
 
       {/* ── Main footer content ── */}
-      <div className="container mx-auto max-w-[1200px] py-14 lg:py-16">
+      <div className="container  px-12 py-14 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
 
           {/* Col 1: Brand */}
