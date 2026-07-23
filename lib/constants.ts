@@ -6,13 +6,13 @@ export const SITE_CONFIG = {
   description:
     "Projoy Web Solutions builds high-performance Next.js websites and dominates local Google rankings. Get more traffic, leads, and revenue. Free growth audit available.",
   url: "https://projoywebsolutions.com",
-  email: "hello@projoywebsolutions.com",
-  phone: "+880-XXX-XXXXXX", // TODO: replace
+  email: "hello.projoyweb@gmail.com",
+  phone: "+880-170-9437619", // TODO: replace
   location: "Sylhet, Bangladesh",
   social: {
     twitter: "https://x.com/projoywebsol",
     linkedin: "https://www.linkedin.com/in/projoywebsolutions/",
-    facebook: "https://www.facebook.com/projoywebsolutions/",
+    facebook: "https://www.facebook.com/projoywebsolution/",
     github: "https://github.com/joinvnexus",
   },
   openGraph: {
