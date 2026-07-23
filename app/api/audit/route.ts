@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import { createAuditEmailHtml } from "@/components/emails/AuditEmail";
 import { SITE_CONFIG } from "@/lib/constants";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || "");
 
 export async function POST(request: NextRequest) {
   try {
