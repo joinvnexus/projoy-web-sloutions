@@ -3,10 +3,17 @@ import { Resend } from "resend";
 import { createAuditEmailHtml } from "@/components/emails/AuditEmail";
 import { SITE_CONFIG } from "@/lib/constants";
 
-const resend = new Resend(process.env.RESEND_API_KEY || "");
-
 export async function POST(request: NextRequest) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json(
+        { error: "Email service is not configured" },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     const body = await request.json();
     const { name, email, business, website, challenge, service } = body;
 
