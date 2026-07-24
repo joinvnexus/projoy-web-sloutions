@@ -16,7 +16,7 @@ export const SITE_CONFIG = {
     github: "https://github.com/joinvnexus",
   },
   openGraph: {
-    image: "/og-image.jpg",
+    image: "/og-image.png",
     imageAlt: "Projoy Web Solutions — Built to Rank. Designed to Convert.",
     width: 1200,
     height: 630,
