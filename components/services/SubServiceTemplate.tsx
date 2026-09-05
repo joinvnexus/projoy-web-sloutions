@@ -143,7 +143,7 @@ export function SubServiceTemplate({ data }: { data: SubServiceData }) {
             id="sub-benefits-heading"
             className="font-display font-bold text-slate-900 text-2xl lg:text-3xl mb-10 leading-tight max-w-xl"
           >
-            What's Included
+            What&apos;s Included
           </h2>
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {data.benefits.map((b) => (

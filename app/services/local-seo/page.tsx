@@ -274,8 +274,8 @@ function ProblemSection() {
               <span className="text-slate-400"> Are They Finding You — or Your Competitor?</span>
             </h2>
             <p className="text-slate-400 leading-relaxed mb-6">
-              Right now, someone in your city is searching for exactly what you offer. If you're not
-              in the Google 3-pack, they're calling your competitor. Local SEO is how you fix that —
+              Right now, someone in your city is searching for exactly what you offer. If you&apos;re not
+              in the Google 3-pack, they&apos;re calling your competitor. Local SEO is how you fix that —
               permanently and without paying for ads.
             </p>
             <div className="p-5 rounded-2xl bg-slate-800 border border-slate-700">
@@ -459,7 +459,7 @@ export default function LocalSEOPage() {
               What You Get Every Month
             </h2>
             <p className="text-slate-600 leading-relaxed">
-              No vague promises. Here's exactly what's included in your monthly Local SEO retainer.
+              No vague promises. Here&apos;s exactly what&apos;s included in your monthly Local SEO retainer.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">

@@ -110,7 +110,7 @@ export function AuditForm({ variant = "default", className }: AuditFormProps) {
           <CheckCircle className="w-7 h-7 text-success" />
         </div>
         <div>
-          <p className="font-display font-bold text-slate-900 text-lg mb-1">You're in!</p>
+          <p className="font-display font-bold text-slate-900 text-lg mb-1">You&apos;re in!</p>
           <p className="text-sm text-slate-500">Redirecting you now…</p>
         </div>
       </div>

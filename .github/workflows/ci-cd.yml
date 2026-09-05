@@ -30,7 +30,7 @@ jobs:
         run: npm audit --omit=dev --audit-level=high
 
       - name: Secret scan
-        run: npx secretlint "**/*" --no-fix
+        run: npx secretlint "**/*" --secretlintignore .secretlintignore
 
       - name: Build
         run: npm run build

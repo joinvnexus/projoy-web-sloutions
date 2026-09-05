@@ -63,8 +63,8 @@ export function Footer() {
                 Ready to rank higher and convert more?
               </h2>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Get a free analysis of your website and Google presence. We'll
-                show you exactly what's holding back your growth — no
+                Get a free analysis of your website and Google presence. We&apos;ll
+                show you exactly what&apos;s holding back your growth — no
                 commitment, no pressure.
               </p>
             </div>
