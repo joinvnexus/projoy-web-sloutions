@@ -26,6 +26,12 @@ jobs:
       - name: Type-check
         run: npm run type-check
 
+      - name: Dependency audit
+        run: npm audit --omit=dev --audit-level=high
+
+      - name: Secret scan
+        run: npx secretlint "**/*" --no-fix
+
       - name: Build
         run: npm run build
 

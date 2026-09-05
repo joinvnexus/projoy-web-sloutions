@@ -18,6 +18,10 @@ A high-performance, production-ready agency website built with the latest web te
 - **SEO & Performance**: Built-in support for sitemaps, robots.txt, and dynamic metadata management.
 - **Responsive Design**: Fully fluid layout that works seamlessly across mobile, tablet, and desktop.
 
+## License and Copyright
+
+This is proprietary, closed-source software. Copyright (c) 2026 Projoy Web Solutions / Projoy Naidu. All rights reserved. See [LICENSE](LICENSE) for the complete terms. Third-party notices are tracked in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
 ## 🛠️ Tech Stack
 
 - **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
@@ -26,6 +30,40 @@ A high-performance, production-ready agency website built with the latest web te
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **UI Primitives**: [Radix UI](https://www.radix-ui.com/)
+
+## Environment Variables
+
+Copy `.env.example` to `.env.local` and replace placeholders with values from your deployment secret manager. Never commit real credentials.
+
+| Variable | Required | Description |
+| :--- | :---: | :--- |
+| `RESEND_API_KEY` | Yes | Server-only Resend API key used by contact and audit routes. |
+| `NEXT_PUBLIC_SITE_URL` | No | Canonical site URL; defaults to `https://projoywebsolutions.com`. |
+| `NEXT_PUBLIC_GA_ID` | No | Google Analytics 4 measurement ID; omit to disable the loader. |
+| `NEXT_PUBLIC_CLARITY_ID` | No | Microsoft Clarity project ID; omit to disable the loader. |
+
+Example placeholders:
+
+```env
+RESEND_API_KEY=replace_with_resend_api_key
+NEXT_PUBLIC_SITE_URL=https://example.com
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_CLARITY_ID=XXXXXXXXXX
+```
+
+## Form Data Flow
+
+The browser submits JSON from the contact or audit form to its Next.js API route. The route validates and limits the request, then sends an escaped HTML email through Resend to the configured business mailbox. `RESEND_API_KEY` remains server-side.
+
+## Security and Disclosure
+
+Report suspected security issues privately to [hello.projoyweb@gmail.com](mailto:hello.projoyweb@gmail.com). Do not include credentials or sensitive customer data in a public issue. Rate limiting is currently in-memory and instance-local; a distributed provider should be evaluated before high-volume production use.
+
+## CI/CD
+
+`.github/workflows/ci-cd.yml` runs `npm ci`, TypeScript checks, a production dependency audit, `secretlint`, and a production build. The optional Vercel deployment requires these GitHub Actions secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID`. Configure `RESEND_API_KEY` and public analytics/site variables in the deployment environment, not in the repository.
+
+The project targets Node.js 20.x or newer and npm 10.x or newer. Use `npm ci` for reproducible installs.
 
 ## 🏁 Getting Started
 
@@ -57,6 +95,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 | `npm run start` | Starts the production server. |
 | `npm run lint` | Runs ESLint to check for code quality issues. |
 | `npm run type-check` | Runs TypeScript type checking to ensure type safety. |
+| `npm test` | Runs the Vitest scaffold and escaping regression tests. |
 | `npm run format` | Formats the entire codebase using Prettier. |
 
 ## 🚀 Deployment
@@ -73,9 +112,8 @@ The most recommended way to deploy this project is via [Vercel](https://vercel.c
 Before going live, ensure the following configurations are updated:
 
 - [ ] **Constants**: Replace placeholder values in `lib/constants.ts` (Phone number, Calendly URL, Social media links).
-- [ ] **Analytics**: Replace GA4 and Microsoft Clarity IDs in `app/layout.tsx` (currently `G-XXXXXXXXXX` / `XXXXXXXXXX`).
+- [ ] **Analytics**: Add production GA4 and Microsoft Clarity IDs as deployment environment variables if these integrations are intended to run.
 - [ ] **Assets**: Add a real OG image at `public/og-image.jpg` (1200×630px) and update favicons.
-- [ ] **Backend Integration**: Wire `components/forms/AuditForm.tsx` and `ContactForm.tsx` to a real backend (e.g., Resend, Formspree, or a custom Next.js API route).
 - [ ] **Content**: Replace placeholder case study, project, and testimonial content in `lib/data/*.ts`.
 - [ ] **Metadata**: Update the `metadataBase` URL in `lib/constants.ts` to match your production domain.
 

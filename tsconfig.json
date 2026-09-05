@@ -7,7 +7,7 @@
       "dom.iterable",
       "ES2022"
     ],
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     /* Modules */
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -64,7 +64,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

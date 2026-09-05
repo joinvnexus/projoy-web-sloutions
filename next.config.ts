@@ -4,10 +4,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* ── Experimental ── */
   experimental: {
-    // React 19 + Next.js 15: PPR for partial pre-rendering
+    // React 19 + Next.js: PPR for partial pre-rendering
     ppr: false, // enable when stable
-    reactCompiler: false, // enable when stable
   },
+
+  reactCompiler: false,
 
   /* ── Compiler ── */
   compiler: {
@@ -85,10 +86,6 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false,
   },
 
-  /* ── ESLint ── */
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
 };
 
 export default nextConfig;

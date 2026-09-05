@@ -2,9 +2,22 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { createAuditEmailHtml } from "@/components/emails/AuditEmail";
 import { SITE_CONFIG } from "@/lib/constants";
+import { getClientIp, isRateLimited } from "@/lib/rate-limit";
+import { auditSchema } from "@/lib/validation";
+
+const MAX_BODY_BYTES = 32 * 1024;
 
 export async function POST(request: NextRequest) {
   try {
+    if (isRateLimited(`${getClientIp(request)}:/api/audit`)) {
+      return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+    }
+
+    const contentLength = Number(request.headers.get("content-length") ?? 0);
+    if (contentLength > MAX_BODY_BYTES) {
+      return NextResponse.json({ error: "Request too large" }, { status: 413 });
+    }
+
     if (!process.env.RESEND_API_KEY) {
       return NextResponse.json(
         { error: "Email service is not configured" },
@@ -14,15 +27,31 @@ export async function POST(request: NextRequest) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    const body = await request.json();
-    const { name, email, business, website, challenge, service } = body;
+    const rawBody = await request.text();
+    if (new TextEncoder().encode(rawBody).byteLength > MAX_BODY_BYTES) {
+      return NextResponse.json({ error: "Request too large" }, { status: 413 });
+    }
 
-    if (!name || !email || !business || !challenge) {
+    let body: unknown;
+    try {
+      body = JSON.parse(rawBody);
+    } catch {
+      return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+    }
+    const parsed = auditSchema.safeParse(body);
+
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { error: "Invalid request" },
         { status: 400 }
       );
     }
+
+    if (parsed.data.honeypot) {
+      return NextResponse.json({ success: true }, { status: 200 });
+    }
+
+    const { name, email, business, website, challenge, service } = parsed.data;
 
     const { error } = await resend.emails.send({
       from: SITE_CONFIG.email,

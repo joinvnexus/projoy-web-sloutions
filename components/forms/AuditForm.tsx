@@ -6,15 +6,9 @@ import { useRouter } from "next/navigation";
 import { ArrowRight, Loader2, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { trackEvent } from "@/lib/analytics";
+import { auditSchema, type AuditFormData } from "@/lib/validation";
 
-interface FormData {
-  name: string;
-  email: string;
-  business: string;
-  website: string;
-  challenge: string;
-  service: string;
-}
+type FormData = AuditFormData;
 
 interface FieldError {
   name?: string;
@@ -35,14 +29,16 @@ const serviceOptions = [
 
 function validate(data: FormData): FieldError {
   const errors: FieldError = {};
-  if (!data.name.trim()) errors.name = "Your name is required.";
-  if (!data.email.trim()) {
-    errors.email = "Email address is required.";
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-    errors.email = "Please enter a valid email address.";
+  const result = auditSchema.safeParse(data);
+  if (!result.success) {
+    for (const issue of result.error.issues) {
+      const field = issue.path[0] as keyof FieldError;
+      if (field === "name" && !errors.name) errors.name = "Your name is required.";
+      if (field === "email" && !errors.email) errors.email = "Please enter a valid email address.";
+      if (field === "business" && !errors.business) errors.business = "Business name is required.";
+      if (field === "challenge" && !errors.challenge) errors.challenge = "Please briefly describe your challenge.";
+    }
   }
-  if (!data.business.trim()) errors.business = "Business name is required.";
-  if (!data.challenge.trim()) errors.challenge = "Please briefly describe your challenge.";
   return errors;
 }
 
@@ -266,6 +262,16 @@ export function AuditForm({ variant = "default", className }: AuditFormProps) {
       </div>
 
       {/* Submit */}
+      <input
+        type="text"
+        name="honeypot"
+        value={formData.honeypot}
+        onChange={handleChange}
+        tabIndex={-1}
+        autoComplete="off"
+        className="absolute -left-[9999px] h-px w-px opacity-0"
+        aria-hidden="true"
+      />
       <button
         type="submit"
         disabled={submitting}

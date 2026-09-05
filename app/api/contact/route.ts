@@ -2,9 +2,22 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { createContactEmailHtml, subjectLabels } from "@/components/emails/ContactEmail";
 import { SITE_CONFIG } from "@/lib/constants";
+import { getClientIp, isRateLimited } from "@/lib/rate-limit";
+import { contactSchema } from "@/lib/validation";
+
+const MAX_BODY_BYTES = 32 * 1024;
 
 export async function POST(request: NextRequest) {
   try {
+    if (isRateLimited(`${getClientIp(request)}:/api/contact`)) {
+      return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+    }
+
+    const contentLength = Number(request.headers.get("content-length") ?? 0);
+    if (contentLength > MAX_BODY_BYTES) {
+      return NextResponse.json({ error: "Request too large" }, { status: 413 });
+    }
+
     if (!process.env.RESEND_API_KEY) {
       return NextResponse.json(
         { error: "Email service is not configured" },
@@ -14,15 +27,31 @@ export async function POST(request: NextRequest) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    const body = await request.json();
-    const { name, email, subject, message } = body;
+    const rawBody = await request.text();
+    if (new TextEncoder().encode(rawBody).byteLength > MAX_BODY_BYTES) {
+      return NextResponse.json({ error: "Request too large" }, { status: 413 });
+    }
 
-    if (!name || !email || !message) {
+    let body: unknown;
+    try {
+      body = JSON.parse(rawBody);
+    } catch {
+      return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+    }
+    const parsed = contactSchema.safeParse(body);
+
+    if (!parsed.success) {
       return NextResponse.json(
-        { error: "Missing required fields" },
+        { error: "Invalid request" },
         { status: 400 }
       );
     }
+
+    if (parsed.data.honeypot) {
+      return NextResponse.json({ success: true }, { status: 200 });
+    }
+
+    const { name, email, subject, message } = parsed.data;
 
     const subjectLabel = subjectLabels[subject] || subject || "New Message";
 

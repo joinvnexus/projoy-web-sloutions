@@ -6,13 +6,9 @@ import { useRouter } from "next/navigation";
 import { Send, Loader2, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { trackEvent } from "@/lib/analytics";
+import { contactSchema, type ContactFormData } from "@/lib/validation";
 
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+type FormData = ContactFormData;
 
 interface FieldError {
   name?: string;
@@ -22,14 +18,17 @@ interface FieldError {
 
 function validate(data: FormData): FieldError {
   const errors: FieldError = {};
-  if (!data.name.trim()) errors.name = "Your name is required.";
-  if (!data.email.trim()) {
-    errors.email = "Email address is required.";
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-    errors.email = "Please enter a valid email address.";
+  const result = contactSchema.safeParse(data);
+  if (!result.success) {
+    for (const issue of result.error.issues) {
+      const field = issue.path[0] as keyof FieldError;
+      if (field === "name" && !errors.name) errors.name = "Your name is required.";
+      if (field === "email" && !errors.email) errors.email = "Please enter a valid email address.";
+      if (field === "message" && !errors.message) errors.message = "Please enter a message.";
+    }
   }
-  if (!data.message.trim() || data.message.trim().length < 20) {
-    errors.message = "Please write at least 20 characters.";
+  if (data.email && errors.email === undefined && !data.email.includes("@")) {
+    errors.email = "Please enter a valid email address.";
   }
   return errors;
 }
@@ -156,6 +155,19 @@ export function ContactForm({ className }: { className?: string }) {
           />
           {errors.email && <p role="alert" className="mt-1 text-xs text-red-600">{errors.email}</p>}
         </div>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          name="honeypot"
+          value={formData.honeypot}
+          onChange={handleChange}
+          tabIndex={-1}
+          autoComplete="off"
+          className="absolute -left-[9999px] h-px w-px opacity-0"
+          aria-hidden="true"
+        />
       </div>
 
       <div>
