@@ -66,7 +66,6 @@ export const FOUNDER_CONFIG = {
     portfolio: "https://projoynaidu.vercel.app/",
   },
 } as const;
-
 export const IMAGE_ASSETS = {
   services: {
     webDevelopment: "/images/services-hero/web-dev-hero-bg.jpg",

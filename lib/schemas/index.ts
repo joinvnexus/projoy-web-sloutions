@@ -54,7 +54,6 @@ export const personSchema = {
   // Personal profiles only — see lib/constants.ts FOUNDER_CONFIG.sameAs.
   sameAs: Object.values(FOUNDER_CONFIG.sameAs),
 };
-
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -158,7 +157,6 @@ export const createProfilePageSchema = (url: string) => ({
   mainEntity: { "@id": PERSON_ID },
   isPartOf: { "@id": WEBSITE_ID },
 });
-
 export const createFaqSchema = (faqs: { q: string; a: string }[]) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
