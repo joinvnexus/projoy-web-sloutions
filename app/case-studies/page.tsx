@@ -38,7 +38,7 @@ const tagVariantMap: Record<string, "brand" | "accent" | "slate"> = {
 };
 
 const aggregateStats = [
-  { value: "50+", label: "Projects Delivered" },
+  { value: "Selected", label: "Projects Shown" },
   { value: "340%", label: "Best Profile View Increase" },
   { value: "8.4%", label: "Best Conversion Rate" },
   { value: "98", label: "Best PageSpeed Score" },

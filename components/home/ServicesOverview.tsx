@@ -22,7 +22,7 @@ export function ServicesOverview() {
           eyebrow="What We Do"
           heading={
             <>
-              Two Powerful Services.
+              Three Powerful Services.
               <br className="hidden sm:block" /> One Growth Partner.
             </>
           }

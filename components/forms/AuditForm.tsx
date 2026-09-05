@@ -60,6 +60,7 @@ export function AuditForm({ variant = "default", className }: AuditFormProps) {
   const [errors, setErrors] = useState<FieldError>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -79,6 +80,7 @@ export function AuditForm({ variant = "default", className }: AuditFormProps) {
       return;
     }
     setSubmitting(true);
+    setSubmitError(null);
     try {
       const response = await fetch("/api/audit", {
         method: "POST",
@@ -90,15 +92,17 @@ export function AuditForm({ variant = "default", className }: AuditFormProps) {
 
       if (!response.ok) {
         console.error("Form submission error:", result.error);
+        setSubmitError("We could not submit your request. Please try again.");
         return;
       }
 
-      setSubmitting(false);
       setSubmitted(true);
       trackEvent("audit_form_submit", { service: formData.service || "not_specified" });
       setTimeout(() => router.push("/thank-you"), 800);
     } catch (error) {
       console.error("Form submission error:", error);
+      setSubmitError("We could not connect to the audit service. Please try again.");
+    } finally {
       setSubmitting(false);
     }
   };
@@ -297,6 +301,12 @@ export function AuditForm({ variant = "default", className }: AuditFormProps) {
           </>
         )}
       </button>
+
+      {submitError && (
+        <p role="alert" className="text-center text-sm text-red-600">
+          {submitError}
+        </p>
+      )}
 
       <p className="text-center text-xs text-slate-400 leading-relaxed">
         No spam, ever. We reply within 24 hours. Your data is never sold or shared.

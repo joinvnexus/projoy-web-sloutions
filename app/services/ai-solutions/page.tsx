@@ -96,7 +96,7 @@ const aiServices = [
       "We train a custom GPT-powered chatbot on your business data — services, FAQs, pricing, case studies. Deployed on your website to qualify leads and answer questions 24/7.",
     models: ["GPT-4o", "Claude 3.5", "Custom fine-tuning"],
     useCase: "Best for: Service businesses, agencies, SaaS, e-commerce",
-    impact: "Avg. 3× more qualified leads per month",
+    impact: "Lead qualification workflow",
     href: "/services/ai-solutions/ai-chatbots",
   },
   {
@@ -238,19 +238,19 @@ function UseCasesSection() {
       industry: "E-commerce",
       problem: "High support ticket volume",
       solution: "AI handles order FAQs, returns, and tracking queries",
-      result: "60% reduction in support tickets",
+      result: "Automated support workflow",
     },
     {
       industry: "SaaS Product",
       problem: "Long sales cycle, low trial-to-paid conversion",
       solution: "AI onboarding assistant guides users to activation",
-      result: "+40% trial activation rate",
+      result: "Guided onboarding workflow",
     },
     {
       industry: "Agency",
       problem: "Manual lead qualification wasting team time",
       solution: "AI pre-qualifies leads and routes to right team member",
-      result: "3× more qualified sales calls per week",
+      result: "Automated lead qualification and routing",
     },
   ];
 
@@ -323,7 +323,7 @@ export default function AISolutionsPage() {
     serviceType: "Artificial Intelligence Integration",
     description:
       "Custom AI chatbots, business process automation, AI content workflows, and AI-powered SaaS development.",
-    url: `${SITE_CONFIG.url}/services/ai-solutions/`,
+    url: `${SITE_CONFIG.url}/services/ai-solutions`,
     areaServed: "Worldwide",
   };
 
@@ -360,8 +360,8 @@ export default function AISolutionsPage() {
         ]}
         stats={[
           { value: "24/7", label: "Lead Capture" },
-          { value: "3×", label: "More Qualified Leads" },
-          { value: "10h+", label: "Saved Per Week" },
+          { value: "Smart", label: "Lead Qualification" },
+          { value: "Less", label: "Manual Work" },
           { value: "2–4 wk", label: "Time to Launch" },
         ]}
         accentColor="brand"

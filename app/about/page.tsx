@@ -81,7 +81,7 @@ const timeline = [
     year: "2024",
     title: "Expanded to AI integrations",
     description:
-      "With the explosion of AI, clients started asking for chatbots, automation, and AI-powered features. Added AI solutions as a third pillar. 50+ projects delivered total.",
+      "With the explosion of AI, clients started asking for chatbots, automation, and AI-powered features. Added AI solutions as a third pillar.",
   },
 ];
 

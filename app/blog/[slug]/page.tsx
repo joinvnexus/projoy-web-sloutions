@@ -47,57 +47,21 @@ export async function generateMetadata({
   };
 }
 
-/* ─── Placeholder body — replace with MDX in production ─── */
 function PostBody({ post }: { post: ReturnType<typeof getPostBySlug> }) {
-  if (!post) return null;
-
-  // Generic placeholder sections — in production these come from MDX/CMS
-  const sections = [
-    {
-      heading: "Why This Matters for Your Business",
-      body: `Understanding ${post.category.toLowerCase()} is one of the highest-leverage skills a business owner can develop. The difference between a business that's visible online and one that's invisible often comes down to a handful of decisions that, once made correctly, compound over time.
-
-In this article, we'll break down the exact framework we use with our clients — stripped of jargon and focused on what actually moves the needle.`,
-    },
-    {
-      heading: "The Core Principles",
-      body: `Most advice in this space focuses on tactics. But tactics without strategy produce inconsistent results. The businesses that consistently outperform their competitors online share a few key characteristics:
-
-First, they treat their digital presence as infrastructure — not a project that gets done once and forgotten. Second, they measure what matters and ignore vanity metrics. Third, they compound their advantages over time rather than chasing shortcuts.`,
-    },
-    {
-      heading: "Practical Implementation",
-      body: `Here's how to apply these principles in practice. Start with an audit of your current position. You can't improve what you don't measure — and most businesses we work with are surprised to discover opportunities they're already close to capturing.
-
-From there, prioritise the highest-impact actions first. In our experience, 20% of the available actions produce 80% of the results. The goal is to find those 20% and execute them well before moving on to the next layer of optimisation.`,
-    },
-    {
-      heading: "Common Mistakes to Avoid",
-      body: `We've worked with dozens of businesses in this space and the same mistakes appear again and again. The most costly is inconsistency — starting strong and then letting things slide for weeks or months.
-
-The second most common mistake is optimising for the wrong metrics. It's easy to focus on things that feel productive but don't actually drive business outcomes. Always trace your activity back to a revenue impact — if you can't draw that line, reconsider whether the activity deserves your time.`,
-    },
-    {
-      heading: "What to Do Next",
-      body: `If you've read this far, you're in the right mindset to make real progress. The next step is to take one concrete action this week — not next month, this week.
-
-If you'd like us to audit your current setup and give you a personalised list of the highest-impact improvements, that's exactly what our free Growth Audit covers. It's free, takes about 30 minutes on a call, and gives you a clear picture of where to focus.`,
-    },
-  ];
+  if (!post?.content) {
+    return (
+      <p className="text-slate-600 leading-relaxed">
+        The full article is being prepared. Please check back soon or contact Projoy Web Solutions for a discussion about this topic.
+      </p>
+    );
+  }
 
   return (
     <div className="space-y-10">
-      {sections.map((section, i) => (
+      {post.content.split("\n\n").map((paragraph, i) => (
         <RevealWrapper key={i}>
           <div>
-            <h2 className="font-display font-bold text-slate-900 text-xl lg:text-2xl mb-4 leading-snug">
-              {section.heading}
-            </h2>
-            {section.body.split("\n\n").map((para, j) => (
-              <p key={j} className="text-slate-600 leading-relaxed mb-4 last:mb-0">
-                {para}
-              </p>
-            ))}
+            <p className="text-slate-600 leading-relaxed">{paragraph}</p>
           </div>
         </RevealWrapper>
       ))}

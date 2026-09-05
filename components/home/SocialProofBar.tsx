@@ -2,13 +2,13 @@
 import { Star, Zap, MapPin, Code2, Shield } from "lucide-react";
 
 const items = [
-  { icon: Code2,   text: "50+ Projects Delivered" },
-  { icon: Star,    text: "98% Client Satisfaction" },
-  { icon: Zap,     text: "95+ PageSpeed Average" },
+  { icon: Code2,   text: "Custom Web Development" },
+  { icon: Star,    text: "Local SEO Specialists" },
+  { icon: Zap,     text: "Performance-Focused Builds" },
   { icon: MapPin,  text: "Google Maps Ranking Specialists" },
   { icon: Shield,  text: "100% White-Hat Practices" },
   { icon: Code2,   text: "Next.js 15 Experts" },
-  { icon: Star,    text: "Local SEO Results in 60–90 Days" },
+  { icon: Star,    text: "Google Business Profile Optimization" },
   { icon: Zap,     text: "AI Integration Ready" },
 ] as const;
 

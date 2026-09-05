@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
     tags: ["Google Maps", "Local SEO", "GBP", "Ranking"],
     author: "Projoy Web Solutions",
     featured: true,
-    coverImage: "/images/services/local-seo-hero.png",
+    coverImage: "/images/services-hero/local-seo-hero.png",
     coverImageAlt: "Google Maps and local SEO illustration",
   },
   {
@@ -44,7 +44,7 @@ export const blogPosts: BlogPost[] = [
     tags: ["Next.js", "WordPress", "SEO", "Performance"],
     author: "Projoy Web Solutions",
     featured: true,
-    coverImage: "/images/services/web-dev-hero-bg.jpg",
+    coverImage: "/images/services-hero/web-dev-hero-bg.jpg",
     coverImageAlt: "Modern web development illustration",
   },
   {

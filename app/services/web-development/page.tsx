@@ -275,7 +275,7 @@ export default function WebDevelopmentPage() {
     serviceType: "Web Development",
     description:
       "Custom Next.js 15, React, and AI-powered web development services including SaaS applications, landing pages, dashboards, and website redesigns.",
-    url: `${SITE_CONFIG.url}/services/web-development/`,
+    url: `${SITE_CONFIG.url}/services/web-development`,
     areaServed: "Worldwide",
     hasOfferCatalog: {
       "@type": "OfferCatalog",

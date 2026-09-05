@@ -4,7 +4,7 @@ A high-performance, production-ready agency website built with the latest web te
 
 ## 🚀 Features
 
-- **Modern Architecture**: Built with Next.js 15 (App Router) and React 19 for optimal performance and SEO.
+- **Modern Architecture**: Built with Next.js 16 (App Router) and React 19 for optimal performance and SEO.
 - **Cutting-edge Styling**: Leveraging Tailwind CSS v4 for rapid, utility-first styling and a modern design system.
 - **Fluid Animations**: Interactive and smooth user experiences powered by Framer Motion.
 - **Accessible UI**: High-quality, accessible components using Radix UI primitives.
@@ -24,7 +24,7 @@ This is proprietary, closed-source software. Copyright (c) 2026 Projoy Web Solut
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
@@ -113,7 +113,7 @@ Before going live, ensure the following configurations are updated:
 
 - [ ] **Constants**: Replace placeholder values in `lib/constants.ts` (Phone number, Calendly URL, Social media links).
 - [ ] **Analytics**: Add production GA4 and Microsoft Clarity IDs as deployment environment variables if these integrations are intended to run.
-- [ ] **Assets**: Add a real OG image at `public/og-image.jpg` (1200×630px) and update favicons.
+- [x] **Assets**: Use the existing `public/og-image.png` (1200×630px) and verified favicon assets.
 - [ ] **Content**: Replace placeholder case study, project, and testimonial content in `lib/data/*.ts`.
 - [ ] **Metadata**: Update the `metadataBase` URL in `lib/constants.ts` to match your production domain.
 

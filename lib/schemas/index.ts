@@ -17,7 +17,7 @@ export const organizationSchema = {
   url: SITE_CONFIG.url,
   logo: {
     "@type": "ImageObject",
-    url: `${SITE_CONFIG.url}/logo.png`,
+    url: `${SITE_CONFIG.url}/Logo-projoywebsloutions.png`,
     width: 240,
     height: 60,
   },
@@ -59,7 +59,7 @@ export const localBusinessSchema = {
   "@type": "ProfessionalService",
   "@id": `${SITE_CONFIG.url}/#local-business`,
   name: SITE_CONFIG.name,
-  image: `${SITE_CONFIG.url}/og-image.jpg`,
+  image: `${SITE_CONFIG.url}/og-image.png`,
   url: SITE_CONFIG.url,
   email: SITE_CONFIG.email,
   address: {
@@ -92,7 +92,7 @@ export const webDevServiceSchema = {
   serviceType: "Web Development",
   description:
     "Custom Next.js 15 and React web development services including SaaS, landing pages, dashboards, and AI integrations.",
-  url: `${SITE_CONFIG.url}/services/web-development/`,
+  url: `${SITE_CONFIG.url}/services/web-development`,
   areaServed: "Worldwide",
 };
 
@@ -104,7 +104,7 @@ export const localSeoServiceSchema = {
   serviceType: "Search Engine Optimization",
   description:
     "Local SEO and Google Business Profile optimization services to help businesses rank in the Google 3-pack and dominate local search.",
-  url: `${SITE_CONFIG.url}/services/local-seo/`,
+  url: `${SITE_CONFIG.url}/services/local-seo`,
   areaServed: "Worldwide",
 };
 
@@ -116,7 +116,7 @@ export const aiSolutionsServiceSchema = {
   serviceType: "AI Automation",
   description:
     "AI-powered chatbots, workflow automation, and AI integrations that help businesses scale without adding headcount.",
-  url: `${SITE_CONFIG.url}/services/ai-solutions/`,
+  url: `${SITE_CONFIG.url}/services/ai-solutions`,
   areaServed: "Worldwide",
 };
 
@@ -206,7 +206,7 @@ export const createArticleSchema = (post: {
   // passed the full path (e.g. "blog/foo" or "case-studies/bar"), producing
   // malformed URLs like ".../blog/case-studies/bar/". Fixed to use the
   // caller-supplied path as-is.
-  const url = `${SITE_CONFIG.url}/${post.slug}/`;
+  const url = `${SITE_CONFIG.url}/${post.slug}`;
 
   return {
     "@context": "https://schema.org",

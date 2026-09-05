@@ -47,15 +47,12 @@ export const FOUNDER_CONFIG = {
     "TypeScript",
     "React",
     "Next.js",
-    "Vue.js",
     "Node.js",
     "Express.js",
     "Tailwind CSS",
     "PostgreSQL",
     "MongoDB",
-    "WordPress",
-    "WooCommerce",
-    "Shopify",
+
   ],
   // Personal profiles only. TODO: this LinkedIn URL is one of two personal
   // profiles currently in use — pick a single canonical one (see plan) and
@@ -156,10 +153,10 @@ export const FOOTER_LINKS = {
 } as const;
 
 export const TRUST_STATS = [
-  { value: "50+", label: "Projects Delivered" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "95+", label: "PageSpeed Average" },
-  { value: "90 days", label: "Avg. SEO Results" },
+  { value: "Custom", label: "Web Development" },
+  { value: "Local", label: "SEO Focus" },
+  { value: "AI", label: "Automation Capability" },
+  { value: "Global", label: "Client Delivery" },
 ] as const;
 
 export const SERVICES_OVERVIEW = [

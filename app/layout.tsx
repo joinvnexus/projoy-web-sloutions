@@ -85,7 +85,7 @@ export const metadata: Metadata = {
         width: SITE_CONFIG.openGraph.width,
         height: SITE_CONFIG.openGraph.height,
         alt: SITE_CONFIG.openGraph.imageAlt,
-        type: "image/jpeg",
+        type: "image/png",
       },
     ],
   },

@@ -43,7 +43,7 @@ export function SubServiceTemplate({ data }: { data: SubServiceData }) {
     name: data.title,
     provider: { "@id": ORGANIZATION_ID },
     description: data.metaDescription,
-    url: `${SITE_CONFIG.url}${data.parentHref}/${data.slug}/`,
+    url: `${SITE_CONFIG.url}${data.parentHref}/${data.slug}`,
     areaServed: "Worldwide",
   };
 

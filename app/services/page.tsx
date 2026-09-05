@@ -27,7 +27,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Our Services — Web Development, Local SEO & AI Solutions",
   description:
-    "Projoy Web Solutions offers expert Next.js web development, local SEO & Google Business Profile optimization, and AI integrations. Two services. One growth partner.",
+    "Projoy Web Solutions offers expert Next.js web development, local SEO & Google Business Profile optimization, and AI integrations. Three capabilities. One growth partner.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Services — Projoy Web Solutions",
@@ -57,7 +57,7 @@ const services = [
       "Custom Dashboards",
       "High-Converting Landing Pages",
     ],
-    stats: [{ value: "95+", label: "Avg. PageSpeed" }, { value: "3 wk", label: "Avg. Launch Time" }],
+    stats: [{ value: "Fast", label: "Performance Focus" }, { value: "Custom", label: "Build Approach" }],
     gradient: "from-brand-600 to-accent-500",
   },
   {
@@ -78,7 +78,7 @@ const services = [
       "Review & Reputation Management",
       "Local Link Building",
     ],
-    stats: [{ value: "60–90", label: "Days to Results" }, { value: "3-Pack", label: "Target Ranking" }],
+    stats: [{ value: "Local", label: "Search Focus" }, { value: "Maps", label: "Visibility Target" }],
     gradient: "from-accent-500 to-brand-600",
   },
   {
@@ -99,7 +99,7 @@ const services = [
       "Business Process Automation",
       "Custom AI Integrations",
     ],
-    stats: [{ value: "24/7", label: "Lead Capture" }, { value: "3×", label: "Lead Quality" }],
+    stats: [{ value: "24/7", label: "Available Automation" }, { value: "Smart", label: "Lead Workflows" }],
     gradient: "from-brand-600 to-accent-500",
   },
 ] as const;
@@ -157,7 +157,7 @@ export default function ServicesPage() {
             className="font-display font-extrabold text-slate-900 leading-tight tracking-tight mb-5"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
           >
-            Two Powerful Services.{" "}
+              Three Powerful Services.{" "}
             <GradientText>One Growth Partner.</GradientText>
           </h1>
           <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto mb-8">

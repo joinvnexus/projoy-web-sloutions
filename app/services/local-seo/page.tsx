@@ -53,8 +53,8 @@ const benefits = [
     icon: <MapPin strokeWidth={1.75} />,
     title: "Dominate the Google 3-Pack",
     description:
-      "The local 3-pack gets 700% more clicks than organic results. We optimize every ranking signal — proximity, relevance, and prominence — to get you there and keep you there.",
-    highlight: "Avg. results in 60–90 days",
+      "We optimize the local ranking signals that matter — proximity, relevance, and prominence — to improve your visibility in Maps and local search.",
+    highlight: "Measured ranking progress",
   },
   {
     icon: <Star strokeWidth={1.75} />,
@@ -255,9 +255,9 @@ const faqs = [
 /* ─── The Problem Section ────────────────────────────────── */
 function ProblemSection() {
   const stats = [
-    { value: "46%", label: "of all Google searches have local intent", icon: <Search className="w-5 h-5" strokeWidth={1.75} /> },
-    { value: "76%", label: "of local searchers visit a business within 24 hours", icon: <Phone className="w-5 h-5" strokeWidth={1.75} /> },
-    { value: "700%", label: "more clicks for 3-pack results vs organic #1", icon: <TrendingUp className="w-5 h-5" strokeWidth={1.75} /> },
+    { value: "Maps", label: "Visibility and local discovery", icon: <Search className="w-5 h-5" strokeWidth={1.75} /> },
+    { value: "GBP", label: "Profile optimization and management", icon: <Phone className="w-5 h-5" strokeWidth={1.75} /> },
+    { value: "Local", label: "Ranking signals and reporting", icon: <TrendingUp className="w-5 h-5" strokeWidth={1.75} /> },
   ];
 
   return (
@@ -330,7 +330,7 @@ export default function LocalSEOPage() {
     serviceType: "Search Engine Optimization",
     description:
       "Local SEO and Google Business Profile optimization services to help businesses rank in the Google 3-pack and dominate local search results.",
-    url: `${SITE_CONFIG.url}/services/local-seo/`,
+    url: `${SITE_CONFIG.url}/services/local-seo`,
     areaServed: "Worldwide",
   };
 

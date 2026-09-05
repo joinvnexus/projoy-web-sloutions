@@ -7,9 +7,9 @@ import { ButtonLink } from "@/components/shared/Button";
 import { GradientText } from "@/components/shared/Typography";
 
 const trustPoints = [
-  "50+ projects delivered",
-  "Avg. 3.2× lead increase",
-  "Local SEO results in 60–90 days",
+  "Custom websites and web applications",
+  "Local SEO and Google Business Profile work",
+  "AI integrations and business automation",
 ] as const;
 
 /* ─── Animated gradient orbs (CSS-only, no canvas) ──────── */
