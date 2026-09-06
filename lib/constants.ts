@@ -67,6 +67,7 @@ export const IMAGE_ASSETS = {
   services: {
     webDevelopment: "/images/services-hero/web-dev-hero-bg.jpg",
     localSeo: "/images/services-hero/local-seo-hero.png",
+    technicalSeo: "/images/services-hero/web-dev-hero-bg.jpg",
     aiSolutions: "/images/services-hero/ai-solutions-hero.png",
   },
 } as const;
@@ -77,9 +78,9 @@ export const NAV_LINKS = [
     href: "/services",
     children: [
       {
-        label: "Web Development",
+        label: "Custom Web Development",
         href: "/services/web-development",
-        description: "Next.js, React, SaaS & AI-powered builds",
+        description: "Fast, scalable websites and web applications",
         icon: "code",
       },
       {
@@ -89,9 +90,15 @@ export const NAV_LINKS = [
         icon: "map-pin",
       },
       {
-        label: "AI Solutions",
+        label: "Technical SEO",
+        href: "/services/technical-seo",
+        description: "Crawlability, performance & search readiness",
+        icon: "search",
+      },
+      {
+        label: "AI Solutions & Automation",
         href: "/services/ai-solutions",
-        description: "Chatbots, automation & AI integrations",
+        description: "Additional capability: chatbots and integrations",
         icon: "cpu",
       },
     ],
@@ -136,7 +143,8 @@ export const FOOTER_LINKS = {
     { label: "Google Maps Ranking", href: "/services/local-seo/google-maps-ranking" },
     { label: "Citation Building", href: "/services/local-seo/citation-building" },
     { label: "Reputation Management", href: "/services/local-seo/reputation-management" },
-    { label: "AI Solutions", href: "/services/ai-solutions" },
+    { label: "Technical SEO", href: "/services/technical-seo" },
+    { label: "AI Solutions & Automation", href: "/services/ai-solutions" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -155,18 +163,18 @@ export const FOOTER_LINKS = {
 export const TRUST_STATS = [
   { value: "Custom", label: "Web Development" },
   { value: "Local", label: "SEO Focus" },
-  { value: "AI", label: "Automation Capability" },
+  { value: "Technical", label: "SEO Foundation" },
   { value: "Global", label: "Client Delivery" },
 ] as const;
 
 export const SERVICES_OVERVIEW = [
   {
     id: "web-development",
-    title: "Web Development & AI",
+    title: "Custom Web Development",
     description:
-      "High-performance websites, SaaS apps, and AI-powered tools built with Next.js 15 and React. Designed to convert, built to scale.",
+      "Fast, scalable, modern web experiences built around your business goals.",
     href: "/services/web-development",
-    features: ["Next.js 15", "React", "TypeScript", "AI Integrations", "SaaS Builds"],
+    features: ["Next.js", "React", "TypeScript", "SaaS Builds", "Custom Functionality"],
     icon: "code-2",
     accent: "brand",
   },
@@ -181,13 +189,13 @@ export const SERVICES_OVERVIEW = [
     accent: "accent",
   },
   {
-    id: "ai-solutions",
-    title: "AI Solutions",
+    id: "technical-seo",
+    title: "Technical SEO",
     description:
-      "Integrate AI into your business — chatbots, automation, smart lead capture — so your business scales without adding headcount.",
-    href: "/services/ai-solutions",
-    features: ["AI Chatbots", "Workflow Automation", "AI SaaS Builds", "Smart Lead Capture"],
-    icon: "cpu",
+      "Audit, report, implement, and validate the technical improvements that make your website easier to crawl, index, and find.",
+    href: "/services/technical-seo",
+    features: ["Technical Audits", "Crawlability", "Structured Data", "Core Web Vitals", "Code-Level Fixes"],
+    icon: "search",
     accent: "brand",
   },
 ] as const;

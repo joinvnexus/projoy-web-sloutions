@@ -1,5 +1,5 @@
 // components/home/ServicesOverview.tsx
-import { Code2, MapPin, Cpu } from "lucide-react";
+import { Code2, MapPin, Search } from "lucide-react";
 import { SectionHeader } from "@/components/shared/Typography";
 import { ServiceCard } from "@/components/shared/Card";
 import { SERVICES_OVERVIEW } from "@/lib/constants";
@@ -7,7 +7,7 @@ import { SERVICES_OVERVIEW } from "@/lib/constants";
 const iconMap: Record<string, React.ElementType> = {
   "code-2": Code2,
   "map-pin": MapPin,
-  cpu: Cpu,
+  search: Search,
 };
 
 export function ServicesOverview() {
@@ -22,11 +22,11 @@ export function ServicesOverview() {
           eyebrow="What We Do"
           heading={
             <>
-              Three Powerful Services.
+              Build. Optimize. Get Found.
               <br className="hidden sm:block" /> One Growth Partner.
             </>
           }
-          subheading="Whether you need a stunning, blazing-fast website or a Google Maps presence that dominates your city — we deliver measurable outcomes, not just deliverables."
+          subheading="We build technically strong websites, optimize them for search, and improve the foundations that turn visibility into qualified leads."
           id="services-heading"
         />
 
@@ -45,6 +45,15 @@ export function ServicesOverview() {
               />
             );
           })}
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-brand-100 bg-brand-50/60 p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-brand-600 mb-1">Additional Capability</p>
+            <h3 className="font-display font-bold text-slate-900 text-lg">AI Solutions &amp; Automation</h3>
+            <p className="text-sm text-slate-600 mt-1">Add intelligent automation, AI assistants, and custom integrations when they support your growth goals.</p>
+          </div>
+          <a href="/services/ai-solutions" className="text-sm font-semibold text-brand-600 hover:text-brand-700 whitespace-nowrap">Explore AI Solutions &rarr;</a>
         </div>
 
         {/* Bottom note */}

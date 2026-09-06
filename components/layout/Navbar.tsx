@@ -12,6 +12,7 @@ import {
   X,
   ChevronDown,
   ArrowRight,
+  Search,
 } from "lucide-react";
 import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -20,6 +21,7 @@ import { cn } from "@/lib/utils";
 const iconMap: Record<string, React.ElementType> = {
   code: Code2,
   "map-pin": MapPin,
+  search: Search,
   cpu: Cpu,
 };
 

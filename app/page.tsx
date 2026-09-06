@@ -17,11 +17,11 @@ import { FinalCTA }             from "@/components/home/FinalCTA";
 
 /* ─── Page Metadata ─────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.name} — Web Development & Local SEO Agency`,
+  title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO`,
   description: SITE_CONFIG.description,
   alternates: { canonical: "/" },
   openGraph: {
-    title: `${SITE_CONFIG.name} — Web Development & Local SEO Agency`,
+    title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO`,
     description: SITE_CONFIG.description,
     url: SITE_CONFIG.url,
     type: "website",

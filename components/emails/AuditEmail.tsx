@@ -2,6 +2,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 export const serviceLabels: Record<string, string> = {
   "local-seo": "Local SEO & Google Maps Ranking",
+  "technical-seo": "Technical SEO Audit & Implementation",
   "web-development": "New Website or Redesign",
   "saas-development": "SaaS / Web Application",
   "ai-integration": "AI Chatbot or Automation",

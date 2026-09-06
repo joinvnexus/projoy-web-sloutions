@@ -37,6 +37,7 @@ const subjectOptions = [
   { value: "", label: "Select a subject" },
   { value: "web-development", label: "Web Development Project" },
   { value: "local-seo", label: "Local SEO Campaign" },
+  { value: "technical-seo", label: "Technical SEO Audit or Implementation" },
   { value: "ai-solutions", label: "AI Integration" },
   { value: "white-label", label: "White-Label Partnership" },
   { value: "general", label: "General Enquiry" },

@@ -4,6 +4,7 @@ import Link from "next/link";
 import {
   Code2,
   MapPin,
+  Search,
   Cpu,
   ArrowRight,
   CheckCircle,
@@ -18,6 +19,7 @@ import {
   createBreadcrumbSchema,
   webDevServiceSchema,
   localSeoServiceSchema,
+  technicalSeoServiceSchema,
   aiSolutionsServiceSchema,
 } from "@/lib/schemas";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -25,14 +27,14 @@ import { cn } from "@/lib/utils";
 
 /* ─── Metadata ───────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "Our Services — Web Development, Local SEO & AI Solutions",
+  title: "Our Services — Web Development, Local SEO & Technical SEO",
   description:
-    "Projoy Web Solutions offers expert Next.js web development, local SEO & Google Business Profile optimization, and AI integrations. Three capabilities. One growth partner.",
+    "Projoy Web Solutions builds technically strong websites, improves technical SEO, and grows local search visibility. AI solutions are available as an additional capability.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Services — Projoy Web Solutions",
     description:
-      "Next.js web development + local SEO under one roof. Explore our full service offering.",
+      "Custom web development, Local SEO, and Technical SEO under one roof. Explore our core services and additional AI capabilities.",
     url: `${SITE_CONFIG.url}/services`,
   },
 };
@@ -42,18 +44,17 @@ const services = [
   {
     id: "web-development",
     icon: Code2,
-    tag: "Development",
+    tag: "01 · Core Service",
     tagVariant: "brand" as const,
-    title: "Web Development & AI Solutions",
+    title: "Custom Web Development",
     description:
-      "We build high-performance websites, SaaS applications, and AI-powered tools using Next.js 15, React, and TypeScript. Every build is engineered for speed, SEO, and conversion.",
+      "Fast, scalable, modern web experiences built around your business goals using Next.js, React, TypeScript, and custom functionality.",
     href: "/services/web-development",
     cta: "Explore Web Development",
     features: [
       "Next.js 15 & React",
       "TypeScript & Tailwind CSS",
       "SaaS Product Development",
-      "AI Chatbots & Automations",
       "Custom Dashboards",
       "High-Converting Landing Pages",
     ],
@@ -63,7 +64,7 @@ const services = [
   {
     id: "local-seo",
     icon: MapPin,
-    tag: "SEO",
+    tag: "02 · Core Service",
     tagVariant: "accent" as const,
     title: "Local SEO & Google Business Profile",
     description:
@@ -82,27 +83,38 @@ const services = [
     gradient: "from-accent-500 to-brand-600",
   },
   {
-    id: "ai-solutions",
-    icon: Cpu,
-    tag: "AI",
+    id: "technical-seo",
+    icon: Search,
+    tag: "03 · Core Service",
     tagVariant: "brand" as const,
-    title: "AI Solutions & Integrations",
+    title: "Technical SEO",
     description:
-      "We integrate AI into your website and business workflows — chatbots, automation, smart lead capture — so your business scales without linearly increasing headcount.",
-    href: "/services/ai-solutions",
-    cta: "Explore AI Solutions",
+      "We audit your existing website, report technical issues, implement approved improvements, and validate the result for better crawlability, performance, and search visibility.",
+    href: "/services/technical-seo",
+    cta: "Explore Technical SEO",
     features: [
-      "AI Chatbots (OpenAI / Claude)",
-      "Lead Qualification Automation",
-      "AI-Powered SaaS Builds",
-      "Content Generation Workflows",
-      "Business Process Automation",
-      "Custom AI Integrations",
+      "Technical SEO Audits",
+      "Crawlability & Indexability",
+      "Metadata & Canonicals",
+      "Structured Data & JSON-LD",
+      "Core Web Vitals",
+      "Approved Code-Level Fixes",
     ],
-    stats: [{ value: "24/7", label: "Available Automation" }, { value: "Smart", label: "Lead Workflows" }],
+    stats: [{ value: "Code", label: "Implementation Ready" }, { value: "5-Step", label: "Audit to Validation" }],
     gradient: "from-brand-600 to-accent-500",
   },
 ] as const;
+
+const additionalCapability = {
+  icon: Cpu,
+  tag: "Additional Capability",
+  title: "AI Solutions & Automation",
+  description:
+    "Add AI chatbots, workflow automation, AI integrations, and intelligent business workflows when they support your core web and SEO goals.",
+  href: "/services/ai-solutions",
+  cta: "Explore AI Solutions",
+  features: ["AI Chatbots", "Workflow Automation", "AI Integrations", "Custom Business Workflows"],
+};
 
 /* ─── Cross-sell block ───────────────────────────────────── */
 const crossSell = [
@@ -117,9 +129,9 @@ const crossSell = [
     href: "/services/web-development",
   },
   {
-    from: "Want to scale without hiring?",
-    suggestion: "AI automation is your answer.",
-    href: "/services/ai-solutions",
+    from: "Need a search-ready foundation?",
+    suggestion: "Technical SEO connects your site and search strategy.",
+    href: "/services/technical-seo",
   },
 ] as const;
 
@@ -132,6 +144,7 @@ export default function ServicesPage() {
     ]),
     webDevServiceSchema,
     localSeoServiceSchema,
+    technicalSeoServiceSchema,
     aiSolutionsServiceSchema,
   ];
 
@@ -157,13 +170,11 @@ export default function ServicesPage() {
             className="font-display font-extrabold text-slate-900 leading-tight tracking-tight mb-5"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
           >
-              Three Powerful Services.{" "}
+              Three Core Services.{" "}
             <GradientText>One Growth Partner.</GradientText>
           </h1>
           <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto mb-8">
-            Most agencies specialize in one thing. We bridge expert web development
-            with local SEO mastery — so you get traffic, leads, and revenue from
-            a single trusted partner.
+            We build technically strong websites, improve their search foundations, and help businesses become more visible in local search.
           </p>
           <Link
             href="/contact#audit"
@@ -258,6 +269,27 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="py-14 bg-white" aria-labelledby="additional-capability-heading">
+        <div className="container mx-auto max-w-[1200px]">
+          <div className="card p-8 lg:p-10 border-brand-100 bg-brand-50/40">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+              <div className="w-12 h-12 rounded-xl bg-brand-600 flex items-center justify-center flex-shrink-0">
+                <Cpu className="w-6 h-6 text-white" strokeWidth={1.75} />
+              </div>
+              <div className="flex-1">
+                <Tag variant="brand">{additionalCapability.tag}</Tag>
+                <h2 id="additional-capability-heading" className="font-display font-bold text-slate-900 text-2xl mt-3 mb-2">{additionalCapability.title}</h2>
+                <p className="text-slate-600 leading-relaxed max-w-2xl mb-4">{additionalCapability.description}</p>
+                <ul className="flex flex-wrap gap-2" role="list">
+                  {additionalCapability.features.map((feature) => <li key={feature} className="px-3 py-1 rounded-full bg-white border border-brand-100 text-xs font-medium text-slate-700">{feature}</li>)}
+                </ul>
+              </div>
+              <Link href={additionalCapability.href} className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 whitespace-nowrap">{additionalCapability.cta}<ArrowRight className="w-4 h-4" /></Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Cross-sell helper ── */}
       <section className="py-14 bg-white">
         <div className="container mx-auto max-w-[1200px]">
@@ -265,7 +297,7 @@ export default function ServicesPage() {
             <SectionHeader
               eyebrow="Not Sure Where to Start?"
               heading="We'll Point You in the Right Direction"
-              subheading="Most clients combine both services. Here's a quick guide based on where you are right now."
+              subheading="Start with the part of your growth engine that needs the most attention, then expand as your foundations improve."
               maxWidth="md"
             />
           </RevealWrapper>

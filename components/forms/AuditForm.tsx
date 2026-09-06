@@ -20,6 +20,7 @@ interface FieldError {
 const serviceOptions = [
   { value: "", label: "What do you need most help with?" },
   { value: "local-seo", label: "Local SEO & Google Maps Ranking" },
+  { value: "technical-seo", label: "Technical SEO Audit & Implementation" },
   { value: "web-development", label: "New Website or Redesign" },
   { value: "saas-development", label: "SaaS / Web Application" },
   { value: "ai-integration", label: "AI Chatbot or Automation" },

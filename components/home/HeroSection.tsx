@@ -9,7 +9,8 @@ import { GradientText } from "@/components/shared/Typography";
 const trustPoints = [
   "Custom websites and web applications",
   "Local SEO and Google Business Profile work",
-  "AI integrations and business automation",
+  "Technical SEO and search-ready implementation",
+  "AI integrations and business automation when useful",
 ] as const;
 
 /* ─── Animated gradient orbs (CSS-only, no canvas) ──────── */
@@ -147,7 +148,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
             >
-              <span className="eyebrow">Web Development & Local SEO Agency</span>
+              <span className="eyebrow">Web Development, Local SEO &amp; Technical SEO</span>
             </motion.div>
 
             {/* H1 */}
@@ -169,9 +170,8 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-slate-600 leading-relaxed mb-8 max-w-lg"
             >
-              Projoy Web Solutions combines expert Next.js development with local
-              SEO mastery — so your website doesn&apos;t just look great, it
-              generates real leads from day one.
+              Projoy Web Solutions builds technically strong websites, improves
+              their search foundations, and helps businesses generate real leads.
             </motion.p>
 
             {/* CTAs */}

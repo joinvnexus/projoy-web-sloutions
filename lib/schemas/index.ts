@@ -108,6 +108,18 @@ export const localSeoServiceSchema = {
   areaServed: "Worldwide",
 };
 
+export const technicalSeoServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Technical SEO",
+  provider: { "@id": ORGANIZATION_ID },
+  serviceType: "Technical Search Engine Optimization",
+  description:
+    "Technical SEO audits, detailed reporting, approved code-level implementation, and validation for crawlability, indexability, performance, metadata, and structured data.",
+  url: `${SITE_CONFIG.url}/services/technical-seo`,
+  areaServed: "Worldwide",
+};
+
 export const aiSolutionsServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",

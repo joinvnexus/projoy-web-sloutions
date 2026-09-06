@@ -1,11 +1,12 @@
 // components/home/SocialProofBar.tsx
-import { Star, Zap, MapPin, Code2, Shield } from "lucide-react";
+import { Star, Zap, MapPin, Code2, Shield, Search } from "lucide-react";
 
 const items = [
   { icon: Code2,   text: "Custom Web Development" },
   { icon: Star,    text: "Local SEO Specialists" },
   { icon: Zap,     text: "Performance-Focused Builds" },
   { icon: MapPin,  text: "Google Maps Ranking Specialists" },
+  { icon: Search,  text: "Technical SEO Audits & Implementation" },
   { icon: Shield,  text: "100% White-Hat Practices" },
   { icon: Code2,   text: "Next.js 15 Experts" },
   { icon: Star,    text: "Google Business Profile Optimization" },

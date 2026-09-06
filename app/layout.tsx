@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
 
   title: {
-    default: `${SITE_CONFIG.name} — Web Development & Local SEO Agency`,
+    default: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO Agency`,
     template: `%s | ${SITE_CONFIG.name}`,
   },
 
@@ -59,7 +59,8 @@ export const metadata: Metadata = {
     "Google Business Profile optimization",
     "React development",
     "SaaS development",
-    "AI web development",
+    "technical SEO services",
+    "AI solutions and automation",
     "Google Maps ranking",
     "Projoy Web Solutions",
     "Bangladesh web agency",
@@ -76,9 +77,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
-    title: `${SITE_CONFIG.name} — Web Development & Local SEO Agency`,
+    title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO Agency`,
     description:
-      "We build websites that rank on Google and grow your business. Next.js development + Local SEO under one roof.",
+      "We build technically strong websites, improve technical SEO, and grow local search visibility. AI solutions are available when useful.",
     images: [
       {
         url: SITE_CONFIG.openGraph.image,
@@ -94,7 +95,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@projoywebsol",
     creator: "@projoywebsol",
-    title: `${SITE_CONFIG.name} — Web Development & Local SEO Agency`,
+    title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO Agency`,
     description:
       "Next.js Web Development + Local SEO. We build websites that rank and grow businesses.",
     images: [SITE_CONFIG.openGraph.image],
