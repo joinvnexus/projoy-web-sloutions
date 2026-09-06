@@ -21,7 +21,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Contact Projoy Web Solutions — Free Growth Audit",
   description:
-    "Get a free growth audit for your website and Google Business Profile. Book a strategy call or send us a message. Reply within 24 hours guaranteed.",
+    "Get a free growth audit for your website and Google Business Profile. Book a strategy call or send us a message. We aim to reply within 24 hours.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Projoy Web Solutions",

@@ -66,7 +66,7 @@ export default function ProjectsPage() {
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed">
               A selection of websites, applications, and campaigns we&apos;ve built and
-              optimised. Every project below is held to a 95+ PageSpeed standard.
+              optimised. Every project below is built with performance and Core Web Vitals in mind.
             </p>
           </div>
         </div>

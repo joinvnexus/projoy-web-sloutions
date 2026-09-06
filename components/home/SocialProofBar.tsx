@@ -8,7 +8,7 @@ const items = [
   { icon: MapPin,  text: "Google Maps Ranking Specialists" },
   { icon: Search,  text: "Technical SEO Audits & Implementation" },
   { icon: Shield,  text: "100% White-Hat Practices" },
-  { icon: Code2,   text: "Next.js 15 Experts" },
+  { icon: Code2,   text: "Next.js 16 Experts" },
   { icon: Star,    text: "Google Business Profile Optimization" },
   { icon: Zap,     text: "AI Integration Ready" },
 ] as const;

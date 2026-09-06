@@ -52,7 +52,7 @@ const services = [
     href: "/services/web-development",
     cta: "Explore Web Development",
     features: [
-      "Next.js 15 & React",
+      "Next.js 16 & React",
       "TypeScript & Tailwind CSS",
       "SaaS Product Development",
       "Custom Dashboards",

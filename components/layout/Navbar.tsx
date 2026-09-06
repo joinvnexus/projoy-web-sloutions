@@ -32,6 +32,9 @@ export function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobilePanelRef = useRef<HTMLDivElement>(null);
+  const mobileCloseRef = useRef<HTMLButtonElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
   const dropdownTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   /* Scroll state */
@@ -65,6 +68,43 @@ export function Navbar() {
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    previousFocusRef.current = document.activeElement as HTMLElement | null;
+    mobileCloseRef.current?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab" || !mobilePanelRef.current) return;
+      const focusable = mobilePanelRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled])'
+      );
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      previousFocusRef.current?.focus();
+      previousFocusRef.current = null;
+    };
   }, [mobileOpen]);
 
   const handleMouseEnter = (label: string) => {
@@ -151,8 +191,13 @@ export function Navbar() {
                               const Icon = iconMap[child.icon] ?? Code2;
                               const isActive = pathname.startsWith(child.href);
                               return (
-                                <Link
-                                  key={child.href}
+                                  <div key={child.href}>
+                                    {child.group === "additional" && (
+                                      <p className="px-4 pt-3 pb-1 text-[0.65rem] font-semibold uppercase tracking-widest text-slate-400">
+                                        Additional Capability
+                                      </p>
+                                    )}
+                                    <Link
                                   href={child.href}
                                   className={cn(
                                     "flex items-start gap-3 px-4 py-3.5 rounded-xl transition-colors group",
@@ -169,7 +214,7 @@ export function Navbar() {
                                         ? "bg-brand-100"
                                         : "bg-slate-100 group-hover:bg-brand-50"
                                     )}
-                                  >
+                                    >
                                     <Icon
                                       className={cn(
                                         "w-4 h-4 transition-colors",
@@ -187,7 +232,8 @@ export function Navbar() {
                                       {child.description}
                                     </p>
                                   </div>
-                                </Link>
+                                    </Link>
+                                  </div>
                               );
                             })}
                           </div>
@@ -275,9 +321,13 @@ export function Navbar() {
           mobileOpen ? "pointer-events-auto" : "pointer-events-none"
         )}
         aria-hidden={!mobileOpen}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
       >
         {/* Overlay */}
         <div
+          ref={mobilePanelRef}
           className={cn(
             "absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity duration-300",
             mobileOpen ? "opacity-100" : "opacity-0"
@@ -309,6 +359,7 @@ export function Navbar() {
               </span>
             </Link>
             <button
+              ref={mobileCloseRef}
               className="p-2 rounded-lg text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-colors"
               onClick={() => setMobileOpen(false)}
               aria-label="Close menu"
@@ -330,8 +381,13 @@ export function Navbar() {
                       {link.children.map((child) => {
                         const Icon = iconMap[child.icon] ?? Code2;
                         return (
-                          <Link
-                            key={child.href}
+                          <div key={child.href}>
+                            {child.group === "additional" && (
+                              <p className="px-3 pt-3 pb-1 text-[0.65rem] font-semibold uppercase tracking-widest text-slate-400">
+                                Additional Capability
+                              </p>
+                            )}
+                            <Link
                             href={child.href}
                             className={cn(
                               "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors",
@@ -339,10 +395,11 @@ export function Navbar() {
                                 ? "bg-brand-50 text-brand-700"
                                 : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
                             )}
-                          >
+                            >
                             <Icon className="w-4 h-4 flex-shrink-0" />
                             {child.label}
-                          </Link>
+                            </Link>
+                          </div>
                         );
                       })}
                     </div>

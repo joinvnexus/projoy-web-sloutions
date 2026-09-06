@@ -54,6 +54,7 @@ export function ContactForm({ className }: { className?: string }) {
   const [errors, setErrors] = useState<FieldError>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -73,6 +74,7 @@ export function ContactForm({ className }: { className?: string }) {
       return;
     }
     setSubmitting(true);
+    setSubmitError(null);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -84,15 +86,17 @@ export function ContactForm({ className }: { className?: string }) {
 
       if (!response.ok) {
         console.error("Form submission error:", result.error);
+        setSubmitError("We could not send your message. Please try again.");
         return;
       }
 
-      setSubmitting(false);
       setSubmitted(true);
       trackEvent("contact_form_submit", { subject: formData.subject || "not_specified" });
       setTimeout(() => router.push("/thank-you"), 800);
     } catch (error) {
       console.error("Form submission error:", error);
+      setSubmitError("We could not connect to the contact service. Please try again.");
+    } finally {
       setSubmitting(false);
     }
   };
@@ -216,6 +220,11 @@ export function ContactForm({ className }: { className?: string }) {
           <><Send className="w-4 h-4" />Send Message</>
         )}
       </button>
+      {submitError && (
+        <p role="alert" className="text-center text-sm text-red-600">
+          {submitError}
+        </p>
+      )}
     </form>
   );
 }

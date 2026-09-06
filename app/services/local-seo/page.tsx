@@ -35,7 +35,7 @@ import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Local SEO & Google Business Profile Optimization | Projoy Web Solutions",
   description:
-    "Rank #1 on Google Maps with Projoy's local SEO services. GBP optimization, citation building, reputation management and geo-tagged images. Results in 60–90 days.",
+    "Improve your Google Maps visibility with Projoy's local SEO services. GBP optimization, citation building, reputation management and geo-tagged images.",
   alternates: { canonical: "/services/local-seo" },
   openGraph: {
     title: "Local SEO & Google Business Profile Optimization | Projoy Web Solutions",
@@ -349,7 +349,7 @@ export default function LocalSEOPage() {
         eyebrow="Local SEO Services"
         heading={
           <>
-            Rank #1 on Google Maps —{" "}
+            Improve Your Google Maps Visibility —{" "}
             <GradientText>Local SEO That Drives Calls,</GradientText> Visits &amp; Revenue
           </>
         }

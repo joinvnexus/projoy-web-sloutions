@@ -30,12 +30,12 @@ import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 
 /* ─── Metadata ───────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "AI Integration Services for Websites & SaaS | Projoy Web Solutions",
+  title: "AI Solutions & Automation — Additional Capability | Projoy Web Solutions",
   description:
-    "We integrate AI into your website and business — chatbots, lead automation, content workflows, and AI SaaS builds. Scale without adding headcount. Free consultation.",
+    "Add AI chatbots, workflow automation, content workflows, and AI SaaS integrations when they support your web and SEO goals. Free consultation.",
   alternates: { canonical: "/services/ai-solutions" },
   openGraph: {
-    title: "AI Integration Services — Projoy Web Solutions",
+    title: "AI Solutions & Automation — Additional Capability",
     description:
       "AI chatbots, automation, and custom AI integrations that save time, reduce costs, and grow revenue.",
     url: `${SITE_CONFIG.url}/services/ai-solutions`,
@@ -310,7 +310,7 @@ export default function AISolutionsPage() {
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
-    { name: "AI Solutions", href: "/services/ai-solutions" },
+    { name: "AI Solutions & Automation", href: "/services/ai-solutions" },
   ]);
 
   const faqSchema = createFaqSchema(faqs);
@@ -318,11 +318,11 @@ export default function AISolutionsPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "AI Solutions & Integrations",
+    name: "AI Solutions & Automation",
     provider: { "@id": ORGANIZATION_ID },
     serviceType: "Artificial Intelligence Integration",
     description:
-      "Custom AI chatbots, business process automation, AI content workflows, and AI-powered SaaS development.",
+      "Additional AI capability including custom chatbots, business process automation, AI content workflows, and AI-powered SaaS development.",
     url: `${SITE_CONFIG.url}/services/ai-solutions`,
     areaServed: "Worldwide",
   };
@@ -333,13 +333,13 @@ export default function AISolutionsPage() {
       <Breadcrumbs
         items={[
           { name: "Services", href: "/services" },
-          { name: "AI Solutions", href: "/services/ai-solutions" },
+          { name: "AI Solutions & Automation", href: "/services/ai-solutions" },
         ]}
       />
 
       {/* 1. Hero */}
       <ServiceHero
-        eyebrow="AI Solutions"
+        eyebrow="Additional Capability · AI Solutions & Automation"
         heading={
           <>
             AI Integrations That Save Time,{" "}

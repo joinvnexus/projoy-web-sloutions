@@ -98,6 +98,7 @@ export default async function CaseStudyPage({
     title: cs.headline,
     description: cs.description,
     publishedAt: cs.publishedAt,
+    schemaType: "Article",
     slug: `case-studies/${slug}`,
   });
 

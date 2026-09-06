@@ -54,7 +54,7 @@ const values = [
     icon: Zap,
     title: "Technical Excellence",
     description:
-      "We refuse to cut corners on code quality, performance, or SEO implementation. 'Good enough' is never the standard — 95+ PageSpeed scores are our floor, not our ceiling.",
+      "We refuse to cut corners on code quality, performance, or SEO implementation. 'Good enough' is never the standard — performance and Core Web Vitals are considered from the start.",
   },
 ];
 
@@ -87,7 +87,7 @@ const timeline = [
 
 const differentiators = [
   "We're the only local agency offering Next.js development AND local SEO under one roof",
-  "We guarantee 95+ PageSpeed scores — not as a target, as a contract requirement",
+  "We build with performance and Core Web Vitals in mind from the start",
   "Every engagement includes full Google Analytics 4 + Search Console setup",
   "We use 100% white-hat methods — no shortcuts that risk your rankings",
   "You own everything: code, GBP, content, data. No lock-in ever",

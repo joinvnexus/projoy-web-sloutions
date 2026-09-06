@@ -37,10 +37,10 @@ export const subServices: SubServiceData[] = [
     title: "Next.js Development",
     metaTitle: "Next.js Development Services | Projoy Web Solutions",
     metaDescription:
-      "Custom Next.js 15 website development with 95+ PageSpeed guarantee. Server Components, SEO-ready architecture, and production-grade code.",
+      "Custom Next.js 16 website development with performance-focused architecture, Server Components, and production-grade code.",
     heading: "Next.js Websites Built for Speed and Search Rankings",
     subheading:
-      "We build custom websites on Next.js 15 — the same framework powering some of the world's fastest sites — engineered from the first line of code for Core Web Vitals and conversions.",
+      "We build custom websites on Next.js 16, engineered from the first line of code with Core Web Vitals and conversions in mind.",
     accentColor: "brand",
     stats: [
       { value: "95+", label: "PageSpeed Score" },
@@ -60,10 +60,10 @@ export const subServices: SubServiceData[] = [
       { title: "Launch & Handoff", description: "Performance testing, deployment to Vercel, and full source code handoff.", timeline: "Week 3" },
     ],
     deliverables: [
-      "Full Next.js 15 source code (GitHub repo)",
+      "Full Next.js 16 source code (GitHub repo)",
       "Component documentation",
       "Vercel deployment configuration",
-      "90+ PageSpeed guarantee",
+      "Performance-focused Core Web Vitals review",
       "30-day post-launch support",
     ],
     faqs: [

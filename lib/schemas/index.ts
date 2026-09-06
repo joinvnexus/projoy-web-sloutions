@@ -91,7 +91,7 @@ export const webDevServiceSchema = {
   provider: { "@id": ORGANIZATION_ID },
   serviceType: "Web Development",
   description:
-    "Custom Next.js 15 and React web development services including SaaS, landing pages, dashboards, and AI integrations.",
+    "Custom Next.js 16 and React web development services including SaaS, landing pages, dashboards, and AI integrations.",
   url: `${SITE_CONFIG.url}/services/web-development`,
   areaServed: "Worldwide",
 };
@@ -123,11 +123,11 @@ export const technicalSeoServiceSchema = {
 export const aiSolutionsServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "AI Solutions",
+  name: "AI Solutions & Automation",
   provider: { "@id": ORGANIZATION_ID },
   serviceType: "AI Automation",
   description:
-    "AI-powered chatbots, workflow automation, and AI integrations that help businesses scale without adding headcount.",
+    "Additional AI capability including chatbots, workflow automation, and AI integrations that support web and SEO goals.",
   url: `${SITE_CONFIG.url}/services/ai-solutions`,
   areaServed: "Worldwide",
 };
@@ -203,6 +203,7 @@ export const createArticleSchema = (post: {
   /** Full relative path, e.g. "blog/my-post" or "case-studies/my-client" — NOT prefixed with "blog/" here. */
   slug: string;
   author?: string;
+  schemaType?: "BlogPosting" | "Article";
 }) => {
   // Attribute to the Person entity only when the content is genuinely
   // founder-authored; otherwise default to the Organization as author,
@@ -222,7 +223,7 @@ export const createArticleSchema = (post: {
 
   return {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
+    "@type": post.schemaType ?? "BlogPosting",
     headline: post.title,
     description: post.description,
     datePublished: post.publishedAt,

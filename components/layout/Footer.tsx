@@ -242,7 +242,7 @@ export function Footer() {
               ))}
               <span className="text-xs text-slate-700">
                 Built with{" "}
-                <span className="text-slate-600">Next.js 15</span>
+                <span className="text-slate-600">Next.js 16</span>
               </span>
             </div>
           </div>

@@ -36,12 +36,12 @@ import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Web Development Services — Next.js, React & AI | Projoy Web Solutions",
   description:
-    "Custom Next.js 15 web development, SaaS builds, AI integrations, and high-converting landing pages. 95+ PageSpeed scores guaranteed. Free consultation available.",
+    "Custom Next.js 16 web development, SaaS builds, AI integrations, and high-converting landing pages with performance-focused engineering. Free consultation available.",
   alternates: { canonical: "/services/web-development" },
   openGraph: {
     title: "Web Development Services — Next.js, React & AI | Projoy Web Solutions",
     description:
-      "We build blazing-fast, SEO-optimized websites and web applications with Next.js 15 and React. Designed to convert, built to scale.",
+      "We build performance-focused, SEO-optimized websites and web applications with Next.js 16 and React. Designed to convert, built to scale.",
     url: `${SITE_CONFIG.url}/services/web-development`,
   },
 };
@@ -97,8 +97,8 @@ const subServices = [
     icon: <Globe strokeWidth={1.75} />,
     title: "Next.js Website Development",
     description:
-      "Full custom websites built on Next.js 15 — the framework powering some of the world's fastest sites. Ideal for businesses who need a marketing presence that ranks and converts.",
-    tags: ["Next.js 15", "TypeScript", "Tailwind CSS"],
+      "Full custom websites built on Next.js 16 with a performance-focused architecture. Ideal for businesses who need a marketing presence that ranks and converts.",
+    tags: ["Next.js 16", "TypeScript", "Tailwind CSS"],
     href: "/services/web-development/nextjs-development",
   },
   {
@@ -191,7 +191,7 @@ const processPhases = [
     title: "QA, Launch & Handoff",
     timeline: "Week 5–6",
     description:
-      "Full QA pass across devices and browsers, Core Web Vitals testing (we guarantee 90+ scores), SEO meta setup, deployment to Vercel, and a 30-day post-launch support window.",
+      "Full QA pass across devices and browsers, Core Web Vitals testing, SEO meta setup, deployment to Vercel, and a 30-day post-launch support window.",
     deliverables: [
       "Core Web Vitals ≥90",
       "Vercel Deployment",
@@ -203,7 +203,7 @@ const processPhases = [
 ];
 
 const deliverables = [
-  "Complete Next.js 15 source code (GitHub repo, you own it 100%)",
+  "Complete Next.js 16 source code (GitHub repo, you own it 100%)",
   "Figma design files for all screens",
   "Component documentation",
   "Vercel deployment with custom domain setup",
@@ -214,7 +214,7 @@ const deliverables = [
 ];
 
 const techStack = [
-  { category: "Frontend", items: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS"] },
+  { category: "Frontend", items: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS"] },
   { category: "Backend", items: ["Node.js", "Prisma ORM", "PostgreSQL", "REST / tRPC"] },
   { category: "Auth", items: ["NextAuth.js", "Clerk", "JWT", "OAuth 2.0"] },
   { category: "Payments", items: ["Stripe", "Webhooks", "Subscriptions"] },
@@ -248,8 +248,8 @@ const faqs = [
     a: "We support several CMS options depending on your needs: Sanity for structured content, Contentlayer for MDX-based blogs, or Payload CMS for full headless control. We'll recommend the right fit based on who'll be editing content.",
   },
   {
-    q: "Do you guarantee PageSpeed scores?",
-    a: "Yes. We guarantee a minimum 90/100 on Google PageSpeed Insights (desktop) and a mobile score of 85+ at launch. We test against Core Web Vitals (LCP, CLS, INP) and won't sign off on a launch that doesn't meet these thresholds.",
+    q: "How do you approach PageSpeed and Core Web Vitals?",
+    a: "We test against Core Web Vitals (LCP, CLS, INP), identify bottlenecks, and make performance-focused recommendations based on the project scope, content, and integrations.",
   },
   {
     q: "What's the typical investment for a Next.js website?",
@@ -274,7 +274,7 @@ export default function WebDevelopmentPage() {
     provider: { "@id": ORGANIZATION_ID },
     serviceType: "Web Development",
     description:
-      "Custom Next.js 15, React, and AI-powered web development services including SaaS applications, landing pages, dashboards, and website redesigns.",
+      "Custom Next.js 16, React, and AI-powered web development services including SaaS applications, landing pages, dashboards, and website redesigns.",
     url: `${SITE_CONFIG.url}/services/web-development`,
     areaServed: "Worldwide",
     hasOfferCatalog: {
@@ -313,11 +313,11 @@ export default function WebDevelopmentPage() {
         backgroundImage={IMAGE_ASSETS.services.webDevelopment}
         backgroundImageAlt="Custom web development hero image"
         imagePriority
-        subheading="We build blazing-fast, SEO-optimized websites and web applications using Next.js 15, React, and TypeScript. Every pixel and every millisecond is engineered for one goal: your growth."
+        subheading="We build performance-focused, SEO-optimized websites and web applications using Next.js 16, React, and TypeScript. Every pixel and every millisecond is engineered for one goal: your growth."
         primaryCTA={{ label: "Get a Free Development Audit", href: "/contact#audit" }}
         secondaryCTA={{ label: "View Our Projects", href: "/projects" }}
         trustPoints={[
-          "95+ PageSpeed score guarantee",
+          "Performance-focused Core Web Vitals",
           "Full source code ownership",
           "30-day post-launch support",
           "Delivered in 3–6 weeks",
