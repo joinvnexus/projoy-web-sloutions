@@ -11,12 +11,12 @@ import { projects } from "@/lib/data/projects";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Projects — Our Portfolio | Projoy Web Solutions",
+  title: "Projects — Our Portfolio | LocalLeads",
   description:
-    "Browse Projoy Web Solutions' portfolio of Next.js websites, SaaS applications, landing pages, and local SEO campaigns. Real work, real results.",
+    "Browse LocalLeads' portfolio of Next.js websites, SaaS applications, landing pages, and local SEO campaigns. Real work, real results.",
   alternates: { canonical: "/projects" },
   openGraph: {
-    title: "Projects — Projoy Web Solutions Portfolio",
+    title: "Projects — LocalLeads Portfolio",
     description: "Next.js builds, SaaS apps, AI integrations, and local SEO campaigns.",
     url: `${SITE_CONFIG.url}/projects`,
   },

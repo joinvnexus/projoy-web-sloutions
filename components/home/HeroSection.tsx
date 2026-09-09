@@ -51,7 +51,7 @@ function HeroVisual() {
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
           <div className="flex-1 mx-4">
             <div className="bg-white rounded-md px-3 py-1 text-[10px] text-slate-400 border border-slate-200 text-center">
-              projoywebsolutions.com
+               localleads.com
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-slate-600 leading-relaxed mb-8 max-w-lg"
             >
-              Projoy Web Solutions builds technically strong websites, improves
+              LocalLeads builds technically strong websites, improves
               their search foundations, and helps businesses generate real leads.
             </motion.p>
 

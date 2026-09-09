@@ -5,9 +5,9 @@ import { CheckCircle, ArrowRight, Calendar, BookOpen, MessageSquare } from "luci
 import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Thank You — We've Received Your Request | Projoy Web Solutions",
+  title: "Thank You — We've Received Your Request | LocalLeads",
   description:
-    "Thank you for contacting Projoy Web Solutions. We'll review your details and respond within 24 hours.",
+    "Thank you for contacting LocalLeads. We'll review your details and respond within 24 hours.",
   robots: { index: false, follow: false },
 };
 

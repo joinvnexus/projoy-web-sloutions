@@ -1,4 +1,4 @@
-# Projoy Web Solutions Audit Report
+# LocalLeads Audit Report
 
 **Audit date:** 5 September 2026  
 **Scope:** Source tree, application configuration, API routes, forms, legal pages, README, package metadata, ignore rules, and GitHub Actions workflow.  
@@ -47,7 +47,7 @@ There is no universally best license; the correct choice depends on the business
 - **MIT:** Best for maximum adoption and minimal friction. It is permissive and simple, but gives recipients broad rights and has fewer explicit patent and notice protections than Apache-2.0.
 - **GPLv3:** Best when derivative distributed software must remain GPL and source must be provided under the copyleft terms. It is usually a poor fit for a proprietary agency starter or a client-delivery codebase. For a hosted service where network copyleft matters, AGPLv3 is the more relevant license, but it has stronger obligations.
 
-**Recommendation:** If the project is a commercial Projoy asset, use a proprietary license or clearly drafted “All Rights Reserved” terms and keep the repository private. If the intention is genuinely to build an open-source starter, choose Apache-2.0 over MIT when patent protection and preserved notices matter. Have counsel review the final terms, especially client ownership and third-party assets.
+**Recommendation:** If the project is a commercial LocalLeads asset, use a proprietary license or clearly drafted “All Rights Reserved” terms and keep the repository private. If the intention is genuinely to build an open-source starter, choose Apache-2.0 over MIT when patent protection and preserved notices matter. Have counsel review the final terms, especially client ownership and third-party assets.
 
 ### Ownership risks to resolve
 
@@ -163,7 +163,7 @@ Authenticate with GitHub CLI/browser login or Git Credential Manager; never past
 For a closed commercial project, add a reviewed proprietary license. For a real open-source release, choose Apache-2.0 or MIT deliberately and add the exact upstream license text. Then add a copyright notice such as:
 
 ```text
-Copyright (c) 2026 Projoy Web Solutions / Projoy Naidu
+Copyright (c) 2026 LocalLeads / Projoy Naidu
 All rights reserved.
 ```
 

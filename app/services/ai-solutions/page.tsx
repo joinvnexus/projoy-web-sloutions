@@ -30,7 +30,7 @@ import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 
 /* ─── Metadata ───────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "AI Solutions & Automation — Additional Capability | Projoy Web Solutions",
+  title: "AI Solutions & Automation — Additional Capability | LocalLeads",
   description:
     "Add AI chatbots, workflow automation, content workflows, and AI SaaS integrations when they support your web and SEO goals. Free consultation.",
   alternates: { canonical: "/services/ai-solutions" },

@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Projoy Web Solutions",
-  description: "Privacy policy for Projoy Web Solutions — how we collect, use and protect your data.",
+  title: "Privacy Policy | LocalLeads",
+  description: "Privacy policy for LocalLeads — how we collect, use and protect your data.",
   alternates: { canonical: "/privacy-policy" },
   robots: { index: true, follow: false },
 };

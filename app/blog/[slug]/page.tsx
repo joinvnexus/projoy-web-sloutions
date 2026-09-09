@@ -29,7 +29,7 @@ export async function generateMetadata({
   if (!post) return { title: "Post Not Found" };
 
   return {
-    title: `${post.title} | Projoy Web Solutions Blog`,
+    title: `${post.title} | LocalLeads Blog`,
     description: post.excerpt,
     alternates: { canonical: `/blog/${slug}` },
     openGraph: {
@@ -51,7 +51,7 @@ function PostBody({ post }: { post: ReturnType<typeof getPostBySlug> }) {
   if (!post?.content) {
     return (
       <p className="text-slate-600 leading-relaxed">
-        The full article is being prepared. Please check back soon or contact Projoy Web Solutions for a discussion about this topic.
+        The full article is being prepared. Please check back soon or contact LocalLeads for a discussion about this topic.
       </p>
     );
   }

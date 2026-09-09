@@ -8,7 +8,7 @@ import { createBreadcrumbSchema } from "@/lib/schemas";
 import { HeroSection }          from "@/components/home/HeroSection";
 import { SocialProofBar }       from "@/components/home/SocialProofBar";
 import { ServicesOverview }     from "@/components/home/ServicesOverview";
-import { WhyProjoy }            from "@/components/home/WhyProjoy";
+import { WhyLocalLeads }            from "@/components/home/WhyLocalLeads";
 import { FeaturedCaseStudies }  from "@/components/home/FeaturedCaseStudies";
 import { ProcessSection }       from "@/components/home/ProcessSection";
 import { PricingSection }       from "@/components/home/PricingSection";
@@ -38,7 +38,7 @@ export default function HomePage() {
       <HeroSection />
       <SocialProofBar />
       <ServicesOverview />
-      <WhyProjoy />
+      <WhyLocalLeads />
       <FeaturedCaseStudies />
       <ProcessSection />
       <PricingSection />

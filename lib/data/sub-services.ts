@@ -35,7 +35,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "Web Development",
     parentHref: "/services/web-development",
     title: "Next.js Development",
-    metaTitle: "Next.js Development Services | Projoy Web Solutions",
+    metaTitle: "Next.js Development Services | LocalLeads",
     metaDescription:
       "Custom Next.js 16 website development with performance-focused architecture, Server Components, and production-grade code.",
     heading: "Next.js Websites Built for Speed and Search Rankings",
@@ -83,7 +83,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "Web Development",
     parentHref: "/services/web-development",
     title: "SaaS Development",
-    metaTitle: "SaaS Application Development Services | Projoy Web Solutions",
+    metaTitle: "SaaS Application Development Services | LocalLeads",
     metaDescription:
       "End-to-end SaaS development with Next.js, authentication, Stripe billing, and database architecture. From validated idea to production-ready product.",
     heading: "From Idea to Production-Ready SaaS in Weeks, Not Months",
@@ -130,7 +130,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "Web Development",
     parentHref: "/services/web-development",
     title: "Landing Page Development",
-    metaTitle: "High-Converting Landing Page Development | Projoy Web Solutions",
+    metaTitle: "High-Converting Landing Page Development | LocalLeads",
     metaDescription:
       "CRO-optimized landing pages built with Next.js for ad campaigns and product launches. Fast-loading, conversion-focused, and A/B test ready.",
     heading: "Landing Pages Engineered to Convert Cold Traffic",
@@ -176,7 +176,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "Web Development",
     parentHref: "/services/web-development",
     title: "Custom Dashboard Development",
-    metaTitle: "Custom Dashboard Development Services | Projoy Web Solutions",
+    metaTitle: "Custom Dashboard Development Services | LocalLeads",
     metaDescription:
       "Internal tools, client portals, and admin panels built with React and Next.js. Real-time data, role-based access, and clean, usable interfaces.",
     heading: "Dashboards That Make Your Data Usable",
@@ -222,7 +222,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "Web Development",
     parentHref: "/services/web-development",
     title: "AI Integrations",
-    metaTitle: "AI Integration Development Services | Projoy Web Solutions",
+    metaTitle: "AI Integration Development Services | LocalLeads",
     metaDescription:
       "OpenAI, Anthropic Claude, and Gemini API integrations for your website or web application. Chatbots, automation, and intelligent features.",
     heading: "AI Features Built Into Your Website, Not Bolted On",
@@ -270,7 +270,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "Local SEO",
     parentHref: "/services/local-seo",
     title: "Google Business Profile Optimization",
-    metaTitle: "Google Business Profile Optimization Service | Projoy Web Solutions",
+    metaTitle: "Google Business Profile Optimization Service | LocalLeads",
     metaDescription:
       "Complete Google Business Profile optimization — categories, descriptions, attributes, posts, and Q&A management. Turn your GBP into a lead-generating asset.",
     heading: "Turn Your Google Business Profile Into a Lead Generator",
@@ -316,7 +316,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "Local SEO",
     parentHref: "/services/local-seo",
     title: "Google Maps Ranking",
-    metaTitle: "Google Maps Ranking Service | Projoy Web Solutions",
+    metaTitle: "Google Maps Ranking Service | LocalLeads",
     metaDescription:
       "Systematic Google Maps ranking improvement through proximity, relevance, and prominence optimization. Track your 3-pack position weekly.",
     heading: "Get Found First on Google Maps",
@@ -362,7 +362,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "Local SEO",
     parentHref: "/services/local-seo",
     title: "Citation Building",
-    metaTitle: "Local Citation Building Service | Projoy Web Solutions",
+    metaTitle: "Local Citation Building Service | LocalLeads",
     metaDescription:
       "Consistent NAP citation building across 50+ high-authority directories. Fix existing citation errors that are suppressing your local rankings.",
     heading: "Consistent Citations Across 50+ Directories",
@@ -408,7 +408,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "Local SEO",
     parentHref: "/services/local-seo",
     title: "Reputation Management",
-    metaTitle: "Online Reputation Management Service | Projoy Web Solutions",
+    metaTitle: "Online Reputation Management Service | LocalLeads",
     metaDescription:
       "Review acquisition systems and reputation monitoring across Google, Yelp, and Facebook. Build a 4.5+ star average ethically and consistently.",
     heading: "Build a Review Profile That Builds Trust and Rankings",
@@ -454,7 +454,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "Local SEO",
     parentHref: "/services/local-seo",
     title: "Geo-Tagged Image Strategy",
-    metaTitle: "Geo-Tagged Image SEO Service | Projoy Web Solutions",
+    metaTitle: "Geo-Tagged Image SEO Service | LocalLeads",
     metaDescription:
       "Geo-tagged image uploads with embedded GPS metadata for stronger local relevance signals. An underused but highly effective Google Maps ranking tactic.",
     heading: "The Underused Ranking Signal Most Agencies Skip",
@@ -502,7 +502,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "AI Solutions",
     parentHref: "/services/ai-solutions",
     title: "AI Chatbots",
-    metaTitle: "AI Chatbot Development Service | Projoy Web Solutions",
+    metaTitle: "AI Chatbot Development Service | LocalLeads",
     metaDescription:
       "Custom AI chatbots trained on your business data using GPT-4o and Claude. Qualify leads and answer questions 24/7 on your website.",
     heading: "An AI Chatbot That Actually Knows Your Business",
@@ -548,7 +548,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "AI Solutions",
     parentHref: "/services/ai-solutions",
     title: "Business Process Automation",
-    metaTitle: "Business Process Automation Service | Projoy Web Solutions",
+    metaTitle: "Business Process Automation Service | LocalLeads",
     metaDescription:
       "AI-powered workflow automation connecting your CRM, email, and calendar. Automate lead routing, follow-ups, and reporting.",
     heading: "Automate the Repetitive Work Eating Your Team's Time",
@@ -594,7 +594,7 @@ export const subServices: SubServiceData[] = [
     parentLabel: "AI Solutions",
     parentHref: "/services/ai-solutions",
     title: "AI-Powered SaaS Development",
-    metaTitle: "AI-Powered SaaS Development Service | Projoy Web Solutions",
+    metaTitle: "AI-Powered SaaS Development Service | LocalLeads",
     metaDescription:
       "Full-stack SaaS applications with AI at the core. Next.js, authentication, billing, and AI features built from idea to deployed product.",
     heading: "SaaS Products With AI at the Core, Not Bolted On",

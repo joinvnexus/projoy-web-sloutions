@@ -1,15 +1,15 @@
 // lib/constants.ts
 
 export const SITE_CONFIG = {
-  name: "Projoy Web Solutions",
+  name: "LocalLeads",
   tagline: "Built to Rank. Designed to Convert.",
   description:
-    "Projoy Web Solutions builds high-performance Next.js websites and dominates local Google rankings. Get more traffic, leads, and revenue. Free growth audit available.",
+    "LocalLeads builds high-performance Next.js websites and dominates local Google rankings. Get more traffic, leads, and revenue. Free growth audit available.",
   // Reads from env so the same code works on preview deployments (*.vercel.app)
   // and the production custom domain without any hard-coded URLs.
   // Set NEXT_PUBLIC_SITE_URL in .env.local / hosting env vars.
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://projoywebsolutions.com",
-  email: "hello.projoyweb@gmail.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://localleads.com",
+  email: "hello@localleads.com",
   phone: "+880-170-9437619", // TODO: replace
   location: "Sylhet, Bangladesh",
   // Organization-owned profiles ONLY — accounts that represent the brand,
@@ -25,7 +25,7 @@ export const SITE_CONFIG = {
   },
   openGraph: {
     image: "/og-image.png",
-    imageAlt: "Projoy Web Solutions — Built to Rank. Designed to Convert.",
+    imageAlt: "LocalLeads — Built to Rank. Designed to Convert.",
     width: 1200,
     height: 630,
   },
@@ -41,7 +41,7 @@ export const FOUNDER_CONFIG = {
   jobTitle: "Founder & Full-Stack Developer",
   slug: "projoy-naidu",
   description:
-    "Projoy Naidu is the founder of Projoy Web Solutions and a full-stack developer working across the modern JavaScript ecosystem — React, Next.js, Vue.js, and Node.js — as well as WordPress, WooCommerce, and Shopify for content- and commerce-driven sites.",
+    "Projoy Naidu is the founder of LocalLeads and a full-stack developer working across the modern JavaScript ecosystem — React, Next.js, Vue.js, and Node.js — as well as WordPress, WooCommerce, and Shopify for content- and commerce-driven sites.",
   knowsAbout: [
     "JavaScript",
     "TypeScript",

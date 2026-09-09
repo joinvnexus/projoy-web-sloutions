@@ -207,7 +207,7 @@ export const createArticleSchema = (post: {
 }) => {
   // Attribute to the Person entity only when the content is genuinely
   // founder-authored; otherwise default to the Organization as author,
-  // which matches how the existing blog data is authored ("Projoy Web
+  // which matches how the existing blog data is authored ("LocalLeads"
   // Solutions" as a brand byline) and avoids implying a specific person
   // wrote something they didn't.
   const author =

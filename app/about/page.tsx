@@ -20,12 +20,12 @@ import { createBreadcrumbSchema, createAboutPageSchema } from "@/lib/schemas";
 import { SITE_CONFIG, TRUST_STATS, FOUNDER_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About Projoy Web Solutions — Our Story & Mission",
+  title: "About LocalLeads — Our Story & Mission",
   description:
-    "Learn about Projoy Web Solutions — the agency that bridges expert Next.js development with local SEO mastery to help small businesses rank, convert, and grow.",
+    "Learn about LocalLeads — the agency that bridges expert Next.js development with local SEO mastery to help small businesses rank, convert, and grow.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Projoy Web Solutions",
+    title: "About LocalLeads",
     description: "Our story, mission, and why we do what we do.",
     url: `${SITE_CONFIG.url}/about`,
   },
@@ -71,12 +71,12 @@ const timeline = [
     description:
       "Clients kept asking 'can you help us rank on Google Maps too?' Started studying local SEO deeply and got our first GBP results — a restaurant from page 5 to the 3-pack in 90 days.",
   },
-  {
-    year: "2023",
-    title: "Formed Projoy Web Solutions",
-    description:
-      "Officially launched as a named agency with the clear positioning: web development + local SEO under one roof. The combined offering started winning larger clients.",
-  },
+    {
+      year: "2023",
+      title: "Formed LocalLeads",
+      description:
+        "Officially launched as a named agency with the clear positioning: web development + local SEO under one roof. The combined offering started winning larger clients.",
+    },
   {
     year: "2024",
     title: "Expanded to AI integrations",
@@ -129,8 +129,8 @@ export default function AboutPage() {
               <br />
               <GradientText>We Grew Into an Agency</GradientText> With a Clear Mission.
             </h1>
-            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
-              Projoy Web Solutions exists because most small businesses deserve a better digital
+              <p className="text-lg text-slate-600 leading-relaxed max-w-2xl">
+              LocalLeads exists because most small businesses deserve a better digital
               partner — one who combines technical excellence with real marketing results, and
               treats every project as if it were their own business on the line.
             </p>
@@ -164,11 +164,11 @@ export default function AboutPage() {
                 Built on the Belief That Small Businesses Deserve Big Results
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
-                <p>
-                  Projoy Web Solutions was founded with a simple frustration: small businesses were
+                 <p>
+                  LocalLeads was founded with a simple frustration: small businesses were
                   being let down by one of two options — expensive agencies who treated them as small
                   accounts, or cheap freelancers who delivered websites with no strategy behind them.
-                </p>
+                 </p>
                 <p>
                   We believed there was a better way. A boutique agency that could deliver
                   agency-quality work — technically excellent websites, real SEO results, and AI
@@ -264,7 +264,7 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-[1200px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <RevealWrapper>
-              <Eyebrow>Why Choose Projoy</Eyebrow>
+              <Eyebrow>Why Choose LocalLeads</Eyebrow>
               <h2
                 id="different-heading"
                 className="font-display font-bold text-slate-900 text-3xl lg:text-4xl leading-tight mb-5"

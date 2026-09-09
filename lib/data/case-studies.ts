@@ -140,7 +140,7 @@ export const caseStudies: CaseStudy[] = [
     timeline: "5 months",
     testimonial: {
       quote:
-        "We hired Projoy for GBP optimization and ended up retaining them for our new website too. Best decision we made. Two vendors' worth of expertise from one team.",
+        "We hired LocalLeads for GBP optimization and ended up retaining them for our new website too. Best decision we made. Two vendors' worth of expertise from one team.",
       author: "Nasrin Begum",
       role: "Director, BD Legal Associates",
     },

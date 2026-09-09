@@ -33,12 +33,12 @@ import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 
 /* ─── Metadata ───────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "Local SEO & Google Business Profile Optimization | Projoy Web Solutions",
+  title: "Local SEO & Google Business Profile Optimization | LocalLeads",
   description:
-    "Improve your Google Maps visibility with Projoy's local SEO services. GBP optimization, citation building, reputation management and geo-tagged images.",
+    "Improve your Google Maps visibility with LocalLeads' local SEO services. GBP optimization, citation building, reputation management and geo-tagged images.",
   alternates: { canonical: "/services/local-seo" },
   openGraph: {
-    title: "Local SEO & Google Business Profile Optimization | Projoy Web Solutions",
+    title: "Local SEO & Google Business Profile Optimization | LocalLeads",
     description:
       "We specialize in getting local businesses to the top of Google Maps. More visibility = more calls, visits, and revenue.",
     url: `${SITE_CONFIG.url}/services/local-seo`,

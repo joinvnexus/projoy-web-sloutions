@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     category: "Local SEO",
     categorySlug: "local-seo",
     tags: ["Google Maps", "Local SEO", "GBP", "Ranking"],
-    author: "Projoy Web Solutions",
+    author: "LocalLeads",
     featured: true,
     coverImage: "/images/services-hero/local-seo-hero.png",
     coverImageAlt: "Google Maps and local SEO illustration",
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     category: "Web Development",
     categorySlug: "web-development",
     tags: ["Next.js", "WordPress", "SEO", "Performance"],
-    author: "Projoy Web Solutions",
+    author: "LocalLeads",
     featured: true,
     coverImage: "/images/services-hero/web-dev-hero-bg.jpg",
     coverImageAlt: "Modern web development illustration",
@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
     category: "Local SEO",
     categorySlug: "local-seo",
     tags: ["GBP", "Google Business Profile", "Local SEO"],
-    author: "Projoy Web Solutions",
+    author: "LocalLeads",
     featured: true,
   },
   {
@@ -70,7 +70,7 @@ export const blogPosts: BlogPost[] = [
     category: "Web Development",
     categorySlug: "web-development",
     tags: ["Core Web Vitals", "Performance", "SEO", "Next.js"],
-    author: "Projoy Web Solutions",
+    author: "LocalLeads",
     featured: false,
   },
   {
@@ -83,7 +83,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI Solutions",
     categorySlug: "ai-solutions",
     tags: ["AI Chatbot", "Automation", "Small Business"],
-    author: "Projoy Web Solutions",
+    author: "LocalLeads",
     featured: false,
   },
   {
@@ -96,7 +96,7 @@ export const blogPosts: BlogPost[] = [
     category: "Local SEO",
     categorySlug: "local-seo",
     tags: ["Citations", "Local SEO", "NAP", "Directories"],
-    author: "Projoy Web Solutions",
+    author: "LocalLeads",
     featured: false,
   },
 ];

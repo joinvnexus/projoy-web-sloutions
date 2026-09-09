@@ -19,12 +19,12 @@ import { createBreadcrumbSchema } from "@/lib/schemas";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Projoy Web Solutions — Free Growth Audit",
+  title: "Contact LocalLeads — Free Growth Audit",
   description:
     "Get a free growth audit for your website and Google Business Profile. Book a strategy call or send us a message. We aim to reply within 24 hours.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Projoy Web Solutions",
+    title: "Contact LocalLeads",
     description: "Free growth audit. Book a call or send a message. Reply within 24 hours.",
     url: `${SITE_CONFIG.url}/contact`,
   },

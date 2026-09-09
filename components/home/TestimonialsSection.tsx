@@ -9,7 +9,7 @@ const testimonials = [
   {
     id: "t1",
     quote:
-      "Within 60 days of working with Projoy, we went from being invisible on Google Maps to showing up in the top 3 for our main keywords. The phone hasn't stopped ringing since.",
+      "Within 60 days of working with LocalLeads, we went from being invisible on Google Maps to showing up in the top 3 for our main keywords. The phone hasn't stopped ringing since.",
     author: "Rahim Chowdhury",
     role: "Owner",
     company: "RC Restaurant",
@@ -33,7 +33,7 @@ const testimonials = [
   {
     id: "t3",
     quote:
-      "We hired Projoy for GBP optimization and ended up retaining them for our new website too. Best decision we made. Two vendors' worth of expertise from one team. Communication is excellent.",
+      "We hired LocalLeads for GBP optimization and ended up retaining them for our new website too. Best decision we made. Two vendors' worth of expertise from one team. Communication is excellent.",
     author: "Nasrin Begum",
     role: "Director",
     company: "BD Legal Associates",
@@ -45,7 +45,7 @@ const testimonials = [
   {
     id: "t4",
     quote:
-      "Our old WordPress site was embarrassingly slow. Projoy rebuilt everything on Next.js and our PageSpeed score went from 42 to 97. Our bounce rate dropped by 34% in the first month.",
+      "Our old WordPress site was embarrassingly slow. LocalLeads rebuilt everything on Next.js and our PageSpeed score went from 42 to 97. Our bounce rate dropped by 34% in the first month.",
     author: "Tanvir Islam",
     role: "Marketing Manager",
     company: "EduPlatform BD",

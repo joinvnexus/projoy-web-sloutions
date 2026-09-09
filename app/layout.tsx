@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     "technical SEO services",
     "AI solutions and automation",
     "Google Maps ranking",
-    "Projoy Web Solutions",
+    "LocalLeads",
     "Bangladesh web agency",
   ],
 

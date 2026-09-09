@@ -34,12 +34,12 @@ import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 
 /* ─── Metadata ───────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "Web Development Services — Next.js, React & AI | Projoy Web Solutions",
+  title: "Web Development Services — Next.js, React & AI | LocalLeads",
   description:
     "Custom Next.js 16 web development, SaaS builds, AI integrations, and high-converting landing pages with performance-focused engineering. Free consultation available.",
   alternates: { canonical: "/services/web-development" },
   openGraph: {
-    title: "Web Development Services — Next.js, React & AI | Projoy Web Solutions",
+    title: "Web Development Services — Next.js, React & AI | LocalLeads",
     description:
       "We build performance-focused, SEO-optimized websites and web applications with Next.js 16 and React. Designed to convert, built to scale.",
     url: `${SITE_CONFIG.url}/services/web-development`,

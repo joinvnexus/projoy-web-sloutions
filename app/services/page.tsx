@@ -29,10 +29,10 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Our Services — Web Development, Local SEO & Technical SEO",
   description:
-    "Projoy Web Solutions builds technically strong websites, improves technical SEO, and grows local search visibility. AI solutions are available as an additional capability.",
+    "LocalLeads builds technically strong websites, improves technical SEO, and grows local search visibility. AI solutions are available as an additional capability.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Services — Projoy Web Solutions",
+    title: "Services — LocalLeads",
     description:
       "Custom web development, Local SEO, and Technical SEO under one roof. Explore our core services and additional AI capabilities.",
     url: `${SITE_CONFIG.url}/services`,

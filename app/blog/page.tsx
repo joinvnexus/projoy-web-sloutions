@@ -15,12 +15,12 @@ import { SITE_CONFIG } from "@/lib/constants";
 import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Blog — Local SEO & Web Development Insights | Projoy Web Solutions",
+  title: "Blog — Local SEO & Web Development Insights | LocalLeads",
   description:
     "Free guides and insights on local SEO, Google Business Profile optimization, Next.js development, Core Web Vitals, and AI integrations for growing businesses.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Blog — Projoy Web Solutions",
+    title: "Blog — LocalLeads",
     description: "Local SEO guides, Next.js tutorials, and AI insights for growing businesses.",
     url: `${SITE_CONFIG.url}/blog`,
   },

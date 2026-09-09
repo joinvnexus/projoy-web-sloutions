@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Projoy Web Solutions",
-  description: "Terms of service for Projoy Web Solutions — the terms governing use of our website and services.",
+  title: "Terms of Service | LocalLeads",
+  description: "Terms of service for LocalLeads — the terms governing use of our website and services.",
   alternates: { canonical: "/terms-of-service" },
   robots: { index: true, follow: false },
 };
@@ -16,7 +16,7 @@ const sections = [
   },
   {
     title: "Services",
-    content: `Projoy Web Solutions provides web development, local SEO, and AI integration services. The specific scope, deliverables, timeline, and pricing for each engagement are defined in a separate project proposal or service agreement provided to you before work commences.
+    content: `LocalLeads provides web development, local SEO, and AI integration services. The specific scope, deliverables, timeline, and pricing for each engagement are defined in a separate project proposal or service agreement provided to you before work commences.
 
 We reserve the right to decline any project at our sole discretion, including after initial contact or consultation.`,
   },

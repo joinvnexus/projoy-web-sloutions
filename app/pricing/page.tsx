@@ -11,12 +11,12 @@ import { pricingFaqs } from "@/lib/data/pricing";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Pricing — Web Development & Local SEO Packages | Projoy Web Solutions",
+  title: "Pricing — Web Development & Local SEO Packages | LocalLeads",
   description:
     "Transparent pricing for Next.js web development, local SEO campaigns, and AI integrations. Project-based and monthly retainer options available.",
   alternates: { canonical: "/pricing" },
   openGraph: {
-    title: "Pricing — Projoy Web Solutions",
+    title: "Pricing — LocalLeads",
     description: "Transparent, starting-from pricing for web development and local SEO services.",
     url: `${SITE_CONFIG.url}/pricing`,
   },

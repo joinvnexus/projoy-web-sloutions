@@ -59,7 +59,7 @@ export async function generateMetadata({
   if (!cs) return { title: "Case Study Not Found" };
 
   return {
-    title: `${cs.headline} | Case Study — Projoy Web Solutions`,
+    title: `${cs.headline} | Case Study — LocalLeads`,
     description: cs.description,
     alternates: { canonical: `/case-studies/${slug}` },
     openGraph: {

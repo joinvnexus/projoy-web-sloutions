@@ -14,12 +14,12 @@ import { SITE_CONFIG } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Real Results from Real Businesses | Projoy Web Solutions",
+  title: "Case Studies — Real Results from Real Businesses | LocalLeads",
   description:
-    "See how Projoy Web Solutions has helped local businesses, startups, and agencies rank higher, convert more visitors, and grow faster. Real metrics, real clients.",
+    "See how LocalLeads has helped local businesses, startups, and agencies rank higher, convert more visitors, and grow faster. Real metrics, real clients.",
   alternates: { canonical: "/case-studies" },
   openGraph: {
-    title: "Case Studies — Projoy Web Solutions",
+    title: "Case Studies — LocalLeads",
     description: "Real results from real businesses. Local SEO rankings, Next.js builds, AI integrations.",
     url: `${SITE_CONFIG.url}/case-studies`,
   },

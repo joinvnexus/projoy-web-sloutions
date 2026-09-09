@@ -1,4 +1,4 @@
-// components/home/WhyProjoy.tsx
+// components/home/WhyLocalLeads.tsx
 import { Zap, MapPin, Cpu, BarChart3 } from "lucide-react";
 import { SectionHeader } from "@/components/shared/Typography";
 import { StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
@@ -56,7 +56,7 @@ const colorMap = {
   },
 };
 
-export function WhyProjoy() {
+export function WhyLocalLeads() {
   return (
     <section
       className="section-padding bg-white"
@@ -71,7 +71,7 @@ export function WhyProjoy() {
               <br className="hidden sm:block" /> We Do Both — And Connect Them.
             </>
           }
-          subheading="A great website with no traffic is a brochure. SEO with a slow, ugly site kills conversions. Projoy gives you both sides of the equation."
+          subheading="A great website with no traffic is a brochure. SEO with a slow, ugly site kills conversions. LocalLeads gives you both sides of the equation."
           id="why-heading"
         />
 

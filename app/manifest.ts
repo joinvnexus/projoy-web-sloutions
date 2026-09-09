@@ -5,7 +5,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: SITE_CONFIG.name,
-    short_name: "Projoy",
+    short_name: "LocalLeads",
     description: SITE_CONFIG.description,
     start_url: "/",
     display: "standalone",

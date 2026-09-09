@@ -1,4 +1,4 @@
-# Projoy Web Solutions — Premium Agency Website
+# LocalLeads — Premium Agency Website
 
 A high-performance, production-ready agency website built with the latest web technologies to showcase services, case studies, and industry expertise.
 
@@ -20,7 +20,7 @@ A high-performance, production-ready agency website built with the latest web te
 
 ## License and Copyright
 
-This is proprietary, closed-source software. Copyright (c) 2026 Projoy Web Solutions / Projoy Naidu. All rights reserved. See [LICENSE](LICENSE) for the complete terms. Third-party notices are tracked in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+This is proprietary, closed-source software. Copyright (c) 2026 LocalLeads / Projoy Naidu. All rights reserved. See [LICENSE](LICENSE) for the complete terms. Third-party notices are tracked in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## 🛠️ Tech Stack
 
@@ -38,7 +38,7 @@ Copy `.env.example` to `.env.local` and replace placeholders with values from yo
 | Variable | Required | Description |
 | :--- | :---: | :--- |
 | `RESEND_API_KEY` | Yes | Server-only Resend API key used by contact and audit routes. |
-| `NEXT_PUBLIC_SITE_URL` | No | Canonical site URL; defaults to `https://projoywebsolutions.com`. |
+| `NEXT_PUBLIC_SITE_URL` | No | Canonical site URL; defaults to `https://localleads.com`. |
 | `NEXT_PUBLIC_GA_ID` | No | Google Analytics 4 measurement ID; omit to disable the loader. |
 | `NEXT_PUBLIC_CLARITY_ID` | No | Microsoft Clarity project ID; omit to disable the loader. |
 
@@ -57,7 +57,7 @@ The browser submits JSON from the contact or audit form to its Next.js API route
 
 ## Security and Disclosure
 
-Report suspected security issues privately to [hello.projoyweb@gmail.com](mailto:hello.projoyweb@gmail.com). Do not include credentials or sensitive customer data in a public issue. Rate limiting is currently in-memory and instance-local; a distributed provider should be evaluated before high-volume production use.
+Report suspected security issues privately to [hello@localleads.com](mailto:hello@localleads.com). Do not include credentials or sensitive customer data in a public issue. Rate limiting is currently in-memory and instance-local; a distributed provider should be evaluated before high-volume production use.
 
 ## CI/CD
 

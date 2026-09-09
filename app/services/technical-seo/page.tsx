@@ -26,12 +26,12 @@ import {
 import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Technical SEO Services & Search-Ready Development | Projoy Web Solutions",
+  title: "Technical SEO Services & Search-Ready Development | LocalLeads",
   description:
     "Technical SEO audits, detailed reports, approved code-level implementation, and validation for crawlability, performance, metadata, structured data, and search visibility.",
   alternates: { canonical: "/services/technical-seo" },
   openGraph: {
-    title: "Technical SEO Services | Projoy Web Solutions",
+    title: "Technical SEO Services | LocalLeads",
     description:
       "Audit your website, review the report, approve the plan, and get technical SEO improvements implemented and validated.",
     url: `${SITE_CONFIG.url}/services/technical-seo`,
@@ -192,7 +192,7 @@ export default function TechnicalSEOPage() {
 
       <section className="section-padding bg-slate-900" aria-labelledby="differentiator-heading">
         <div className="container mx-auto max-w-[900px] text-center">
-          <p className="eyebrow text-accent-400 before:from-accent-400">The Projoy Difference</p>
+          <p className="eyebrow text-accent-400 before:from-accent-400">The LocalLeads Difference</p>
           <h2 id="differentiator-heading" className="font-display font-bold text-white text-3xl lg:text-4xl leading-tight mb-5">
             We Don&apos;t Just Find SEO Problems — <span className="text-accent-400">We Can Fix Them.</span>
           </h2>
