@@ -1,5 +1,5 @@
 // components/home/ProcessSection.tsx
-import { Search, Map, Rocket, BarChart3 } from "lucide-react";
+import { Search, FileText, Target, Code2, TrendingUp } from "lucide-react";
 import { SectionHeader } from "@/components/shared/Typography";
 import { StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
 
@@ -7,134 +7,91 @@ const steps = [
   {
     number: "01",
     icon: Search,
-    phase: "Discovery & Audit",
-    timeline: "Week 1",
+    phase: "Discover",
+    timeline: "Step 1",
     description:
-      "Free growth audit of your website, Google presence, and competitor landscape. We map your opportunities before we quote — no guesswork.",
-    deliverable: "Growth Opportunity Report",
+      "We learn about your business, goals, competitors, and current online presence. This shapes everything that follows.",
+    deliverable: "Business & Market Understanding",
   },
   {
     number: "02",
-    icon: Map,
-    phase: "Strategy & Roadmap",
-    timeline: "Week 1–2",
+    icon: FileText,
+    phase: "Audit",
+    timeline: "Step 2",
     description:
-      "A clear plan: what we'll build, what we'll optimize, what we'll track, and in what order — with realistic timelines you can hold us to.",
-    deliverable: "Strategic Roadmap Document",
+      "We audit your website for technical SEO issues, review your local search presence, and identify the highest-impact opportunities.",
+    deliverable: "Technical + Local SEO Audit",
   },
   {
     number: "03",
-    icon: Rocket,
-    phase: "Build & Launch",
-    timeline: "Week 2–6",
+    icon: Target,
+    phase: "Strategize",
+    timeline: "Step 3",
     description:
-      "Development, SEO implementation, and GBP optimization executed in parallel so you go live faster and start ranking sooner.",
-    deliverable: "Live Website + SEO Setup",
+      "You receive a clear, prioritized plan — what we'll fix, what we'll build, what it will cost, and what results to expect.",
+    deliverable: "Prioritized Growth Plan",
   },
   {
     number: "04",
-    icon: BarChart3,
-    phase: "Grow & Report",
-    timeline: "Ongoing",
+    icon: Code2,
+    phase: "Implement",
+    timeline: "Step 4",
     description:
-      "Monthly ranking reports, conversion tracking, A/B testing, and continuous optimization. Your results compound over time.",
-    deliverable: "Monthly Growth Report",
+      "We execute the approved plan — building or improving your website, fixing technical SEO, and optimizing your local presence.",
+    deliverable: "Website + SEO Implementation",
+  },
+  {
+    number: "05",
+    icon: TrendingUp,
+    phase: "Grow",
+    timeline: "Step 5",
+    description:
+      "We monitor rankings, traffic, and leads. Monthly reporting and continuous optimization keep your results compounding.",
+    deliverable: "Ongoing Growth & Reporting",
   },
 ] as const;
 
 export function ProcessSection() {
   return (
     <section
-      className="section-padding bg-gradient-subtle"
+      className="section-padding bg-white"
       aria-labelledby="process-heading"
     >
       <div className="container mx-auto max-w-[1200px]">
         <SectionHeader
-          eyebrow="How It Works"
-          heading="From Discovery to Domination in 4 Stages"
-          subheading="A transparent, proven process so you always know what's happening, what's coming next, and why."
+          eyebrow="Our Process"
+          heading="Discover. Audit. Strategize. Implement. Grow."
+          subheading="A clear, repeatable process that connects your website, technical foundation, and local search into one growth system."
           id="process-heading"
         />
 
-        {/* Single responsive grid */}
         <div className="relative">
-          {/* Connecting line - desktop only */}
-          <div
-            className="hidden lg:block absolute top-[2.125rem] left-[calc(12.5%+1.5rem)] right-[calc(12.5%+1.5rem)] h-px"
-            style={{
-              background: "linear-gradient(to right, #2563EB, #0EA5E9, #2563EB)",
-            }}
-            aria-hidden="true"
-          />
-
-          <StaggerContainer className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6 bg-red font-display">
-            {steps.map((step, idx) => {
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5">
+            {steps.map((step) => {
               const Icon = step.icon;
-              const isLast = idx === steps.length - 1;
               return (
                 <StaggerItem key={step.number}>
-                  <div className="relative">
-                    {/* Mobile: vertical connector */}
-                    {!isLast && (
-                      <div
-                        className="lg:hidden absolute left-[1.375rem] top-[3.5rem] bottom-[-1rem] w-px bg-gradient-to-b from-brand-300 to-transparent"
-                        aria-hidden="true"
-                      />
-                    )}
-
-                    {/* Mobile layout: flex with icon on left */}
-                    <div className="lg:hidden flex gap-4">
-                      <div className="w-11 h-11 rounded-full bg-brand-600 p-0.5 flex items-center justify-center flex-shrink-0 shadow-sm z-10">
-                        <Icon className="w-5 h-5 text-white" strokeWidth={1.75} />
-                      </div>
-                      <div className="card p-5 flex-1">
-                        <div className="flex items-center gap-2 mb-2 flex-wrap">
-                          <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                            Step {step.number}
-                          </span>
-                          <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-brand-50 border border-brand-100 text-xs font-semibold text-brand-700">
-                            {step.timeline}
-                            
-                          </span>
-                        </div>
-                        <h3 className="font-display font-bold text-slate-900 text-lg mb-2">
-                          {step.phase}
-                        </h3>
-                        <p className="text-slate-600 text-sm leading-relaxed mb-3">
-                          {step.description}
-                        </p>
-                        <div className="inline-flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-success" />
-                          <span className="text-xs font-medium text-slate-500">
-                            {step.deliverable}
-                          </span>
-                        </div>
-                      </div>
+                  <div className="card p-6 flex flex-col items-center text-center h-full">
+                    <div className="relative z-10 w-11 h-11 rounded-full bg-brand-600 flex items-center justify-center mb-4 shadow-sm flex-shrink-0">
+                      <Icon className="w-5 h-5 text-white" strokeWidth={1.75} />
                     </div>
-
-                    {/* Desktop layout: center-aligned vertical */}
-                    <div className="hidden lg:flex lg:flex-col lg:items-center lg:text-center pt-2 ">
-                      <div className="relative z-10 w-11 h-11 rounded-full bg-brand-500 flex items-center justify-center mb-5 shadow-glow-accent flex-shrink-0">
-                        <Icon className="w-5 h-5 text-white" strokeWidth={1.75} />
-                      </div>
-                      <span className="text-2xs font-bold uppercase tracking-widest text-slate-400 mb-1">
-                        Step {step.number}
+                    <span className="text-2xs font-bold uppercase tracking-widest text-slate-400 mb-1">
+                      Step {step.number}
+                    </span>
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-brand-50 border border-brand-100 text-xs font-semibold text-brand-700 mb-3">
+                      {step.timeline}
+                    </span>
+                    <h3 className="font-display font-bold text-slate-900 text-lg mb-2 leading-snug">
+                      {step.phase}
+                    </h3>
+                    <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-1">
+                      {step.description}
+                    </p>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" />
+                      <span className="text-xs font-medium text-slate-600">
+                        {step.deliverable}
                       </span>
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-brand-50 border border-brand-100 text-xs font-semibold text-brand-700 mb-3">
-                        {step.timeline}
-                      </span>
-                      <h3 className="font-display font-bold text-slate-900 text-lg mb-2 leading-snug">
-                        {step.phase}
-                      </h3>
-                      <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                        {step.description}
-                      </p>
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" />
-                        <span className="text-xs font-medium text-slate-600">
-                          {step.deliverable}
-                        </span>
-                      </div>
                     </div>
                   </div>
                 </StaggerItem>
@@ -143,7 +100,6 @@ export function ProcessSection() {
           </StaggerContainer>
         </div>
 
-        {/* CTA below process */}
         <div className="text-center mt-12">
           <a
             href="/contact#audit"

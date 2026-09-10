@@ -63,7 +63,7 @@ const timeline = [
     year: "2021",
     title: "Started as a freelancer",
     description:
-      "Built the first few websites as a solo developer — Next.js sites for local businesses in Sylhet — publishing early work under the name VueNexus. Realized that ranking on Google was just as important as looking good.",
+      "Built the first few websites as a solo developer — Next.js sites for local businesses — and realized that ranking on Google was just as important as looking good.",
   },
   {
     year: "2022",
@@ -79,16 +79,16 @@ const timeline = [
     },
   {
     year: "2024",
-    title: "Expanded to AI integrations",
+    title: "Expanded to Technical SEO",
     description:
-      "With the rise of AI, clients started asking for chatbots, automation, and AI-powered features. Added AI solutions as an additional capability alongside our three core services.",
+      "Clients needed more than just local rankings — their websites had technical barriers holding them back. Added technical SEO as a formal service to cover crawlability, performance, and structured data.",
   },
 ];
 
 const differentiators = [
-  "We're the only local agency offering Next.js development AND local SEO under one roof",
+  "We combine web development, technical SEO, and local SEO under one roof",
   "We build with performance and Core Web Vitals in mind from the start",
-  "Every engagement includes full Google Analytics 4 + Search Console setup",
+  "Every engagement includes Google Analytics 4 and Search Console setup",
   "We use 100% white-hat methods — no shortcuts that risk your rankings",
   "You own everything: code, GBP, content, data. No lock-in ever",
   "We communicate in plain English, not agency jargon",
@@ -171,8 +171,7 @@ export default function AboutPage() {
                  </p>
                 <p>
                   We believed there was a better way. A boutique agency that could deliver
-                  agency-quality work — technically excellent websites, real SEO results, and AI
-                  integrations that actually work — but with the care and communication of a true
+                  agency-quality work — technically excellent websites, real SEO results — but with the care and communication of a true
                   business partner.
                 </p>
                 <p>

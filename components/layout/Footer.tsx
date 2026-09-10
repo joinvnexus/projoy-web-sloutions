@@ -57,7 +57,7 @@ export function Footer() {
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <div className="max-w-xl">
               <p className="text-xs font-semibold uppercase tracking-widest text-brand-400 mb-2">
-                Free Growth Audit
+                Free SEO Audit
               </p>
               <h2 className="text-2xl lg:text-3xl font-bold text-white leading-tight font-display mb-3">
                 Ready to rank higher and convert more?
@@ -80,7 +80,7 @@ export function Footer() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white font-medium text-sm transition-colors duration-200"
               >
-                Book a Call
+                Contact Us
               </Link>
             </div>
           </div>
@@ -109,8 +109,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-slate-400 leading-relaxed mb-6 max-w-xs">
-              {SITE_CONFIG.tagline}. We build websites that rank on Google and
-              grow local businesses.
+              {SITE_CONFIG.tagline}. Local SEO, Technical SEO & Web Development for businesses that want to get found and generate more leads.
             </p>
 
             {/* Trust badge */}

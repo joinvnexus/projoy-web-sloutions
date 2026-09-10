@@ -113,7 +113,7 @@ export function TestimonialsSection() {
         {/* Google Reviews link */}
         <RevealWrapper className="text-center mt-10">
           <Link
-            href="https://g.page/projoywebsolutions"
+            href="/contact"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700 transition-colors"

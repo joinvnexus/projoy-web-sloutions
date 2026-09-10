@@ -11,7 +11,7 @@ export interface CaseStudy {
   title: string;
   client: string;
   location: string;
-  service: "local-seo" | "web-development" | "ai-solutions";
+  service: "local-seo" | "web-development";
   serviceLabel: string;
   headline: string;
   description: string;
@@ -147,27 +147,27 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "eduplatform-nextjs-rebuild",
-    title: "WordPress to Next.js Migration Cuts Bounce Rate by 34%",
+    title: "E-Learning Platform Rebuild Reduces Bounce Rate by 34%",
     client: "EduPlatform BD",
     location: "Dhaka, Bangladesh",
     service: "web-development",
-    serviceLabel: "Next.js Development",
-    headline: "WordPress to Next.js: Bounce Rate Down 34%, Leads Up 61%",
+    serviceLabel: "Web Development",
+    headline: "Faster Platform, Better Engagement, More Inquiries",
     description:
-      "An e-learning company's slow WordPress site was costing them students. We rebuilt the platform on Next.js and transformed their business metrics.",
+      "An e-learning company needed a faster, more modern platform. We rebuilt the website on Next.js and improved key engagement metrics.",
     challenge:
-      "EduPlatform BD's WordPress site scored 42 on PageSpeed and was losing students to faster competitors. Their average page load was 6.2 seconds on mobile — well above the 3-second threshold where bounce rates spike dramatically.",
+      "EduPlatform BD's existing site had performance and user experience issues that were affecting student engagement. The average page load was above the comfort threshold for many users.",
     strategy:
-      "We migrated the entire site from WordPress to Next.js 15 with static generation for course pages, ISR for blog content, and server-side rendering for the student dashboard. All 400+ blog posts were migrated with full SEO signal preservation (301 redirects, meta, schema).",
+      "We rebuilt the platform on Next.js with static generation for course pages, ISR for blog content, and server-side rendering for the student dashboard. SEO signals were preserved through the transition.",
     result:
-      "PageSpeed jumped from 42 to 97. Average load time dropped to 1.1 seconds on mobile. Bounce rate fell 34% and the improved UX led to a 61% increase in course enrollment inquiries.",
+      "PageSpeed improved substantially. Average load time dropped and the improved user experience led to a meaningful reduction in bounce rate and an increase in course inquiries.",
     metrics: [
-      { value: "42→97", label: "PageSpeed Score", positive: true },
+      { value: "Improved", label: "PageSpeed Score", positive: true },
       { value: "-34%", label: "Bounce Rate", positive: true },
-      { value: "+61%", label: "Enrollment Leads", positive: true },
-      { value: "1.1s", label: "Mobile Load Time", positive: true },
+      { value: "+61%", label: "Inquiry Volume", positive: true },
+      { value: "Faster", label: "Mobile Load Time", positive: true },
     ],
-    tags: ["Next.js", "WordPress Migration", "Performance", "Education"],
+    tags: ["Next.js", "Performance", "Education"],
     publishedAt: "2024-07-20",
     featured: false,
     timeline: "6 weeks",

@@ -16,7 +16,7 @@ const sections = [
   },
   {
     title: "Services",
-    content: `LocalLeads provides web development, local SEO, and AI integration services. The specific scope, deliverables, timeline, and pricing for each engagement are defined in a separate project proposal or service agreement provided to you before work commences.
+    content: `LocalLeads provides web development, local SEO, and technical SEO services. The specific scope, deliverables, timeline, and pricing for each engagement are defined in a separate project proposal or service agreement provided to you before work commences.
 
 We reserve the right to decline any project at our sole discretion, including after initial contact or consultation.`,
   },
@@ -42,9 +42,7 @@ Upon your request, we are happy to sign a mutual NDA before beginning any projec
   },
   {
     title: "Warranties and Limitation of Liability",
-    content: `We warrant that our services will be performed with reasonable skill and care. We guarantee a minimum PageSpeed score of 90/100 on Google PageSpeed Insights (desktop) for all web development projects, unless technical constraints outside our control prevent this.
-
-We do not guarantee specific search engine rankings, advertising results, or revenue outcomes, as these depend on factors outside our direct control. Our total liability for any claim arising from our services is limited to the total fees paid for the specific service giving rise to the claim.`,
+    content: `We warrant that our services will be performed with reasonable skill and care. We do not guarantee specific search engine rankings, advertising results, or revenue outcomes, as these depend on factors outside our direct control. Our total liability for any claim arising from our services is limited to the total fees paid for the specific service giving rise to the claim.`,
   },
   {
     title: "Termination",

@@ -2,88 +2,64 @@
 
 export const SITE_CONFIG = {
   name: "LocalLeads",
-  tagline: "Built to Rank. Designed to Convert.",
+  tagline: "Get Found. Get Ranked. Get More Leads.",
   description:
-    "LocalLeads builds high-performance Next.js websites and dominates local Google rankings. Get more traffic, leads, and revenue. Free growth audit available.",
-  // Reads from env so the same code works on preview deployments (*.vercel.app)
-  // and the production custom domain without any hard-coded URLs.
-  // Set NEXT_PUBLIC_SITE_URL in .env.local / hosting env vars.
+    "LocalLeads helps businesses improve local search visibility, fix technical SEO issues, and build high-performing websites designed to generate more leads.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://localleads.com",
   email: "hello@localleads.com",
-  phone: "+880-170-9437619", // TODO: replace
-  location: "Sylhet, Bangladesh",
-  // Organization-owned profiles ONLY — accounts that represent the brand,
-  // not the founder personally. Keep Person-owned profiles in FOUNDER_CONFIG
-  // below so Organization and Person sameAs never mix entities.
+  phone: "+1-XXX-XXX-XXXX",
+  location: "Remote — Serving clients worldwide",
   social: {
-    twitter: "https://x.com/projoywebsol",
-    facebook: "https://www.facebook.com/projoywebsolution/",
-    // TODO: replace with a real LinkedIn COMPANY PAGE (linkedin.com/company/...)
-    // once created — see the Entity SEO plan. The URL below is a personal-
-    // profile-style URL and should not represent the organization long-term.
-    linkedin: "https://www.linkedin.com/in/projoywebsolutions/",
+    twitter: "",
+    facebook: "",
+    linkedin: "",
   },
   openGraph: {
     image: "/og-image.png",
-    imageAlt: "LocalLeads — Built to Rank. Designed to Convert.",
+    imageAlt: "LocalLeads — Get Found. Get Ranked. Get More Leads.",
     width: 1200,
     height: 630,
   },
 } as const;
 
-/* ─── Founder / Person entity ───────────────────────────────
-   Kept separate from SITE_CONFIG so Person schema never accidentally
-   inherits organization-only data (or vice versa). Only real, currently-
-   controlled profiles belong in `sameAs` — see remaining manual actions
-   in the Entity SEO plan for the canonical-LinkedIn decision still pending. */
+/* ─── Founder / Person entity ─────────────────────────────── */
 export const FOUNDER_CONFIG = {
   name: "Projoy Naidu",
   jobTitle: "Founder & Full-Stack Developer",
   slug: "projoy-naidu",
   description:
-    "Projoy Naidu is the founder of LocalLeads and a full-stack developer working across the modern JavaScript ecosystem — React, Next.js, Vue.js, and Node.js — as well as WordPress, WooCommerce, and Shopify for content- and commerce-driven sites.",
+    "Projoy Naidu is the founder of LocalLeads and a full-stack developer specializing in modern JavaScript, Next.js, React, Node.js, and TypeScript.",
   knowsAbout: [
     "JavaScript",
     "TypeScript",
     "React",
     "Next.js",
     "Node.js",
-    "Express.js",
     "Tailwind CSS",
     "PostgreSQL",
-    "MongoDB",
-
   ],
-  // Personal profiles only. TODO: this LinkedIn URL is one of two personal
-  // profiles currently in use — pick a single canonical one (see plan) and
-  // update this value before relying on it in production.
   sameAs: {
-    linkedin: "https://bd.linkedin.com/in/projoynaidu",
-    github: "https://github.com/joinvnexus",
-    portfolio: "https://projoynaidu.vercel.app/",
+    linkedin: "",
+    github: "",
+    portfolio: "",
   },
 } as const;
+
 export const IMAGE_ASSETS = {
   services: {
     webDevelopment: "/images/services-hero/web-dev-hero-bg.jpg",
     localSeo: "/images/services-hero/local-seo-hero.png",
     technicalSeo: "/images/services-hero/web-dev-hero-bg.jpg",
-    aiSolutions: "/images/services-hero/ai-solutions-hero.png",
   },
 } as const;
+
+
 
 export const NAV_LINKS = [
   {
     label: "Services",
     href: "/services",
     children: [
-      {
-        label: "Custom Web Development",
-        href: "/services/web-development",
-        description: "Fast, scalable websites and web applications",
-        icon: "code",
-        group: "core",
-      },
       {
         label: "Local SEO",
         href: "/services/local-seo",
@@ -99,22 +75,22 @@ export const NAV_LINKS = [
         group: "core",
       },
       {
-        label: "AI Solutions & Automation",
-        href: "/services/ai-solutions",
-        description: "Additional capability: chatbots and integrations",
-        icon: "cpu",
-        group: "additional",
+        label: "Web Development",
+        href: "/services/web-development",
+        description: "Fast, scalable websites and web applications",
+        icon: "code",
+        group: "core",
       },
     ],
   },
   {
-    label: "Case Studies",
-    href: "/case-studies",
+    label: "Industries",
+    href: "/industries",
     children: null,
   },
   {
-    label: "Projects",
-    href: "/projects",
+    label: "Case Studies",
+    href: "/case-studies",
     children: null,
   },
   {
@@ -136,60 +112,54 @@ export const NAV_LINKS = [
 
 export const FOOTER_LINKS = {
   services: [
-    { label: "Web Development", href: "/services/web-development" },
-    { label: "Next.js Development", href: "/services/web-development/nextjs-development" },
-    { label: "SaaS Development", href: "/services/web-development/saas-development" },
-    { label: "Landing Pages", href: "/services/web-development/landing-pages" },
-    { label: "Custom Dashboards", href: "/services/web-development/custom-dashboards" },
-    { label: "AI Integrations", href: "/services/web-development/ai-integrations" },
     { label: "Local SEO", href: "/services/local-seo" },
-    { label: "Google Business Profile", href: "/services/local-seo/google-business-profile" },
-    { label: "Google Maps Ranking", href: "/services/local-seo/google-maps-ranking" },
-    { label: "Citation Building", href: "/services/local-seo/citation-building" },
-    { label: "Reputation Management", href: "/services/local-seo/reputation-management" },
-    { label: "Geo-Tagged Images", href: "/services/local-seo/geo-tagged-images" },
     { label: "Technical SEO", href: "/services/technical-seo" },
-    { label: "AI Solutions & Automation", href: "/services/ai-solutions" },
+    { label: "Web Development", href: "/services/web-development" },
   ],
   company: [
-    { label: "About Us", href: "/about" },
+    { label: "About", href: "/about" },
     { label: "Case Studies", href: "/case-studies" },
-    { label: "Projects", href: "/projects" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "Industries", href: "/industries" },
     { label: "Blog", href: "/blog" },
+    { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
+  ],
+  resources: [
+    { label: "Free SEO Audit", href: "/free-seo-audit" },
+    { label: "SEO Guides", href: "/blog" },
+    { label: "Local SEO Resources", href: "/services/local-seo" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Terms & Conditions", href: "/terms" },
   ],
 } as const;
 
 export const TRUST_STATS = [
-  { value: "Custom", label: "Web Development" },
   { value: "Local", label: "SEO Focus" },
   { value: "Technical", label: "SEO Foundation" },
+  { value: "Web", label: "Development" },
   { value: "Global", label: "Client Delivery" },
 ] as const;
 
 export const SERVICES_OVERVIEW = [
   {
     id: "web-development",
-    title: "Custom Web Development",
+    title: "Web Development",
     description:
       "Fast, scalable, modern web experiences built around your business goals.",
     href: "/services/web-development",
-    features: ["Next.js", "React", "TypeScript", "SaaS Builds", "Custom Functionality"],
+    features: ["Performance-First", "SEO-Ready", "Custom Build", "Responsive"],
     icon: "code-2",
     accent: "brand",
   },
   {
     id: "local-seo",
-    title: "Local SEO & Google Business",
+    title: "Local SEO",
     description:
-      "Get your business to the top of Google Maps and local search. More visibility means more calls, more foot traffic, and more revenue.",
+      "Improve local visibility and Google Maps presence for qualified local customers.",
     href: "/services/local-seo",
-    features: ["GBP Optimization", "Google Maps Ranking", "Citations", "Reputation Mgmt."],
+    features: ["GBP Optimization", "Maps Ranking", "Citations", "Reputation"],
     icon: "map-pin",
     accent: "accent",
   },
@@ -197,9 +167,9 @@ export const SERVICES_OVERVIEW = [
     id: "technical-seo",
     title: "Technical SEO",
     description:
-      "Audit, report, implement, and validate the technical improvements that make your website easier to crawl, index, and find.",
+      "Identify and fix technical barriers affecting crawling, indexing, and search visibility.",
     href: "/services/technical-seo",
-    features: ["Technical Audits", "Crawlability", "Structured Data", "Core Web Vitals", "Code-Level Fixes"],
+    features: ["Technical Audits", "Crawlability", "Performance", "Structured Data"],
     icon: "search",
     accent: "brand",
   },

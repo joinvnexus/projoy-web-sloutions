@@ -13,7 +13,6 @@ const filterOptions = [
   { label: "All Results", value: "all" },
   { label: "Local SEO", value: "local-seo" },
   { label: "Web Development", value: "web-development" },
-  { label: "AI Solutions", value: "ai-solutions" },
 ] as const;
 
 // serviceIcon removed (unused)
@@ -21,13 +20,11 @@ const filterOptions = [
 const serviceGradient: Record<string, string> = {
   "local-seo": "from-accent-500 to-brand-600",
   "web-development": "from-brand-600 to-accent-500",
-  "ai-solutions": "from-brand-700 to-accent-500",
 };
 
 const tagVariantMap: Record<string, "brand" | "accent" | "slate"> = {
   "local-seo": "accent",
   "web-development": "brand",
-  "ai-solutions": "brand",
 };
 
 interface CaseStudyFilterBarProps {

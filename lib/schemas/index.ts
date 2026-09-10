@@ -17,28 +17,19 @@ export const organizationSchema = {
   url: SITE_CONFIG.url,
   logo: {
     "@type": "ImageObject",
-    url: `${SITE_CONFIG.url}/Logo-projoywebsloutions.png`,
-    width: 240,
-    height: 60,
+    url: `${SITE_CONFIG.url}/icon-512.png`,
+    width: 512,
+    height: 512,
   },
   description: SITE_CONFIG.description,
   foundingDate: "2023",
   email: SITE_CONFIG.email,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Sylhet",
-    addressRegion: "Sylhet Division",
-    addressCountry: "BD",
-  },
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
     email: SITE_CONFIG.email,
     availableLanguage: ["English"],
   },
-  founder: { "@id": PERSON_ID },
-  // Organization-owned profiles only — see lib/constants.ts SITE_CONFIG.social.
-  sameAs: Object.values(SITE_CONFIG.social),
 };
 
 export const personSchema = {
@@ -51,9 +42,9 @@ export const personSchema = {
   description: FOUNDER_CONFIG.description,
   worksFor: { "@id": ORGANIZATION_ID },
   knowsAbout: [...FOUNDER_CONFIG.knowsAbout],
-  // Personal profiles only — see lib/constants.ts FOUNDER_CONFIG.sameAs.
   sameAs: Object.values(FOUNDER_CONFIG.sameAs),
 };
+
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
@@ -64,14 +55,8 @@ export const localBusinessSchema = {
   email: SITE_CONFIG.email,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Sylhet",
-    addressRegion: "Sylhet Division",
-    addressCountry: "BD",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 24.8949,
-    longitude: 91.8687,
+    addressLocality: "Remote",
+    addressCountry: "US",
   },
   priceRange: "$$",
   openingHoursSpecification: [
@@ -91,7 +76,7 @@ export const webDevServiceSchema = {
   provider: { "@id": ORGANIZATION_ID },
   serviceType: "Web Development",
   description:
-    "Custom Next.js 16 and React web development services including SaaS, landing pages, dashboards, and AI integrations.",
+    "Custom web development services including business websites, e-commerce, landing pages, and custom web applications.",
   url: `${SITE_CONFIG.url}/services/web-development`,
   areaServed: "Worldwide",
 };
@@ -99,11 +84,11 @@ export const webDevServiceSchema = {
 export const localSeoServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Local SEO & Google Business Profile Optimization",
+  name: "Local SEO",
   provider: { "@id": ORGANIZATION_ID },
   serviceType: "Search Engine Optimization",
   description:
-    "Local SEO and Google Business Profile optimization services to help businesses rank in the Google 3-pack and dominate local search.",
+    "Local SEO services to help businesses rank in local search, improve Google Maps visibility, and generate more leads.",
   url: `${SITE_CONFIG.url}/services/local-seo`,
   areaServed: "Worldwide",
 };
@@ -115,20 +100,8 @@ export const technicalSeoServiceSchema = {
   provider: { "@id": ORGANIZATION_ID },
   serviceType: "Technical Search Engine Optimization",
   description:
-    "Technical SEO audits, detailed reporting, approved code-level implementation, and validation for crawlability, indexability, performance, metadata, and structured data.",
+    "Technical SEO audits, reporting, implementation, and validation for crawlability, indexability, performance, metadata, and structured data.",
   url: `${SITE_CONFIG.url}/services/technical-seo`,
-  areaServed: "Worldwide",
-};
-
-export const aiSolutionsServiceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "AI Solutions & Automation",
-  provider: { "@id": ORGANIZATION_ID },
-  serviceType: "AI Automation",
-  description:
-    "Additional AI capability including chatbots, workflow automation, and AI integrations that support web and SEO goals.",
-  url: `${SITE_CONFIG.url}/services/ai-solutions`,
   areaServed: "Worldwide",
 };
 
@@ -169,6 +142,7 @@ export const createProfilePageSchema = (url: string) => ({
   mainEntity: { "@id": PERSON_ID },
   isPartOf: { "@id": WEBSITE_ID },
 });
+
 export const createFaqSchema = (faqs: { q: string; a: string }[]) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -200,25 +174,10 @@ export const createArticleSchema = (post: {
   description: string;
   publishedAt: string;
   dateModified?: string;
-  /** Full relative path, e.g. "blog/my-post" or "case-studies/my-client" — NOT prefixed with "blog/" here. */
   slug: string;
   author?: string;
   schemaType?: "BlogPosting" | "Article";
 }) => {
-  // Attribute to the Person entity only when the content is genuinely
-  // founder-authored; otherwise default to the Organization as author,
-  // which matches how the existing blog data is authored ("LocalLeads"
-  // Solutions" as a brand byline) and avoids implying a specific person
-  // wrote something they didn't.
-  const author =
-    post.author === FOUNDER_CONFIG.name
-      ? { "@id": PERSON_ID }
-      : { "@id": ORGANIZATION_ID };
-
-  // NOTE: previously this hardcoded a "/blog/" prefix while callers already
-  // passed the full path (e.g. "blog/foo" or "case-studies/bar"), producing
-  // malformed URLs like ".../blog/case-studies/bar/". Fixed to use the
-  // caller-supplied path as-is.
   const url = `${SITE_CONFIG.url}/${post.slug}`;
 
   return {
@@ -230,7 +189,7 @@ export const createArticleSchema = (post: {
     dateModified: post.dateModified ?? post.publishedAt,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     url,
-    author,
+    author: { "@id": ORGANIZATION_ID },
     publisher: { "@id": ORGANIZATION_ID },
   };
 };

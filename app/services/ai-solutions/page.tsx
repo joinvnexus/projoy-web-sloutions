@@ -346,8 +346,8 @@ export default function AISolutionsPage() {
             <GradientText>Reduce Costs</GradientText> &amp; Grow Revenue
           </>
         }
-        backgroundImage={IMAGE_ASSETS.services.aiSolutions}
-        backgroundImageAlt="AI solutions dashboard and automation illustration"
+        backgroundImage={IMAGE_ASSETS.services.webDevelopment}
+        backgroundImageAlt="Web development and AI integrations illustration"
         imagePriority
         subheading="We integrate AI into your website and business workflows — chatbots, automation, content generation, and smart lead capture — so your business scales without linearly adding headcount."
         primaryCTA={{ label: "Explore AI for My Business", href: "/contact#audit" }}

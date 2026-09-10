@@ -73,8 +73,9 @@ const nextConfig: NextConfig = {
   /* ── Redirects ── */
   async redirects() {
     return [
-      // Enforce trailing slash consistency
-      // Example: redirect old portfolio URLs to new agency URLs
+      { source: "/services/ai-solutions", destination: "/services", permanent: true },
+      { source: "/projects", destination: "/case-studies", permanent: true },
+      { source: "/terms-of-service", destination: "/terms", permanent: true },
     ];
   },
 

@@ -5,30 +5,30 @@ import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
 import { createBreadcrumbSchema } from "@/lib/schemas";
 
 // Homepage sections
-import { HeroSection }          from "@/components/home/HeroSection";
-import { SocialProofBar }       from "@/components/home/SocialProofBar";
-import { ServicesOverview }     from "@/components/home/ServicesOverview";
-import { WhyLocalLeads }            from "@/components/home/WhyLocalLeads";
-import { FeaturedCaseStudies }  from "@/components/home/FeaturedCaseStudies";
-import { ProcessSection }       from "@/components/home/ProcessSection";
-import { PricingSection }       from "@/components/home/PricingSection";
-import { TestimonialsSection }  from "@/components/home/TestimonialsSection";
-import { FinalCTA }             from "@/components/home/FinalCTA";
+import { HeroSection } from "@/components/home/HeroSection";
+import { ProblemSection } from "@/components/home/ProblemSection";
+import { ServicesOverview } from "@/components/home/ServicesOverview";
+import { WhyLocalLeads } from "@/components/home/WhyLocalLeads";
+import { ProcessSection } from "@/components/home/ProcessSection";
+import { IndustriesSection } from "@/components/home/IndustriesSection";
+import { FeaturedCaseStudies } from "@/components/home/FeaturedCaseStudies";
+import { PricingSection } from "@/components/home/PricingSection";
+import { FinalCTA } from "@/components/home/FinalCTA";
 
-/* ─── Page Metadata ─────────────────────────────────────── */
+/* ─── Page Metadata ───────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO`,
+  title: `${SITE_CONFIG.name} — Get Found. Get Ranked. Get More Leads.`,
   description: SITE_CONFIG.description,
   alternates: { canonical: "/" },
   openGraph: {
-    title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO`,
+    title: `${SITE_CONFIG.name} — Get Found. Get Ranked. Get More Leads.`,
     description: SITE_CONFIG.description,
     url: SITE_CONFIG.url,
     type: "website",
   },
 };
 
-/* ─── Page Component ────────────────────────────────────── */
+/* ─── Page Component ─────────────────────────────────────── */
 export default function HomePage() {
   const breadcrumb = createBreadcrumbSchema([{ name: "Home", href: "/" }]);
 
@@ -36,13 +36,13 @@ export default function HomePage() {
     <>
       <SchemaMarkup schema={breadcrumb} />
       <HeroSection />
-      <SocialProofBar />
+      <ProblemSection />
       <ServicesOverview />
       <WhyLocalLeads />
-      <FeaturedCaseStudies />
       <ProcessSection />
+      <IndustriesSection />
+      <FeaturedCaseStudies />
       <PricingSection />
-      <TestimonialsSection />
       <FinalCTA />
     </>
   );

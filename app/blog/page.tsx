@@ -17,11 +17,11 @@ import { formatDate } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Blog — Local SEO & Web Development Insights | LocalLeads",
   description:
-    "Free guides and insights on local SEO, Google Business Profile optimization, Next.js development, Core Web Vitals, and AI integrations for growing businesses.",
+    "Free guides and insights on local SEO, Google Business Profile optimization, Next.js development, Core Web Vitals, and technical SEO for growing businesses.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Blog — LocalLeads",
-    description: "Local SEO guides, Next.js tutorials, and AI insights for growing businesses.",
+    description: "Local SEO guides, Next.js tutorials, and technical SEO insights for growing businesses.",
     url: `${SITE_CONFIG.url}/blog`,
   },
 };
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const categoryTagMap: Record<string, "brand" | "accent" | "slate"> = {
   "Local SEO": "accent",
   "Web Development": "brand",
-  "AI Solutions": "brand",
+  "Technical SEO": "brand",
 };
 
 const featured = blogPosts.filter((p) => p.featured);

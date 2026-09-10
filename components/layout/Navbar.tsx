@@ -4,16 +4,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  Code2,
-  MapPin,
-  Cpu,
-  Menu,
-  X,
-  ChevronDown,
-  ArrowRight,
-  Search,
-} from "lucide-react";
+import { Code2, MapPin, Search, Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -22,7 +13,6 @@ const iconMap: Record<string, React.ElementType> = {
   code: Code2,
   "map-pin": MapPin,
   search: Search,
-  cpu: Cpu,
 };
 
 /* ─── Navbar ─────────────────────────────────────────────── */
@@ -191,11 +181,6 @@ export function Navbar() {
                               const isActive = pathname.startsWith(child.href);
                               return (
                                   <div key={child.href}>
-                                    {child.group === "additional" && (
-                                      <p className="px-4 pt-3 pb-1 text-[0.65rem] font-semibold uppercase tracking-widest text-slate-400">
-                                        Additional Capability
-                                      </p>
-                                    )}
                                     <Link
                                   href={child.href}
                                   className={cn(
@@ -286,7 +271,7 @@ export function Navbar() {
                   "transition-all duration-200"
                 )}
               >
-                Free Growth Audit
+                Free SEO Audit
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -381,11 +366,6 @@ export function Navbar() {
                         const Icon = iconMap[child.icon] ?? Code2;
                         return (
                           <div key={child.href}>
-                            {child.group === "additional" && (
-                              <p className="px-3 pt-3 pb-1 text-[0.65rem] font-semibold uppercase tracking-widest text-slate-400">
-                                Additional Capability
-                              </p>
-                            )}
                             <Link
                             href={child.href}
                             className={cn(
@@ -432,7 +412,7 @@ export function Navbar() {
                 "transition-colors duration-200"
               )}
             >
-              Get Free Growth Audit
+              Free SEO Audit
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link

@@ -8,7 +8,6 @@ import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
 import {
   organizationSchema,
   personSchema,
-  localBusinessSchema,
   websiteSchema,
 } from "@/lib/schemas";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -58,12 +57,10 @@ export const metadata: Metadata = {
     "local SEO agency",
     "Google Business Profile optimization",
     "React development",
-    "SaaS development",
     "technical SEO services",
-    "AI solutions and automation",
     "Google Maps ranking",
     "LocalLeads",
-    "Bangladesh web agency",
+    "local search marketing",
   ],
 
   authors: [{ name: SITE_CONFIG.name, url: SITE_CONFIG.url }],
@@ -77,9 +74,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
-    title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO Agency`,
-    description:
-      "We build technically strong websites, improve technical SEO, and grow local search visibility. AI solutions are available when useful.",
+    title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO`,
+    description: SITE_CONFIG.description,
     images: [
       {
         url: SITE_CONFIG.openGraph.image,
@@ -93,11 +89,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    site: "@projoywebsol",
-    creator: "@projoywebsol",
-    title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO Agency`,
+    title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO`,
     description:
-      "Next.js Web Development + Local SEO. We build websites that rank and grow businesses.",
+      "Local SEO, Technical SEO, and Web Development for businesses that want to get found and generate more leads.",
     images: [SITE_CONFIG.openGraph.image],
   },
 
@@ -188,7 +182,6 @@ export default function RootLayout({
           schema={[
             organizationSchema,
             personSchema,
-            localBusinessSchema,
             websiteSchema,
           ]}
         />

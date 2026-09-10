@@ -1,41 +1,41 @@
 // components/home/WhyLocalLeads.tsx
-import { Zap, MapPin, Cpu, BarChart3 } from "lucide-react";
+import { MapPin, Search, Code2, BarChart3 } from "lucide-react";
 import { SectionHeader } from "@/components/shared/Typography";
 import { StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
 import { cn } from "@/lib/utils";
 
 const differentiators = [
   {
-    icon: Zap,
-    color: "brand",
-    title: "Speed is non-negotiable",
-    body: "We build with Next.js and focus on performance, Core Web Vitals, and conversion-ready foundations.",
-    stat: "Fast",
-    statLabel: "Built for performance",
-  },
-  {
     icon: MapPin,
     color: "accent",
-    title: "Local SEO is our superpower",
-    body: "We work on Google Business Profile optimization, Maps visibility, citations, reputation, and local search strategy.",
-    stat: "GBP",
-    statLabel: "Local search focus",
+    title: "Local SEO is our focus",
+    body: "We work on Google Business Profile optimization, Maps visibility, citations, reputation, and local search strategy — the signals that drive local growth.",
+    stat: "Local",
+    statLabel: "Search focus",
   },
   {
-    icon: Cpu,
+    icon: Search,
     color: "brand",
-    title: "AI-powered where it matters",
-    body: "We integrate AI into your website — chatbots, automation, smart lead capture — so your business scales without adding headcount.",
-    stat: "24/7",
-    statLabel: "AI Lead Capture",
+    title: "Technical SEO foundation",
+    body: "We audit crawlability, indexability, performance, metadata, and structured data — then implement the approved fixes so your site is search-ready.",
+    stat: "Technical",
+    statLabel: "SEO foundation",
+  },
+  {
+    icon: Code2,
+    color: "brand",
+    title: "Websites built for growth",
+    body: "We build fast, conversion-focused websites on modern stacks. Every pixel and every millisecond is engineered for performance and SEO from day one.",
+    stat: "Web",
+    statLabel: "Development",
   },
   {
     icon: BarChart3,
     color: "accent",
-    title: "Dashboards, not PDF reports",
-    body: "Real-time visibility into rankings, traffic, and leads. You'll always know exactly what your investment is doing — in plain English.",
+    title: "Strategy first, data-driven",
+    body: "Every engagement starts with a clear plan — audit, priorities, timeline, and measurable outcomes. You always know what we're doing and why.",
     stat: "Clear",
-    statLabel: "Reporting and insights",
+    statLabel: "Process and reporting",
   },
 ] as const;
 
@@ -67,11 +67,11 @@ export function WhyLocalLeads() {
           eyebrow="Why Choose Us"
           heading={
             <>
-              Most Agencies Do One Thing.
-              <br className="hidden sm:block" /> We Do Both — And Connect Them.
+              We don&apos;t just optimize websites.
+              <br className="hidden sm:block" /> We optimize for business growth.
             </>
           }
-          subheading="A great website with no traffic is a brochure. SEO with a slow, ugly site kills conversions. LocalLeads gives you both sides of the equation."
+          subheading="A great website with no traffic is a brochure. SEO with a slow site kills conversions. LocalLeads connects website, technical foundation, and local search into one growth system."
           id="why-heading"
         />
 
@@ -89,7 +89,6 @@ export function WhyLocalLeads() {
                   )}
                 >
                   <div className="flex items-start gap-5">
-                    {/* Icon */}
                     <div
                       className={cn(
                         "w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0",
@@ -112,7 +111,6 @@ export function WhyLocalLeads() {
                     </div>
                   </div>
 
-                  {/* Stat badge */}
                   <div className="absolute top-5 right-5">
                     <div className="text-right">
                       <div

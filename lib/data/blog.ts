@@ -36,16 +36,14 @@ export const blogPosts: BlogPost[] = [
     slug: "nextjs-vs-wordpress-for-seo",
     title: "Next.js vs WordPress for SEO: What the Data Actually Shows",
     excerpt:
-      "WordPress powers 43% of the web, but Next.js is winning the performance race. Here's a data-driven comparison of what each platform actually delivers for SEO in 2025.",
+      "WordPress powers a large share of the web, but Next.js is winning the performance race. Here's a comparison of what each platform actually delivers for SEO.",
     publishedAt: "2024-10-28",
     readingTime: 7,
     category: "Web Development",
     categorySlug: "web-development",
-    tags: ["Next.js", "WordPress", "SEO", "Performance"],
+    tags: ["Next.js", "Performance", "SEO"],
     author: "LocalLeads",
-    featured: true,
-    coverImage: "/images/services-hero/web-dev-hero-bg.jpg",
-    coverImageAlt: "Modern web development illustration",
+    featured: false,
   },
   {
     slug: "google-business-profile-optimization-guide",
@@ -74,19 +72,6 @@ export const blogPosts: BlogPost[] = [
     featured: false,
   },
   {
-    slug: "ai-chatbot-for-small-business",
-    title: "Should Your Small Business Use an AI Chatbot? An Honest Assessment",
-    excerpt:
-      "AI chatbots aren't right for every business. Here's an honest breakdown of when they deliver ROI, when they don't, and what a realistic implementation looks like.",
-    publishedAt: "2024-09-02",
-    readingTime: 8,
-    category: "AI Solutions",
-    categorySlug: "ai-solutions",
-    tags: ["AI Chatbot", "Automation", "Small Business"],
-    author: "LocalLeads",
-    featured: false,
-  },
-  {
     slug: "local-citation-building-guide",
     title: "Local Citation Building: The 50 Directories That Actually Move the Needle",
     excerpt:
@@ -105,7 +90,7 @@ export const blogCategories = [
   { label: "All Posts", slug: "all" },
   { label: "Local SEO", slug: "local-seo" },
   { label: "Web Development", slug: "web-development" },
-  { label: "AI Solutions", slug: "ai-solutions" },
+  { label: "Technical SEO", slug: "technical-seo" },
 ];
 
 export function getFeaturedPosts(): BlogPost[] {

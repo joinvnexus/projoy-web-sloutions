@@ -42,7 +42,7 @@ const contactMethods = [
     icon: MessageSquare,
     label: "WhatsApp",
     value: "Chat on WhatsApp",
-    href: "https://wa.me/8801709437619?text=Hi,%20I%20want%20to%20get%20a%20Free%20Growth%20Audit%20for%20my%20local%20business%20and%20Google%20Maps%20ranking.%20Can%20we%20discuss%3F",
+    href: "https://wa.me/1XXXXXXXXXX?text=Hi,%20I%20want%20to%20get%20a%20Free%20SEO%20Audit%20for%20my%20business.%20Can%20we%20discuss%3F",
     detail: "Fastest response channel",
   },
   {
@@ -237,7 +237,7 @@ export default function ContactPage() {
                 ))}
               </ul>
               <a
-                href="https://calendly.com/projoynaidu-work/30min"
+                href="https://calendly.com/localleads/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-sm hover:shadow-md hover:-translate-y-px transition-all duration-200"

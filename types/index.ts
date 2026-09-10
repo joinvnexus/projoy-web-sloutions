@@ -114,5 +114,5 @@ export interface PricingTier {
   highlighted?: boolean;
 }
 
-export type ServiceType = "web-development" | "local-seo" | "ai-solutions";
+export type ServiceType = "web-development" | "local-seo" | "technical-seo";
 export type AccentColor = "brand" | "accent";

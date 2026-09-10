@@ -20,10 +20,9 @@ export function SubServiceTemplate({ data }: { data: SubServiceData }) {
       : "from-accent-500 to-brand-600";
 
   // Choose a fallback hero image per parent service when a specific one isn't provided
-  const parentHeroMap: Record<SubServiceData['parentSlug'], string> = {
+  const parentHeroMap: Record<string, string> = {
     "web-development": IMAGE_ASSETS.services.webDevelopment,
     "local-seo": IMAGE_ASSETS.services.localSeo,
-    "ai-solutions": IMAGE_ASSETS.services.aiSolutions,
   };
 
   const heroSrc = data.heroImage ?? parentHeroMap[data.parentSlug];
