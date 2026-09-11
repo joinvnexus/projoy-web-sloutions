@@ -17,7 +17,7 @@ export const organizationSchema = {
   url: SITE_CONFIG.url,
   logo: {
     "@type": "ImageObject",
-    url: `${SITE_CONFIG.url}/Logo-projoywebsloutions.png`,
+    url: `${SITE_CONFIG.url}/logo-localleads.png`,
     width: 240,
     height: 60,
   },

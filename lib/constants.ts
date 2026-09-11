@@ -16,12 +16,13 @@ export const SITE_CONFIG = {
   // not the founder personally. Keep Person-owned profiles in FOUNDER_CONFIG
   // below so Organization and Person sameAs never mix entities.
   social: {
-    twitter: "https://x.com/projoywebsol",
-    facebook: "https://www.facebook.com/projoywebsolution/",
+    // TODO: replace with LocalLeads Twitter/X handle once available
+    twitter: "// TODO: add LocalLeads Twitter/X handle",
+    // TODO: replace with LocalLeads Facebook page URL once available
+    facebook: "// TODO: add LocalLeads Facebook page URL",
     // TODO: replace with a real LinkedIn COMPANY PAGE (linkedin.com/company/...)
-    // once created — see the Entity SEO plan. The URL below is a personal-
-    // profile-style URL and should not represent the organization long-term.
-    linkedin: "https://www.linkedin.com/in/projoywebsolutions/",
+    // once created — see the Entity SEO plan.
+    linkedin: "// TODO: add LocalLeads LinkedIn company page URL",
   },
   openGraph: {
     image: "/og-image.png",
@@ -58,9 +59,12 @@ export const FOUNDER_CONFIG = {
   // profiles currently in use — pick a single canonical one (see plan) and
   // update this value before relying on it in production.
   sameAs: {
-    linkedin: "https://bd.linkedin.com/in/projoynaidu",
-    github: "https://github.com/joinvnexus",
-    portfolio: "https://projoynaidu.vercel.app/",
+    // TODO: add LocalLeads founder personal LinkedIn URL once confirmed
+    linkedin: "// TODO: add LocalLeads founder LinkedIn URL",
+    // TODO: add LocalLeads GitHub organization URL once available
+    github: "// TODO: add LocalLeads GitHub organization URL",
+    // TODO: add LocalLeads portfolio URL or remove if not needed
+    portfolio: "// TODO: add LocalLeads portfolio URL or remove",
   },
 } as const;
 export const IMAGE_ASSETS = {

@@ -63,7 +63,7 @@ const timeline = [
     year: "2021",
     title: "Started as a freelancer",
     description:
-      "Built the first few websites as a solo developer — Next.js sites for local businesses in Sylhet — publishing early work under the name VueNexus. Realized that ranking on Google was just as important as looking good.",
+      "Built the first few websites as a solo developer — Next.js sites for local businesses in Sylhet. Realized that ranking on Google was just as important as looking good.",
   },
   {
     year: "2022",

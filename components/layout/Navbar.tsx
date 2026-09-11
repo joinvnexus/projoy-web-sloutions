@@ -143,7 +143,7 @@ export function Navbar() {
             >
               <div className="w-8 h-8 rounded-lg bg-gradient-brand flex items-center justify-center shadow-sm">
                 {/* <Zap className="w-4 h-4 text-white" strokeWidth={2.5} /> */}
-                <img className="w-8 h-8" src="/Logo-projoywebsloutions.png" alt="LocalLeads" />
+                <img className="w-8 h-8" src="/logo-localleads.png" alt="LocalLeads" />
               </div>
               <span className="font-display font-bold text-slate-900 text-[0.9375rem] leading-tight">
                 LocalLeads
@@ -351,7 +351,7 @@ export function Navbar() {
               onClick={() => setMobileOpen(false)}
             >
 <div className="w-7 h-7 rounded-lg bg-gradient-brand flex items-center justify-center">
-                <img className="w-7 h-7" src="/Logo-projoywebsloutions.png" alt="LocalLeads" />
+                <img className="w-7 h-7" src="/logo-localleads.png" alt="LocalLeads" />
                </div>
                <span className="font-display font-bold text-slate-900 text-sm">
                  LocalLeads

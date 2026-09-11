@@ -93,8 +93,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    site: "@projoywebsol",
-    creator: "@projoywebsol",
+    site: "// TODO: add LocalLeads Twitter/X handle",
+    creator: "// TODO: add LocalLeads Twitter/X handle",
     title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO Agency`,
     description:
       "Next.js Web Development + Local SEO. We build websites that rank and grow businesses.",

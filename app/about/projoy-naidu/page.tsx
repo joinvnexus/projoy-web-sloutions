@@ -134,8 +134,8 @@ export default function FounderPage() {
                 </p>
                 <p>
                   Before {SITE_CONFIG.name} was formed as an agency, this work was published
-                  under an earlier name, VueNexus. VueNexus is a previous brand — it is not a
-                  current, separate company.
+                  under an earlier brand. That earlier brand is not a current, separate
+                  company.
                 </p>
               </div>
             </RevealWrapper>
