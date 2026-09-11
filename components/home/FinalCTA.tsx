@@ -34,7 +34,7 @@ export function FinalCTA() {
             {/* Eyebrow */}
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-400 mb-4">
               <span className="w-8 h-px bg-gradient-to-r from-brand-400 to-transparent" />
-              Free Growth Audit
+              Free SEO Audit
               <span className="w-8 h-px bg-gradient-to-l from-brand-400 to-transparent" />
             </span>
 
@@ -44,17 +44,17 @@ export function FinalCTA() {
               className="font-display font-extrabold text-white leading-tight tracking-tight mb-5"
               style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
             >
-              Ready to Get More Traffic, More Leads,{" "}
+              Ready to Get Found, Ranked,{" "}
               <span
                 className="bg-gradient-to-r from-brand-400 to-accent-400 bg-clip-text text-transparent"
               >
-                More Revenue?
+                and Grow?
               </span>
             </h2>
 
             {/* Subheadline */}
             <p className="text-lg text-slate-400 leading-relaxed mb-8">
-              Start with a free, no-obligation Growth Audit. We&apos;ll analyze
+              Start with a free, no-obligation SEO audit. We&apos;ll analyze
               your website and Google presence and show you exactly what&apos;s
               holding back your growth.
             </p>
@@ -65,7 +65,7 @@ export function FinalCTA() {
                 href="/contact#audit"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-base shadow-glow-accent hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 animate-pulse-ring"
               >
-                Book Your Free Growth Audit
+                Get Your Free SEO Audit
                 <ArrowRight className="w-5 h-5" />
               </Link>
 

@@ -22,11 +22,10 @@ export function ServicesOverview() {
           eyebrow="What We Do"
           heading={
             <>
-              Build. Optimize. Get Found.
-              <br className="hidden sm:block" /> One Growth Partner.
+              Build. Optimize. Rank.
             </>
           }
-          subheading="We build technically strong websites, optimize them for search, and improve the foundations that turn visibility into qualified leads."
+          subheading="Three core services connected into one growth system: a fast, conversion-ready website, a solid technical foundation, and local search visibility that drives qualified leads."
           id="services-heading"
         />
 
@@ -51,7 +50,7 @@ export function ServicesOverview() {
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-brand-600 mb-1">Additional Capability</p>
             <h3 className="font-display font-bold text-slate-900 text-lg">AI Solutions &amp; Automation</h3>
-            <p className="text-sm text-slate-600 mt-1">Add intelligent automation, AI assistants, and custom integrations when they support your growth goals.</p>
+            <p className="text-sm text-slate-600 mt-1">Add intelligent automation, AI assistants, and custom integrations when they support your core web and SEO goals.</p>
           </div>
           <a href="/services/ai-solutions" className="text-sm font-semibold text-brand-600 hover:text-brand-700 whitespace-nowrap">Explore AI Solutions &rarr;</a>
         </div>

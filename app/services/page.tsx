@@ -27,14 +27,14 @@ import { cn } from "@/lib/utils";
 
 /* ─── Metadata ───────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "Our Services — Web Development, Local SEO & Technical SEO",
+  title: "Our Services — Local SEO, Technical SEO & Web Development",
   description:
-    "LocalLeads builds technically strong websites, improves technical SEO, and grows local search visibility. AI solutions are available as an additional capability.",
+    "LocalLeads connects three core services: web development, technical SEO, and local SEO. One system to get found, rank higher, and generate more leads.",
   alternates: { canonical: "/services" },
   openGraph: {
     title: "Services — LocalLeads",
     description:
-      "Custom web development, Local SEO, and Technical SEO under one roof. Explore our core services and additional AI capabilities.",
+      "Custom web development, Local SEO, and Technical SEO under one roof. Explore our core services.",
     url: `${SITE_CONFIG.url}/services`,
   },
 };
@@ -170,17 +170,17 @@ export default function ServicesPage() {
             className="font-display font-extrabold text-slate-900 leading-tight tracking-tight mb-5"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
           >
-              Three Core Services.{" "}
-            <GradientText>One Growth Partner.</GradientText>
+            Get Found. Get Ranked.{" "}
+            <GradientText>Get More Leads.</GradientText>
           </h1>
           <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto mb-8">
-            We build technically strong websites, improve their search foundations, and help businesses become more visible in local search.
+            Three connected services: a fast, conversion-ready website, a solid technical foundation, and local search visibility that drives qualified leads.
           </p>
           <Link
             href="/contact#audit"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-base shadow-sm hover:shadow-md hover:-translate-y-px transition-all duration-200"
           >
-            Get a Free Strategy Call
+            Get a Free SEO Audit
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

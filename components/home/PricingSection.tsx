@@ -17,7 +17,7 @@ export function PricingSection({ showFullFeatures = false }: PricingSectionProps
         <SectionHeader
           eyebrow="Investment"
           heading="Transparent Pricing. No Surprises."
-          subheading="We offer project-based and monthly retainer options. Most clients start with one service and expand to both within 6 months."
+          subheading="We offer project-based and monthly retainer options. Most clients start with one service and expand as their results grow."
           id="pricing-heading"
         />
 

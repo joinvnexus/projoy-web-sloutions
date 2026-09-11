@@ -5,7 +5,6 @@ import {
   Zap,
   Smartphone,
   Search,
-  Bot,
   Lock,
   BarChart3,
   Code2,
@@ -34,14 +33,14 @@ import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 
 /* ─── Metadata ───────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "Web Development Services — Next.js, React & AI | LocalLeads",
+  title: "Web Development Services — Next.js, React & Custom Builds | LocalLeads",
   description:
-    "Custom Next.js 16 web development, SaaS builds, AI integrations, and high-converting landing pages with performance-focused engineering. Free consultation available.",
+    "Custom web development, SaaS builds, landing pages, and web applications built for performance, conversion, and search visibility.",
   alternates: { canonical: "/services/web-development" },
   openGraph: {
-    title: "Web Development Services — Next.js, React & AI | LocalLeads",
+    title: "Web Development Services — Next.js, React & Custom Builds | LocalLeads",
     description:
-      "We build performance-focused, SEO-optimized websites and web applications with Next.js 16 and React. Designed to convert, built to scale.",
+      "We build performance-focused, SEO-ready websites and web applications with Next.js and React. Designed to convert, built to scale.",
     url: `${SITE_CONFIG.url}/services/web-development`,
   },
 };
@@ -70,13 +69,6 @@ const benefits = [
     highlight: "Schema + meta included",
   },
   {
-    icon: <Bot strokeWidth={1.75} />,
-    title: "AI-Powered Features",
-    description:
-      "We integrate OpenAI, Anthropic Claude, and custom AI into your site — chatbots that qualify leads, content workflows, smart forms, and intelligent automation.",
-    highlight: "GPT-4 & Claude APIs",
-  },
-  {
     icon: <Lock strokeWidth={1.75} />,
     title: "Secure & Production-Grade",
     description:
@@ -90,6 +82,13 @@ const benefits = [
       "GA4, Google Tag Manager, Search Console, Hotjar or Microsoft Clarity — all configured. You'll know exactly which pages convert, which don't, and why.",
     highlight: "Full analytics stack setup",
   },
+  {
+    icon: <Code2 strokeWidth={1.75} />,
+    title: "Custom Business Logic",
+    description:
+      "From SaaS workflows to internal dashboards, we build the custom functionality your business needs — not just a template with your logo on it.",
+    highlight: "Built for your workflow",
+  },
 ];
 
 const subServices = [
@@ -97,15 +96,15 @@ const subServices = [
     icon: <Globe strokeWidth={1.75} />,
     title: "Next.js Website Development",
     description:
-      "Full custom websites built on Next.js 16 with a performance-focused architecture. Ideal for businesses who need a marketing presence that ranks and converts.",
-    tags: ["Next.js 16", "TypeScript", "Tailwind CSS"],
+      "Full custom websites built on Next.js with a performance-focused architecture. Ideal for businesses who need a marketing presence that ranks and converts.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     href: "/services/web-development/nextjs-development",
   },
   {
     icon: <Layers strokeWidth={1.75} />,
     title: "SaaS Application Development",
     description:
-      "End-to-end SaaS builds — auth, dashboard, subscription billing (Stripe), API integrations. From validated idea to production-ready product in weeks.",
+      "End-to-end SaaS builds — auth, dashboard, subscription billing, API integrations. From validated idea to production-ready product in weeks.",
     tags: ["Auth", "Stripe", "Prisma", "API"],
     href: "/services/web-development/saas-development",
   },
@@ -113,7 +112,7 @@ const subServices = [
     icon: <Rocket strokeWidth={1.75} />,
     title: "High-Converting Landing Pages",
     description:
-      "CRO-optimized landing pages for ad campaigns, product launches, and lead generation — built to turn cold traffic into warm leads. Every element is A/B tested.",
+      "CRO-optimized landing pages for ad campaigns, product launches, and lead generation — built to turn cold traffic into warm leads.",
     tags: ["CRO", "A/B Testing", "Lead Gen"],
     href: "/services/web-development/landing-pages",
   },
@@ -126,19 +125,11 @@ const subServices = [
     href: "/services/web-development/custom-dashboards",
   },
   {
-    icon: <Bot strokeWidth={1.75} />,
-    title: "AI Integrations",
-    description:
-      "OpenAI GPT-4, Anthropic Claude, and Gemini API integrations into your existing or new website — chatbots, content generation, smart lead capture, and AI automation.",
-    tags: ["OpenAI", "Claude API", "Langchain"],
-    href: "/services/web-development/ai-integrations",
-  },
-  {
     icon: <FileCode2 strokeWidth={1.75} />,
     title: "Website Redesign & Migration",
     description:
-      "Transform your slow WordPress or legacy site into a blazing-fast Next.js application. We handle the full migration — content, SEO signals, redirects, and performance.",
-    tags: ["Migration", "WordPress", "Performance"],
+      "Transform your slow or legacy site into a blazing-fast modern application. We handle the full migration — content, SEO signals, redirects, and performance.",
+    tags: ["Migration", "Performance", "SEO"],
     href: "/services/web-development",
   },
 ];
@@ -203,28 +194,27 @@ const processPhases = [
 ];
 
 const deliverables = [
-  "Complete Next.js 16 source code (GitHub repo, you own it 100%)",
+  "Complete source code (GitHub repo, you own it 100%)",
   "Figma design files for all screens",
   "Component documentation",
   "Vercel deployment with custom domain setup",
   "GA4 + Google Search Console configuration",
-  "Core Web Vitals report (90+ score guarantee)",
+  "Core Web Vitals report (90+ score target)",
   "SEO meta, JSON-LD schema, Open Graph setup",
   "30-day post-launch support window",
 ];
 
 const techStack = [
-  { category: "Frontend", items: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS"] },
+  { category: "Frontend", items: ["Next.js", "React", "TypeScript", "Tailwind CSS"] },
   { category: "Backend", items: ["Node.js", "Prisma ORM", "PostgreSQL", "REST / tRPC"] },
   { category: "Auth", items: ["NextAuth.js", "Clerk", "JWT", "OAuth 2.0"] },
   { category: "Payments", items: ["Stripe", "Webhooks", "Subscriptions"] },
-  { category: "AI", items: ["OpenAI API", "Anthropic Claude", "LangChain", "Vercel AI SDK"] },
   { category: "Deploy", items: ["Vercel", "AWS", "Railway", "GitHub CI/CD"] },
 ];
 
 const faqs = [
   {
-    q: "How long does a Next.js website take to build?",
+    q: "How long does a website take to build?",
     a: "A standard marketing website takes 3–5 weeks from kick-off to launch. A SaaS MVP typically takes 6–10 weeks depending on feature scope and integration complexity. We always provide a detailed timeline before starting.",
   },
   {
@@ -252,7 +242,7 @@ const faqs = [
     a: "We test against Core Web Vitals (LCP, CLS, INP), identify bottlenecks, and make performance-focused recommendations based on the project scope, content, and integrations.",
   },
   {
-    q: "What's the typical investment for a Next.js website?",
+    q: "What's the typical investment for a website?",
     a: "Project pricing depends on scope and complexity. A marketing website typically starts in the $1,500–$3,500 range. SaaS MVPs start at $4,000+. Book a free call and we'll provide a detailed, itemized quote — no vague estimates.",
   },
 ];
@@ -313,7 +303,7 @@ export default function WebDevelopmentPage() {
         backgroundImage={IMAGE_ASSETS.services.webDevelopment}
         backgroundImageAlt="Custom web development hero image"
         imagePriority
-        subheading="We build performance-focused, SEO-optimized websites and web applications using Next.js 16, React, and TypeScript. Every pixel and every millisecond is engineered for one goal: your growth."
+        subheading="We build performance-focused, SEO-ready websites and web applications using Next.js and React. Every pixel and every millisecond is engineered for one goal: your growth."
         primaryCTA={{ label: "Get a Free Development Audit", href: "/contact#audit" }}
         secondaryCTA={{ label: "View Our Projects", href: "/projects" }}
         trustPoints={[

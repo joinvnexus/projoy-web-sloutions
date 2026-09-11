@@ -1,41 +1,41 @@
 // components/home/WhyLocalLeads.tsx
-import { Zap, MapPin, Cpu, BarChart3 } from "lucide-react";
+import { Search, MapPin, TrendingUp, ShieldCheck } from "lucide-react";
 import { SectionHeader } from "@/components/shared/Typography";
 import { StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
 import { cn } from "@/lib/utils";
 
 const differentiators = [
   {
-    icon: Zap,
+    icon: Search,
     color: "brand",
-    title: "Speed is non-negotiable",
-    body: "We build with Next.js and focus on performance, Core Web Vitals, and conversion-ready foundations.",
-    stat: "Fast",
-    statLabel: "Built for performance",
+    title: "Strategy before execution",
+    body: "We start with audit data, competitor analysis, and a clear roadmap. No guesswork, no wasted spend on tactics that don't move the needle.",
+    stat: "Audit",
+    statLabel: "First step always",
   },
   {
     icon: MapPin,
     color: "accent",
-    title: "Local SEO is our superpower",
-    body: "We work on Google Business Profile optimization, Maps visibility, citations, reputation, and local search strategy.",
-    stat: "GBP",
-    statLabel: "Local search focus",
+    title: "Technical and local expertise combined",
+    body: "Most agencies specialize in either development or SEO. We deliver both under one roof, so your website is built right and optimized from day one.",
+    stat: "Dual",
+    statLabel: "Web + Local focus",
   },
   {
-    icon: Cpu,
+    icon: TrendingUp,
     color: "brand",
-    title: "AI-powered where it matters",
-    body: "We integrate AI into your website — chatbots, automation, smart lead capture — so your business scales without adding headcount.",
-    stat: "24/7",
-    statLabel: "AI Lead Capture",
+    title: "Built for business growth",
+    body: "Every decision is tied to a business outcome — more calls, more traffic, more conversions. We report in plain numbers, not vanity metrics.",
+    stat: "Growth",
+    statLabel: "Business outcomes",
   },
   {
-    icon: BarChart3,
+    icon: ShieldCheck,
     color: "accent",
-    title: "Dashboards, not PDF reports",
-    body: "Real-time visibility into rankings, traffic, and leads. You'll always know exactly what your investment is doing — in plain English.",
+    title: "Transparent and accountable",
+    body: "Clear scopes, itemized quotes, and documented progress. You always know what we're doing, why, and what impact it's having.",
     stat: "Clear",
-    statLabel: "Reporting and insights",
+    statLabel: "No black boxes",
   },
 ] as const;
 
@@ -68,10 +68,10 @@ export function WhyLocalLeads() {
           heading={
             <>
               Most Agencies Do One Thing.
-              <br className="hidden sm:block" /> We Do Both — And Connect Them.
+              <br className="hidden sm:block" /> We Connect All Three.
             </>
           }
-          subheading="A great website with no traffic is a brochure. SEO with a slow, ugly site kills conversions. LocalLeads gives you both sides of the equation."
+          subheading="A great website with no traffic is a brochure. SEO with a slow, weak site wastes budget. LocalLeads connects web development, technical SEO, and local search into one accountable system."
           id="why-heading"
         />
 

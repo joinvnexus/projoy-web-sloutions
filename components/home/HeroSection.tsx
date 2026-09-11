@@ -7,10 +7,10 @@ import { ButtonLink } from "@/components/shared/Button";
 import { GradientText } from "@/components/shared/Typography";
 
 const trustPoints = [
-  "Custom websites and web applications",
-  "Local SEO and Google Business Profile work",
-  "Technical SEO and search-ready implementation",
-  "AI integrations and business automation when useful",
+  "Improve website quality and performance",
+  "Strengthen technical SEO foundations",
+  "Increase local search visibility",
+  "Drive more qualified leads",
 ] as const;
 
 /* ─── Animated gradient orbs (CSS-only, no canvas) ──────── */
@@ -148,19 +148,19 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
             >
-              <span className="eyebrow">Web Development, Local SEO &amp; Technical SEO</span>
+              <span className="eyebrow">LOCAL SEO • TECHNICAL SEO • WEB DEVELOPMENT</span>
             </motion.div>
 
             {/* H1 */}
-            <motion.h1
+              <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               className="font-display font-extrabold text-slate-900 leading-[1.08] tracking-tight mb-5"
               style={{ fontSize: "clamp(2.25rem, 5vw, 3.75rem)" }}
             >
-              We Build Websites That{" "}
-              <GradientText>Rank on Google</GradientText> &amp; Grow Your Business
+              Get Found. Get Ranked.{" "}
+              <GradientText>Get More Leads.</GradientText>
             </motion.h1>
 
             {/* Subheadline */}
@@ -170,8 +170,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-slate-600 leading-relaxed mb-8 max-w-lg"
             >
-              LocalLeads builds technically strong websites, improves
-              their search foundations, and helps businesses generate real leads.
+              LocalLeads helps businesses improve website quality, technical SEO, local search visibility, Google Maps presence, and lead generation.
             </motion.p>
 
             {/* CTAs */}
@@ -187,16 +186,16 @@ export function HeroSection() {
                 pulse
                 className="font-bold"
               >
-                Get Your Free Growth Audit
+                Get a Free SEO Audit
                 <ArrowRight className="w-5 h-5" />
               </ButtonLink>
 
               <ButtonLink
-                href="/case-studies"
+                href="/services"
                 variant="secondary"
                 size="xl"
               >
-                See Our Work
+                Explore Our Services
               </ButtonLink>
             </motion.div>
 

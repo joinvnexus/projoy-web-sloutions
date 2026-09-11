@@ -1,5 +1,5 @@
 // components/home/ProcessSection.tsx
-import { Search, Map, Rocket, BarChart3 } from "lucide-react";
+import { Search, FileText, Map, Rocket, BarChart3 } from "lucide-react";
 import { SectionHeader } from "@/components/shared/Typography";
 import { StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
 
@@ -7,37 +7,46 @@ const steps = [
   {
     number: "01",
     icon: Search,
-    phase: "Discovery & Audit",
+    phase: "Discover",
     timeline: "Week 1",
     description:
-      "Free growth audit of your website, Google presence, and competitor landscape. We map your opportunities before we quote — no guesswork.",
+      "We review your website, Google presence, and competitors. You get a clear picture of what's working, what's missing, and where the fastest wins are.",
     deliverable: "Growth Opportunity Report",
   },
   {
     number: "02",
-    icon: Map,
-    phase: "Strategy & Roadmap",
+    icon: FileText,
+    phase: "Audit",
     timeline: "Week 1–2",
     description:
-      "A clear plan: what we'll build, what we'll optimize, what we'll track, and in what order — with realistic timelines you can hold us to.",
-    deliverable: "Strategic Roadmap Document",
+      "A detailed technical and local SEO audit across your site, Google Business Profile, rankings, and search visibility. No guesswork — just findings and priorities.",
+    deliverable: "Prioritized Audit Findings",
   },
   {
     number: "03",
-    icon: Rocket,
-    phase: "Build & Launch",
-    timeline: "Week 2–6",
+    icon: Map,
+    phase: "Strategize",
+    timeline: "Week 2–3",
     description:
-      "Development, SEO implementation, and GBP optimization executed in parallel so you go live faster and start ranking sooner.",
-    deliverable: "Live Website + SEO Setup",
+      "We map the exact sequence: what to build, what to optimize, and what to track first. You approve the plan before any implementation begins.",
+    deliverable: "Approved Growth Roadmap",
   },
   {
     number: "04",
+    icon: Rocket,
+    phase: "Implement",
+    timeline: "Week 3–6",
+    description:
+      "Development, technical SEO fixes, and local SEO setup executed in parallel. You get a live, fast, search-ready site with clear progress updates.",
+    deliverable: "Live Site + SEO Foundation",
+  },
+  {
+    number: "05",
     icon: BarChart3,
-    phase: "Grow & Report",
+    phase: "Grow",
     timeline: "Ongoing",
     description:
-      "Monthly ranking reports, conversion tracking, A/B testing, and continuous optimization. Your results compound over time.",
+      "Monthly reporting, ranking tracking, conversion monitoring, and continuous optimization. Your visibility and leads compound over time.",
     deliverable: "Monthly Growth Report",
   },
 ] as const;
@@ -51,8 +60,8 @@ export function ProcessSection() {
       <div className="container mx-auto max-w-[1200px]">
         <SectionHeader
           eyebrow="How It Works"
-          heading="From Discovery to Domination in 4 Stages"
-          subheading="A transparent, proven process so you always know what's happening, what's coming next, and why."
+          heading="From Discovery to Growth in 5 Stages"
+          subheading="A transparent, repeatable process so you always know what's happening, what's coming next, and why."
           id="process-heading"
         />
 

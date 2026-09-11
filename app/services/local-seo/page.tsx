@@ -35,12 +35,12 @@ import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Local SEO & Google Business Profile Optimization | LocalLeads",
   description:
-    "Improve your Google Maps visibility with LocalLeads' local SEO services. GBP optimization, citation building, reputation management and geo-tagged images.",
+    "Improve your Google Maps visibility with LocalLeads' local SEO services. GBP optimization, citation building, reputation management, and geo-tagged images.",
   alternates: { canonical: "/services/local-seo" },
   openGraph: {
     title: "Local SEO & Google Business Profile Optimization | LocalLeads",
     description:
-      "We specialize in getting local businesses to the top of Google Maps. More visibility = more calls, visits, and revenue.",
+      "We help local businesses improve Google Maps visibility, GBP completeness, and local search performance.",
     url: `${SITE_CONFIG.url}/services/local-seo`,
   },
 };
@@ -356,11 +356,11 @@ export default function LocalSEOPage() {
         backgroundImage={IMAGE_ASSETS.services.localSeo}
         backgroundImageAlt="Local SEO map and search ranking illustration"
         imagePriority
-        subheading="We specialize in getting local businesses to the top of Google Maps and local search results. More visibility means more calls, more foot traffic, and more revenue — without paying for ads."
+        subheading="We help local businesses improve Google Maps visibility, GBP completeness, and local search performance through systematic optimization."
         primaryCTA={{ label: "Get Your Free Local SEO Audit", href: "/contact#audit" }}
         secondaryCTA={{ label: "See Local SEO Case Studies", href: "/case-studies?filter=local-seo" }}
         trustPoints={[
-          "Results in 60–90 days",
+          "Systematic local SEO approach",
           "100% white-hat methods",
           "You own your GBP",
           "Weekly rank tracking",
