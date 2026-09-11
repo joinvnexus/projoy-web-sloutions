@@ -120,18 +120,6 @@ export const technicalSeoServiceSchema = {
   areaServed: "Worldwide",
 };
 
-export const aiSolutionsServiceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "AI Solutions & Automation",
-  provider: { "@id": ORGANIZATION_ID },
-  serviceType: "AI Automation",
-  description:
-    "Additional AI capability including chatbots, workflow automation, and AI integrations that support web and SEO goals.",
-  url: `${SITE_CONFIG.url}/services/ai-solutions`,
-  areaServed: "Worldwide",
-};
-
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",

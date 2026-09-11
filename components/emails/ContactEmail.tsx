@@ -4,7 +4,6 @@ export const subjectLabels: Record<string, string> = {
   "web-development": "Web Development Project",
   "local-seo": "Local SEO Campaign",
   "technical-seo": "Technical SEO Audit or Implementation",
-  "ai-solutions": "AI Integration",
   "white-label": "White-Label Partnership",
   "general": "General Enquiry",
 };

@@ -191,11 +191,6 @@ export function Navbar() {
                               const isActive = pathname.startsWith(child.href);
                               return (
                                   <div key={child.href}>
-                                    {child.group === "additional" && (
-                                      <p className="px-4 pt-3 pb-1 text-[0.65rem] font-semibold uppercase tracking-widest text-slate-400">
-                                        Additional Capability
-                                      </p>
-                                    )}
                                     <Link
                                   href={child.href}
                                   className={cn(
@@ -381,11 +376,6 @@ export function Navbar() {
                         const Icon = iconMap[child.icon] ?? Code2;
                         return (
                           <div key={child.href}>
-                            {child.group === "additional" && (
-                              <p className="px-3 pt-3 pb-1 text-[0.65rem] font-semibold uppercase tracking-widest text-slate-400">
-                                Additional Capability
-                              </p>
-                            )}
                             <Link
                             href={child.href}
                             className={cn(

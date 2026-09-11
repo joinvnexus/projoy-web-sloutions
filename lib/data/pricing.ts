@@ -63,11 +63,10 @@ export const pricingTiers: PricingTier[] = [
     period: "quote",
     description:
       "For multi-location businesses, SaaS founders, and agencies needing a full build-out.",
-    idealFor: "Multi-location businesses or SaaS / AI product builds",
+    idealFor: "Multi-location businesses or SaaS product builds",
     features: [
       "Everything in Scale, plus:",
       "SaaS application or multi-location site architecture",
-      "AI integrations (chatbot, automation)",
       "Multi-location local SEO campaigns",
       "Custom dashboard / reporting",
       "Dedicated account manager",

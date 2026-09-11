@@ -11,7 +11,7 @@ export interface CaseStudy {
   title: string;
   client: string;
   location: string;
-  service: "local-seo" | "web-development" | "ai-solutions";
+  service: "local-seo" | "web-development";
   serviceLabel: string;
   headline: string;
   description: string;

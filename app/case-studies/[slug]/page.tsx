@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowRight, MapPin, Code2, Cpu, Quote } from "lucide-react";
+import { ArrowRight, MapPin, Code2, Quote } from "lucide-react";
 import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { BeforeAfterPanel } from "@/components/shared/BeforeAfterPanel";
@@ -18,7 +18,6 @@ import { cn, formatDate } from "@/lib/utils";
 const tagVariantMap: Record<string, "brand" | "accent" | "slate"> = {
   "local-seo": "accent",
   "web-development": "brand",
-  "ai-solutions": "brand",
 };
 
 /* ─── Service config ─────────────────────────────────────── */
@@ -32,12 +31,6 @@ const serviceConfig = {
   "web-development": {
     icon: Code2,
     gradient: "from-brand-600 to-accent-500",
-    tagVariant: "brand" as const,
-    accentColor: "brand" as const,
-  },
-  "ai-solutions": {
-    icon: Cpu,
-    gradient: "from-brand-700 to-accent-500",
     tagVariant: "brand" as const,
     accentColor: "brand" as const,
   },

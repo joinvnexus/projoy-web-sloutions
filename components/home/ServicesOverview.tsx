@@ -46,15 +46,6 @@ export function ServicesOverview() {
           })}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-brand-100 bg-brand-50/60 p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-brand-600 mb-1">Additional Capability</p>
-            <h3 className="font-display font-bold text-slate-900 text-lg">AI Solutions &amp; Automation</h3>
-            <p className="text-sm text-slate-600 mt-1">Add intelligent automation, AI assistants, and custom integrations when they support your core web and SEO goals.</p>
-          </div>
-          <a href="/services/ai-solutions" className="text-sm font-semibold text-brand-600 hover:text-brand-700 whitespace-nowrap">Explore AI Solutions &rarr;</a>
-        </div>
-
         {/* Bottom note */}
         <p className="text-center text-sm text-slate-500 mt-10">
           Not sure which service you need?{" "}

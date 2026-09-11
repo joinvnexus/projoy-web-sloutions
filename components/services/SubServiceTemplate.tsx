@@ -23,7 +23,6 @@ export function SubServiceTemplate({ data }: { data: SubServiceData }) {
   const parentHeroMap: Record<SubServiceData['parentSlug'], string> = {
     "web-development": IMAGE_ASSETS.services.webDevelopment,
     "local-seo": IMAGE_ASSETS.services.localSeo,
-    "ai-solutions": IMAGE_ASSETS.services.aiSolutions,
   };
 
   const heroSrc = data.heroImage ?? parentHeroMap[data.parentSlug];

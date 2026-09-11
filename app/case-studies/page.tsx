@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/case-studies" },
   openGraph: {
     title: "Case Studies — LocalLeads",
-    description: "Real results from real businesses. Local SEO rankings, Next.js builds, AI integrations.",
+    description: "Real results from real businesses. Local SEO rankings and Next.js builds.",
     url: `${SITE_CONFIG.url}/case-studies`,
   },
 };
@@ -28,13 +28,11 @@ export const metadata: Metadata = {
 const serviceGradient: Record<string, string> = {
   "local-seo": "from-accent-500 to-brand-600",
   "web-development": "from-brand-600 to-accent-500",
-  "ai-solutions": "from-brand-700 to-accent-500",
 };
 
 const tagVariantMap: Record<string, "brand" | "accent" | "slate"> = {
   "local-seo": "accent",
   "web-development": "brand",
-  "ai-solutions": "brand",
 };
 
 const aggregateStats = [
@@ -44,7 +42,7 @@ const aggregateStats = [
   { value: "98", label: "Best PageSpeed Score" },
 ];
 
-const VALID_FILTERS = ["all", "local-seo", "web-development", "ai-solutions"];
+const VALID_FILTERS = ["all", "local-seo", "web-development"];
 
 export default async function CaseStudiesPage({
   searchParams,

@@ -17,7 +17,7 @@ const PAGE_PATH = `/about/${FOUNDER_CONFIG.slug}`;
 
 export const metadata: Metadata = {
   title: `${FOUNDER_CONFIG.name} — Founder & Full-Stack Developer`,
-  description: `${FOUNDER_CONFIG.name} is the founder of ${SITE_CONFIG.name} and a full-stack developer specializing in modern JavaScript, AI-powered automation, and scalable web applications.`,
+  description: `${FOUNDER_CONFIG.name} is the founder of ${SITE_CONFIG.name} and a full-stack developer specializing in modern JavaScript and scalable web applications.`,
   alternates: { canonical: PAGE_PATH },
   openGraph: {
     title: `${FOUNDER_CONFIG.name} — Founder, ${SITE_CONFIG.name}`,
@@ -171,23 +171,23 @@ export default function FounderPage() {
                 Services
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
-                Web development, AI automation, and local SEO offered through{" "}
-                {SITE_CONFIG.name}.
+                 Web development and local SEO offered through{" "}
+                 {SITE_CONFIG.name}.
               </p>
               <span className="inline-flex items-center gap-1.5 text-brand-700 text-sm font-semibold">
                 View services <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
 
-            <Link href="/projects" className="card card-hover p-7 group">
+            <Link href="/case-studies" className="card card-hover p-7 group">
               <h3 className="font-display font-bold text-slate-900 text-lg mb-2 group-hover:text-brand-700 transition-colors">
-                Projects
+                Case Studies
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
-                A look at the applications and sites built to date.
+                Real results from real businesses we've helped grow.
               </p>
               <span className="inline-flex items-center gap-1.5 text-brand-700 text-sm font-semibold">
-                View projects <ArrowRight className="w-3.5 h-3.5" />
+                View case studies <ArrowRight className="w-3.5 h-3.5" />
               </span>
             </Link>
 
@@ -196,7 +196,7 @@ export default function FounderPage() {
                 Articles
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
-                Writing on web development, AI automation, and local SEO.
+                 Writing on web development and local SEO.
               </p>
               <span className="inline-flex items-center gap-1.5 text-brand-700 text-sm font-semibold">
                 Read the blog <ArrowRight className="w-3.5 h-3.5" />

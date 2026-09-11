@@ -20,7 +20,6 @@ import {
   webDevServiceSchema,
   localSeoServiceSchema,
   technicalSeoServiceSchema,
-  aiSolutionsServiceSchema,
 } from "@/lib/schemas";
 import { SITE_CONFIG } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -108,11 +107,11 @@ const services = [
 const additionalCapability = {
   icon: Cpu,
   tag: "Additional Capability",
-  title: "AI Solutions & Automation",
+  title: "AI Integrations",
   description:
-    "Add AI chatbots, workflow automation, AI integrations, and intelligent business workflows when they support your core web and SEO goals.",
-  href: "/services/ai-solutions",
-  cta: "Explore AI Solutions",
+    "When your website or application needs AI functionality, we can integrate it directly into your build — chatbots, content workflows, and smart automation.",
+  href: "/services/web-development/ai-integrations",
+  cta: "Explore AI Integrations",
   features: ["AI Chatbots", "Workflow Automation", "AI Integrations", "Custom Business Workflows"],
 };
 
@@ -145,7 +144,6 @@ export default function ServicesPage() {
     webDevServiceSchema,
     localSeoServiceSchema,
     technicalSeoServiceSchema,
-    aiSolutionsServiceSchema,
   ];
 
   return (

@@ -305,7 +305,7 @@ export default function WebDevelopmentPage() {
         imagePriority
         subheading="We build performance-focused, SEO-ready websites and web applications using Next.js and React. Every pixel and every millisecond is engineered for one goal: your growth."
         primaryCTA={{ label: "Get a Free Development Audit", href: "/contact#audit" }}
-        secondaryCTA={{ label: "View Our Projects", href: "/projects" }}
+        secondaryCTA={{ label: "View Case Studies", href: "/case-studies" }}
         trustPoints={[
           "Performance-focused Core Web Vitals",
           "Full source code ownership",
@@ -479,7 +479,7 @@ export default function WebDevelopmentPage() {
         heading="Ready to Build a Website That Actually Grows Your Business?"
         subheading="Book a free development consultation. We'll review your current site (or idea), identify the key opportunities, and give you a clear path forward — no pressure, no commitment."
         primaryCTA={{ label: "Book Free Consultation", href: "/contact#audit" }}
-        secondaryCTA={{ label: "View Our Projects", href: "/projects" }}
+        secondaryCTA={{ label: "View Case Studies", href: "/case-studies" }}
         trustPoints={[
           "Free 30-min consultation",
           "Detailed quote within 48 hours",

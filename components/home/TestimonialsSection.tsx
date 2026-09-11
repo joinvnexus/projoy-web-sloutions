@@ -66,18 +66,6 @@ const testimonials = [
     resultStat: "+35 Google reviews",
     service: "local-seo" as const,
   },
-  {
-    id: "t6",
-    quote:
-      "The AI chatbot they integrated into our website qualifies leads before they even reach us. We now only spend time on prospects who are actually ready to buy. It's been a game-changer.",
-    author: "Priya Sharma",
-    role: "CEO",
-    company: "FlowCommerce",
-    location: "Remote",
-    rating: 5 as const,
-    resultStat: "3× qualified leads",
-    service: "ai-solutions" as const,
-  },
 ];
 
 export function TestimonialsSection() {

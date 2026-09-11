@@ -72,7 +72,6 @@ export const IMAGE_ASSETS = {
     webDevelopment: "/images/services-hero/web-dev-hero-bg.jpg",
     localSeo: "/images/services-hero/local-seo-hero.png",
     technicalSeo: "/images/services-hero/web-dev-hero-bg.jpg",
-    aiSolutions: "/images/services-hero/ai-solutions-hero.png",
   },
 } as const;
 
@@ -102,23 +101,11 @@ export const NAV_LINKS = [
         icon: "search",
         group: "core",
       },
-      {
-        label: "AI Solutions & Automation",
-        href: "/services/ai-solutions",
-        description: "Additional capability: chatbots and integrations",
-        icon: "cpu",
-        group: "additional",
-      },
     ],
   },
   {
     label: "Case Studies",
     href: "/case-studies",
-    children: null,
-  },
-  {
-    label: "Projects",
-    href: "/projects",
     children: null,
   },
   {
@@ -145,7 +132,6 @@ export const FOOTER_LINKS = {
     { label: "SaaS Development", href: "/services/web-development/saas-development" },
     { label: "Landing Pages", href: "/services/web-development/landing-pages" },
     { label: "Custom Dashboards", href: "/services/web-development/custom-dashboards" },
-    { label: "AI Integrations", href: "/services/web-development/ai-integrations" },
     { label: "Local SEO", href: "/services/local-seo" },
     { label: "Google Business Profile", href: "/services/local-seo/google-business-profile" },
     { label: "Google Maps Ranking", href: "/services/local-seo/google-maps-ranking" },
@@ -153,12 +139,10 @@ export const FOOTER_LINKS = {
     { label: "Reputation Management", href: "/services/local-seo/reputation-management" },
     { label: "Geo-Tagged Images", href: "/services/local-seo/geo-tagged-images" },
     { label: "Technical SEO", href: "/services/technical-seo" },
-    { label: "AI Solutions & Automation", href: "/services/ai-solutions" },
   ],
   company: [
     { label: "About Us", href: "/about" },
     { label: "Case Studies", href: "/case-studies" },
-    { label: "Projects", href: "/projects" },
     { label: "Pricing", href: "/pricing" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },

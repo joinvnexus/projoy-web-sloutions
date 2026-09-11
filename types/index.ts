@@ -38,7 +38,7 @@ export interface CaseStudy {
   title: string;
   client: string;
   location: string;
-  service: "local-seo" | "web-development" | "ai-solutions";
+  service: "local-seo" | "web-development";
   headline: string;
   description: string;
   metrics: CaseStudyMetric[];
@@ -65,7 +65,7 @@ export interface Testimonial {
   avatar?: string;
   rating: 1 | 2 | 3 | 4 | 5;
   resultStat?: string;
-  service?: "local-seo" | "web-development" | "ai-solutions";
+  service?: "local-seo" | "web-development";
 }
 
 export interface BlogPost {
@@ -114,5 +114,5 @@ export interface PricingTier {
   highlighted?: boolean;
 }
 
-export type ServiceType = "web-development" | "local-seo" | "ai-solutions";
+export type ServiceType = "web-development" | "local-seo" | "Technical SEO";
 export type AccentColor = "brand" | "accent";

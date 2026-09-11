@@ -12,7 +12,6 @@ import { formatDate, cn } from "@/lib/utils";
 const categoryTagMap: Record<string, "brand" | "accent" | "slate"> = {
   "Local SEO": "accent",
   "Web Development": "brand",
-  "AI Solutions": "brand",
 };
 
 interface BlogCategoryFilterProps {

@@ -5,7 +5,6 @@ export const serviceLabels: Record<string, string> = {
   "technical-seo": "Technical SEO Audit & Implementation",
   "web-development": "New Website or Redesign",
   "saas-development": "SaaS / Web Application",
-  "ai-integration": "AI Chatbot or Automation",
   "both": "Web Development + Local SEO (both)",
   "not-sure": "Not sure yet — need guidance",
 };

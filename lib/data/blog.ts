@@ -80,8 +80,8 @@ export const blogPosts: BlogPost[] = [
       "AI chatbots aren't right for every business. Here's an honest breakdown of when they deliver ROI, when they don't, and what a realistic implementation looks like.",
     publishedAt: "2024-09-02",
     readingTime: 8,
-    category: "AI Solutions",
-    categorySlug: "ai-solutions",
+    category: "Web Development",
+    categorySlug: "web-development",
     tags: ["AI Chatbot", "Automation", "Small Business"],
     author: "LocalLeads",
     featured: false,
@@ -105,7 +105,6 @@ export const blogCategories = [
   { label: "All Posts", slug: "all" },
   { label: "Local SEO", slug: "local-seo" },
   { label: "Web Development", slug: "web-development" },
-  { label: "AI Solutions", slug: "ai-solutions" },
 ];
 
 export function getFeaturedPosts(): BlogPost[] {

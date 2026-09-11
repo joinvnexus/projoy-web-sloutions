@@ -79,9 +79,9 @@ const timeline = [
     },
   {
     year: "2024",
-    title: "Expanded to AI integrations",
+    title: "Expanded service offerings",
     description:
-      "With the rise of AI, clients started asking for chatbots, automation, and AI-powered features. Added AI solutions as an additional capability alongside our three core services.",
+      "Deepened expertise across core services and brought on specialized talent to serve larger clients with more complex technical and local SEO needs.",
   },
 ];
 

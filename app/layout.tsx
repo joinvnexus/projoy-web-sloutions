@@ -60,7 +60,6 @@ export const metadata: Metadata = {
     "React development",
     "SaaS development",
     "technical SEO services",
-    "AI solutions and automation",
     "Google Maps ranking",
     "LocalLeads",
     "Bangladesh web agency",
@@ -79,7 +78,7 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.name,
     title: `${SITE_CONFIG.name} — Web Development, Local SEO & Technical SEO Agency`,
     description:
-      "We build technically strong websites, improve technical SEO, and grow local search visibility. AI solutions are available when useful.",
+      "We build technically strong websites, improve technical SEO, and grow local search visibility.",
     images: [
       {
         url: SITE_CONFIG.openGraph.image,
