@@ -11,6 +11,7 @@ export interface NavChild {
   href: string;
   description: string;
   icon: string;
+  group?: string;
 }
 
 export interface FooterLink {
@@ -38,7 +39,7 @@ export interface CaseStudy {
   title: string;
   client: string;
   location: string;
-  service: "local-seo" | "web-development";
+  service: "local-seo" | "web-development" | "technical-seo";
   headline: string;
   description: string;
   metrics: CaseStudyMetric[];
@@ -65,7 +66,7 @@ export interface Testimonial {
   avatar?: string;
   rating: 1 | 2 | 3 | 4 | 5;
   resultStat?: string;
-  service?: "local-seo" | "web-development";
+  service?: "local-seo" | "web-development" | "technical-seo";
 }
 
 export interface BlogPost {
@@ -114,5 +115,5 @@ export interface PricingTier {
   highlighted?: boolean;
 }
 
-export type ServiceType = "web-development" | "local-seo" | "Technical SEO";
+export type ServiceType = "web-development" | "local-seo" | "technical-seo";
 export type AccentColor = "brand" | "accent";

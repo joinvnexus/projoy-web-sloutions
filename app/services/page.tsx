@@ -5,7 +5,6 @@ import {
   Code2,
   MapPin,
   Search,
-  Cpu,
   ArrowRight,
   CheckCircle,
   TrendingUp,
@@ -103,17 +102,6 @@ const services = [
     gradient: "from-brand-600 to-accent-500",
   },
 ] as const;
-
-const additionalCapability = {
-  icon: Cpu,
-  tag: "Additional Capability",
-  title: "AI Integrations",
-  description:
-    "When your website or application needs AI functionality, we can integrate it directly into your build — chatbots, content workflows, and smart automation.",
-  href: "/services/web-development/ai-integrations",
-  cta: "Explore AI Integrations",
-  features: ["AI Chatbots", "Workflow Automation", "AI Integrations", "Custom Business Workflows"],
-};
 
 /* ─── Cross-sell block ───────────────────────────────────── */
 const crossSell = [
@@ -264,27 +252,6 @@ export default function ServicesPage() {
               );
             })}
           </StaggerContainer>
-        </div>
-      </section>
-
-      <section className="py-14 bg-white" aria-labelledby="additional-capability-heading">
-        <div className="container mx-auto max-w-[1200px]">
-          <div className="card p-8 lg:p-10 border-brand-100 bg-brand-50/40">
-            <div className="flex flex-col lg:flex-row lg:items-center gap-8">
-              <div className="w-12 h-12 rounded-xl bg-brand-600 flex items-center justify-center flex-shrink-0">
-                <Cpu className="w-6 h-6 text-white" strokeWidth={1.75} />
-              </div>
-              <div className="flex-1">
-                <Tag variant="brand">{additionalCapability.tag}</Tag>
-                <h2 id="additional-capability-heading" className="font-display font-bold text-slate-900 text-2xl mt-3 mb-2">{additionalCapability.title}</h2>
-                <p className="text-slate-600 leading-relaxed max-w-2xl mb-4">{additionalCapability.description}</p>
-                <ul className="flex flex-wrap gap-2" role="list">
-                  {additionalCapability.features.map((feature) => <li key={feature} className="px-3 py-1 rounded-full bg-white border border-brand-100 text-xs font-medium text-slate-700">{feature}</li>)}
-                </ul>
-              </div>
-              <Link href={additionalCapability.href} className="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 whitespace-nowrap">{additionalCapability.cta}<ArrowRight className="w-4 h-4" /></Link>
-            </div>
-          </div>
         </div>
       </section>
 

@@ -94,23 +94,31 @@ const benefits = [
 const subServices = [
   {
     icon: <Globe strokeWidth={1.75} />,
-    title: "Next.js Website Development",
+    title: "Custom Websites",
     description:
-      "Full custom websites built on Next.js with a performance-focused architecture. Ideal for businesses who need a marketing presence that ranks and converts.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    href: "/services/web-development/nextjs-development",
+      "Bespoke websites built for your exact business needs. Fast, maintainable, and engineered for performance from the ground up.",
+    tags: ["Custom Build", "Performance", "Scalable"],
+    href: "/services/web-development/custom-websites",
+  },
+  {
+    icon: <Globe strokeWidth={1.75} />,
+    title: "Business Websites",
+    description:
+      "Professional business websites designed for lead generation and brand authority. Fast-loading, mobile-first, and built to convert.",
+    tags: ["Lead Generation", "Mobile-First", "Local Business"],
+    href: "/services/web-development/business-websites",
   },
   {
     icon: <Layers strokeWidth={1.75} />,
-    title: "SaaS Application Development",
+    title: "SaaS Development",
     description:
       "End-to-end SaaS builds — auth, dashboard, subscription billing, API integrations. From validated idea to production-ready product in weeks.",
-    tags: ["Auth", "Stripe", "Prisma", "API"],
+    tags: ["Auth", "Billing", "API"],
     href: "/services/web-development/saas-development",
   },
   {
     icon: <Rocket strokeWidth={1.75} />,
-    title: "High-Converting Landing Pages",
+    title: "Landing Pages",
     description:
       "CRO-optimized landing pages for ad campaigns, product launches, and lead generation — built to turn cold traffic into warm leads.",
     tags: ["CRO", "A/B Testing", "Lead Gen"],
@@ -118,19 +126,43 @@ const subServices = [
   },
   {
     icon: <LayoutDashboard strokeWidth={1.75} />,
-    title: "Custom Dashboard Development",
+    title: "Custom Dashboards",
     description:
-      "Internal tools, client portals, admin panels — React and Next.js powered dashboards that display real-time data in a clean, intuitive UI.",
-    tags: ["React", "Charts", "Real-time"],
+      "Internal tools, client portals, admin panels — dashboards that display real-time data in a clean, intuitive interface your team will actually use.",
+    tags: ["Real-time", "RBAC", "Data Viz"],
     href: "/services/web-development/custom-dashboards",
   },
   {
-    icon: <FileCode2 strokeWidth={1.75} />,
-    title: "Website Redesign & Migration",
+    icon: <Code2 strokeWidth={1.75} />,
+    title: "Web Applications",
     description:
-      "Transform your slow or legacy site into a blazing-fast modern application. We handle the full migration — content, SEO signals, redirects, and performance.",
+      "Full-featured web applications with real-time data, offline capabilities, and clean interfaces — built for teams and customers who need more than a website.",
+    tags: ["Real-time", "Offline-Ready", "Scalable"],
+    href: "/services/web-development/web-applications",
+  },
+  {
+    icon: <FileCode2 strokeWidth={1.75} />,
+    title: "Website Redesign",
+    description:
+      "A modern redesign that preserves your SEO rankings and traffic — migrating content safely, improving performance, and upgrading the user experience.",
     tags: ["Migration", "Performance", "SEO"],
-    href: "/services/web-development",
+    href: "/services/web-development/website-redesign",
+  },
+  {
+    icon: <BarChart3 strokeWidth={1.75} />,
+    title: "Performance Optimization",
+    description:
+      "Systematic performance improvements for existing sites. Core Web Vitals fixes, image optimization, and measurable load time gains — no rebuild required.",
+    tags: ["Core Web Vitals", "Speed", "Optimization"],
+    href: "/services/web-development/performance-optimization",
+  },
+  {
+    icon: <Search strokeWidth={1.75} />,
+    title: "SEO-Friendly Development",
+    description:
+      "Websites built with SEO best practices at the code level — semantic HTML, structured data, clean URLs, and crawlability built in from day one.",
+    tags: ["Semantic HTML", "Schema", "Crawlability"],
+    href: "/services/web-development/seo-friendly-development",
   },
 ];
 
@@ -264,7 +296,7 @@ export default function WebDevelopmentPage() {
     provider: { "@id": ORGANIZATION_ID },
     serviceType: "Web Development",
     description:
-      "Custom Next.js 16, React, and AI-powered web development services including SaaS applications, landing pages, dashboards, and website redesigns.",
+      "Custom web development services using modern frameworks. SaaS applications, landing pages, dashboards, and website redesigns built for performance and conversion.",
     url: `${SITE_CONFIG.url}/services/web-development`,
     areaServed: "Worldwide",
     hasOfferCatalog: {

@@ -6,8 +6,16 @@ import {
   CheckCircle,
   Code2,
   Gauge,
-  Route,
   ShieldCheck,
+  FileSearch,
+  Globe,
+  Zap,
+  BarChart3,
+  FileJson,
+  GitBranch,
+  Monitor,
+  Wrench,
+  ArrowRight,
 } from "lucide-react";
 import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
@@ -45,13 +53,15 @@ const benefits = [
     description:
       "We inspect robots.txt, XML sitemaps, canonical URLs, redirects, status codes, internal links, and rendering paths so search engines can discover and understand the right pages.",
     highlight: "Technical foundation review",
+    // href: "/services/technical-seo/crawl-indexation",
   },
   {
-    icon: <FileText strokeWidth={1.75} />,
+    icon: <FileJson strokeWidth={1.75} />,
     title: "Metadata and Structured Data",
     description:
       "We review titles, descriptions, Open Graph, JSON-LD, LocalBusiness, Service, and Breadcrumb schema for accuracy, consistency, and useful search presentation.",
     highlight: "Search-ready page signals",
+    // href: "/services/technical-seo/schema-markup",
   },
   {
     icon: <Gauge strokeWidth={1.75} />,
@@ -59,6 +69,7 @@ const benefits = [
     description:
       "We identify performance and Core Web Vitals opportunities across mobile and desktop, including JavaScript weight, rendering behavior, and user experience issues.",
     highlight: "Performance-aware recommendations",
+    // href: "/services/technical-seo/website-performance",
   },
   {
     icon: <Code2 strokeWidth={1.75} />,
@@ -66,13 +77,15 @@ const benefits = [
     description:
       "After approval, we can implement the agreed improvements directly in the existing project, especially for Next.js, React, and TypeScript codebases.",
     highlight: "We can fix what we find",
+    // href: "/services/technical-seo/technical-seo-fixes",
   },
   {
-    icon: <Route strokeWidth={1.75} />,
+    icon: <GitBranch strokeWidth={1.75} />,
     title: "URL and Internal Linking Review",
     description:
       "We map affected pages, assess URL structure and duplicate content, and recommend internal links that make important content easier to reach.",
     highlight: "Clear page-level priorities",
+    // href: "/services/technical-seo/internal-linking",
   },
   {
     icon: <ShieldCheck strokeWidth={1.75} />,
@@ -80,6 +93,90 @@ const benefits = [
     description:
       "Every approved change is checked after implementation, with a final summary covering metadata, indexability, structured data, redirects, and performance-related work.",
     highlight: "Evidence after implementation",
+    // href: "/services/technical-seo/technical-seo-audit",
+  },
+];
+
+const subServices = [
+  {
+    icon: <FileSearch strokeWidth={1.75} />,
+    title: "Technical SEO Audit",
+    description:
+      "Comprehensive technical SEO audit covering crawlability, indexation, performance, metadata, and structured data. Get a prioritized action plan.",
+    tags: ["Audit", "Prioritized", "Action Plan"],
+    href: "/services/technical-seo/technical-seo-audit",
+  },
+  {
+    icon: <Globe strokeWidth={1.75} />,
+    title: "Crawl & Indexation",
+    description:
+      "Fix crawlability and indexation issues so search engines can discover, crawl, and index your most important pages. Robots.txt, sitemaps, canonicals, and redirects.",
+    tags: ["Crawl", "Indexation", "Robots.txt"],
+    href: "/services/technical-seo/crawl-indexation",
+  },
+  {
+    icon: <Zap strokeWidth={1.75} />,
+    title: "Core Web Vitals",
+    description:
+      "Core Web Vitals optimization for better search rankings and user experience. Fix LCP, INP, and CLS issues with measurable improvements.",
+    tags: ["LCP", "INP", "CLS"],
+    href: "/services/technical-seo/core-web-vitals",
+  },
+  {
+    icon: <BarChart3 strokeWidth={1.75} />,
+    title: "Website Performance",
+    description:
+      "Systematic performance optimization for better user experience and search visibility. Image optimization, caching, code splitting, and measurable load time improvements.",
+    tags: ["Speed", "Optimization", "Core Web Vitals"],
+    href: "/services/technical-seo/website-performance",
+  },
+  {
+    icon: <FileText strokeWidth={1.75} />,
+    title: "Technical On-Page SEO",
+    description:
+      "On-page technical SEO fixes: title tags, meta descriptions, headers, internal linking, and content structure. Optimize every page for search visibility.",
+    tags: ["Title Tags", "Meta", "Headers"],
+    href: "/services/technical-seo/technical-on-page-seo",
+  },
+  {
+    icon: <FileJson strokeWidth={1.75} />,
+    title: "Schema Markup",
+    description:
+      "Structured data implementation for better search visibility. LocalBusiness, Service, FAQ, Breadcrumb, and custom schema markup.",
+    tags: ["JSON-LD", "Rich Results", "Schema"],
+    href: "/services/technical-seo/schema-markup",
+  },
+  {
+    icon: <GitBranch strokeWidth={1.75} />,
+    title: "Internal Linking",
+    description:
+      "Strategic internal linking to pass authority, improve crawlability, and help users navigate. Link audits, architecture improvements, and anchor text optimization.",
+    tags: ["Authority", "Crawlability", "Navigation"],
+    href: "/services/technical-seo/internal-linking",
+  },
+  {
+    icon: <Monitor strokeWidth={1.75} />,
+    title: "Google Search Console",
+    description:
+      "Google Search Console setup, monitoring, and action plans. Index coverage, manual actions, performance metrics, and ongoing technical SEO insights.",
+    tags: ["GSC", "Monitoring", "Insights"],
+    href: "/services/technical-seo/google-search-console",
+  },
+  {
+    icon: <FileText strokeWidth={1.75} />,
+    title: "Sitemap & Robots.txt",
+    description:
+      "XML sitemap creation and robots.txt optimization. Help search engines discover and crawl the right pages while blocking admin and duplicate content.",
+    tags: ["XML Sitemap", "Robots.txt", "Crawl"],
+    href: "/services/technical-seo/sitemap-robots-txt",
+  },
+  {
+    icon: <Wrench strokeWidth={1.75} />,
+    title: "Technical SEO Fixes",
+    description:
+      "Approved technical SEO implementation: metadata updates, redirects, schema improvements, and code-level fixes for Next.js, React, and TypeScript sites.",
+    tags: ["Implementation", "Code-Level", "Fixes"],
+    href: "/services/technical-seo/technical-seo-fixes",
   },
 ];
 
@@ -210,6 +307,52 @@ export default function TechnicalSEOPage() {
         accentColor="brand"
         background="slate"
       />
+
+      {/* Sub-services */}
+      <section className="section-padding bg-white" aria-labelledby="sub-services-heading">
+        <div className="container mx-auto max-w-[1200px]">
+          <SectionHeader
+            eyebrow="Our Technical SEO Services"
+            heading="Technical SEO Services We Offer"
+            subheading="Every technical SEO service below is a dedicated offering with its own page, process, and deliverables."
+            id="sub-services-heading"
+          />
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {subServices.map((service) => (
+              <StaggerItem key={service.title}>
+                <Link
+                  href={service.href}
+                  className="card card-hover p-7 group flex flex-col h-full block"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center mb-4 group-hover:bg-brand-100 transition-colors">
+                    <span className="text-brand-600 w-5 h-5">{service.icon}</span>
+                  </div>
+                  <h3 className="font-display font-bold text-slate-900 text-lg mb-2 leading-snug group-hover:text-brand-700 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-1">
+                    {service.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {service.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-medium text-slate-600"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 group-hover:gap-2.5 transition-all mt-auto">
+                    Learn more
+                    <ArrowRight className="w-3 h-3" />
+                  </span>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
 
       <div id="process">
         <ProcessTimeline

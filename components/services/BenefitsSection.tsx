@@ -1,13 +1,16 @@
 // components/services/BenefitsSection.tsx
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import { SectionHeader } from "@/components/shared/Typography";
 import { StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
+import { ArrowRight } from "lucide-react";
 
 export interface Benefit {
   icon: React.ReactNode;
   title: string;
   description: string;
-  highlight?: string; // optional metric or callout
+  highlight?: string;
+  href?: string;
 }
 
 interface BenefitsSectionProps {
@@ -60,43 +63,87 @@ export function BenefitsSection({
           {benefits.map((benefit, i) => (
             <StaggerItem key={i}>
               {variant === "cards" ? (
-                /* Card style */
-                <div className="card card-hover p-7 group h-full flex flex-col">
-                  {/* Icon */}
-                  <div
-                    className={cn(
-                      "w-11 h-11 rounded-xl flex items-center justify-center mb-5 transition-transform duration-200 group-hover:scale-110 flex-shrink-0",
-                      iconBg
-                    )}
+                benefit.href ? (
+                  <Link
+                    href={benefit.href}
+                    className="card card-hover p-7 group h-full flex flex-col block"
                   >
-                    <span className="w-5 h-5">{benefit.icon}</span>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="font-display font-bold text-slate-900 text-lg mb-2 leading-snug">
-                    {benefit.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-slate-600 text-sm leading-relaxed flex-1">
-                    {benefit.description}
-                  </p>
-
-                  {/* Optional highlight badge */}
-                  {benefit.highlight && (
-                    <div className="mt-4 pt-4 border-t border-slate-100">
-                      <span
-                        className={cn(
-                          "inline-flex items-center gap-1.5 text-xs font-bold",
-                          accentColor === "brand" ? "text-brand-600" : "text-accent-600"
-                        )}
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-current" />
-                        {benefit.highlight}
-                      </span>
+                    {/* Icon */}
+                    <div
+                      className={cn(
+                        "w-11 h-11 rounded-xl flex items-center justify-center mb-5 transition-transform duration-200 group-hover:scale-110 flex-shrink-0",
+                        iconBg
+                      )}
+                    >
+                      <span className="w-5 h-5">{benefit.icon}</span>
                     </div>
-                  )}
-                </div>
+
+                    {/* Title */}
+                    <h3 className="font-display font-bold text-slate-900 text-lg mb-2 leading-snug group-hover:text-brand-700 transition-colors">
+                      {benefit.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-slate-600 text-sm leading-relaxed flex-1">
+                      {benefit.description}
+                    </p>
+
+                    {/* Optional highlight badge */}
+                    {benefit.highlight && (
+                      <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <span
+                          className={cn(
+                            "inline-flex items-center gap-1.5 text-xs font-bold",
+                            accentColor === "brand" ? "text-brand-600" : "text-accent-600"
+                          )}
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-current" />
+                          {benefit.highlight}
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand-600 group-hover:gap-2 transition-all">
+                          Learn more <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </div>
+                    )}
+                  </Link>
+                ) : (
+                  <div className="card card-hover p-7 group h-full flex flex-col">
+                    {/* Icon */}
+                    <div
+                      className={cn(
+                        "w-11 h-11 rounded-xl flex items-center justify-center mb-5 transition-transform duration-200 group-hover:scale-110 flex-shrink-0",
+                        iconBg
+                      )}
+                    >
+                      <span className="w-5 h-5">{benefit.icon}</span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="font-display font-bold text-slate-900 text-lg mb-2 leading-snug">
+                      {benefit.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-slate-600 text-sm leading-relaxed flex-1">
+                      {benefit.description}
+                    </p>
+
+                    {/* Optional highlight badge */}
+                    {benefit.highlight && (
+                      <div className="mt-4 pt-4 border-t border-slate-100">
+                        <span
+                          className={cn(
+                            "inline-flex items-center gap-1.5 text-xs font-bold",
+                            accentColor === "brand" ? "text-brand-600" : "text-accent-600"
+                          )}
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-current" />
+                          {benefit.highlight}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                )
               ) : (
                 /* Clean style (no card border) */
                 <div className="group flex gap-4 h-full">

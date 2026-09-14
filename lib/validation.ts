@@ -17,7 +17,7 @@ export const auditSchema = z.object({
     z.string().trim().url().startsWith("https://").max(2048),
   ]),
   challenge: z.string().trim().min(1).max(5000),
-  service: z.enum(["", "local-seo", "technical-seo", "web-development", "saas-development", "both", "not-sure"]),
+  service: z.enum(["", "local-seo", "technical-seo", "web-development", "both", "not-sure"]),
   honeypot: z.string().max(0).optional(),
 });
 

@@ -5,12 +5,11 @@ import {
   MapPin,
   Star,
   Globe,
-  Image as ImageIcon,
-  Link2,
   TrendingUp,
   Phone,
   Search,
   FileCheck,
+  FileText,
   BarChart3,
   Megaphone,
   ArrowRight,
@@ -35,7 +34,7 @@ import { IMAGE_ASSETS, SITE_CONFIG } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Local SEO & Google Business Profile Optimization | LocalLeads",
   description:
-    "Improve your Google Maps visibility with LocalLeads' local SEO services. GBP optimization, citation building, reputation management, and geo-tagged images.",
+    "Improve your Google Maps visibility with LocalLeads' local SEO services. GBP optimization, citation building, reputation management, and local keyword research.",
   alternates: { canonical: "/services/local-seo" },
   openGraph: {
     title: "Local SEO & Google Business Profile Optimization | LocalLeads",
@@ -58,31 +57,17 @@ const benefits = [
   },
   {
     icon: <Star strokeWidth={1.75} />,
-    title: "Reputation Management",
+    title: "Review & Reputation Strategy",
     description:
       "We implement a review acquisition system that grows your Google rating ethically. More high-quality reviews means higher rankings and more trust from potential customers.",
     highlight: "4.5+ star average strategy",
   },
   {
     icon: <Globe strokeWidth={1.75} />,
-    title: "Complete Citation Building",
+    title: "Citation & NAP Optimization",
     description:
-      "Consistent NAP (Name, Address, Phone) across 50+ directories including Yelp, Bing Places, Apple Maps, TripAdvisor, and industry-specific listings your competitors overlook.",
+      "Consistent NAP (Name, Address, Phone) across 50+ directories including Yelp, Bing Places, Apple Maps, and industry-specific listings your competitors overlook.",
     highlight: "50+ directory submissions",
-  },
-  {
-    icon: <ImageIcon strokeWidth={1.75} />,
-    title: "Geo-Tagged Image Strategy",
-    description:
-      "We embed GPS coordinates and location metadata into images uploaded to your GBP. This underused tactic sends powerful local relevance signals directly to Google's algorithm.",
-    highlight: "Underused but highly effective",
-  },
-  {
-    icon: <Link2 strokeWidth={1.75} />,
-    title: "Local Link Building",
-    description:
-      "We secure backlinks from local news sites, chambers of commerce, business associations, and niche directories — building authoritative local presence signals that compound over time.",
-    highlight: "Authority-building links",
   },
   {
     icon: <BarChart3 strokeWidth={1.75} />,
@@ -104,43 +89,59 @@ const subServices = [
   },
   {
     icon: <TrendingUp strokeWidth={1.75} />,
-    title: "Google Maps Ranking",
+    title: "Google Maps SEO",
     description:
       "Systematic improvement of your Maps position using proximity signals, relevance optimization, and prominence building. We track keyword rankings in the 3-pack weekly.",
     result: "Average 3-pack entry within 60–90 days.",
     href: "/services/local-seo/google-maps-ranking",
   },
   {
+    icon: <Search strokeWidth={1.75} />,
+    title: "Local Keyword Research",
+    description:
+      "Hyper-local keyword research to find exactly what your customers are searching for. Service-area keywords, intent mapping, and priority scoring.",
+    result: "200+ targeted local keywords identified.",
+    href: "/services/local-seo/local-keyword-research",
+  },
+  {
+    icon: <BarChart3 strokeWidth={1.75} />,
+    title: "Local Competitor Analysis",
+    description:
+      "Deep competitor analysis for local SEO. Benchmark rankings, GBP performance, citations, and review profiles against your top local competitors.",
+    result: "Clear gap analysis and opportunity map.",
+    href: "/services/local-seo/local-competitor-analysis",
+  },
+  {
     icon: <Globe strokeWidth={1.75} />,
-    title: "Citation Building & Cleanup",
+    title: "Citation & NAP Optimization",
     description:
       "Consistent NAP across 50+ directories. We audit existing citations for errors (the most common ranking killer), fix them, and build new high-authority listings.",
     result: "Removes ranking suppression from NAP inconsistency.",
     href: "/services/local-seo/citation-building",
   },
   {
-    icon: <ImageIcon strokeWidth={1.75} />,
-    title: "Geo-Tagged Image Uploads",
+    icon: <FileText strokeWidth={1.75} />,
+    title: "Local Landing Pages",
     description:
-      "We create, EXIF-tag, and upload 4–8 location-specific images to your GBP each month with embedded GPS coordinates and keyword-rich filenames and alt text.",
-    result: "Strong relevance signal most competitors miss.",
-    href: "/services/local-seo/geo-tagged-images",
+      "Location-specific landing pages for multi-area businesses. Service-area pages, city pages, and neighborhood pages built to rank and convert locally.",
+    result: "Unique content per location with local signals.",
+    href: "/services/local-seo/local-landing-pages",
   },
   {
     icon: <Star strokeWidth={1.75} />,
-    title: "Review & Reputation Management",
+    title: "Review & Reputation Strategy",
     description:
       "Review request automation via SMS/email, response templates for all reviews (positive and negative), and reputation monitoring across Google, Yelp, and Facebook.",
     result: "Average +25 reviews in first 3 months.",
     href: "/services/local-seo/reputation-management",
   },
   {
-    icon: <Link2 strokeWidth={1.75} />,
-    title: "Local Link Building",
+    icon: <Search strokeWidth={1.75} />,
+    title: "Local SEO Audit",
     description:
-      "Outreach to local news outlets, chambers of commerce, and industry associations for authoritative local backlinks that strengthen your overall domain authority.",
-    result: "High-quality backlinks from local authority sites.",
-    href: "/services/local-seo",
+      "Comprehensive local SEO audit covering GBP, citations, reviews, rankings, and on-page local signals. Get a prioritized action plan to improve local visibility.",
+    result: "Complete local SEO health check with priorities.",
+    href: "/services/local-seo/local-seo-audit",
   },
 ];
 
@@ -156,7 +157,7 @@ const processPhases = [
       "Competitor Analysis",
       "GBP Optimization Live",
       "Citation Cleanup Start",
-      "Geo-Tagged Image Upload #1",
+      "Keyword Research Complete",
     ],
     icon: <Search strokeWidth={1.75} />,
   },
@@ -165,11 +166,11 @@ const processPhases = [
     title: "Building Signals & Authority",
     timeline: "Week 5–8",
     description:
-      "We build 20+ new directory citations, launch the review acquisition strategy, continue geo-tagged image uploads, and begin local link outreach. Your ranking starts moving.",
+      "We build 20+ new directory citations, launch the review acquisition strategy, begin local landing page development, and continue ranking tracking. Your ranking starts moving.",
     deliverables: [
       "20+ Citation Submissions",
       "Review Strategy Live",
-      "4–8 Geo-Tagged Images",
+      "Local Landing Pages Started",
       "GBP Post Schedule Active",
       "First Ranking Movement",
     ],
@@ -180,11 +181,11 @@ const processPhases = [
     title: "Ranking & Reporting",
     timeline: "Week 9–12",
     description:
-      "Advanced GBP tactics, continued link building, in-depth rank tracking, and your first full monthly report with real data. Most clients see 3-pack entry or significant upward movement at this stage.",
+      "Advanced GBP tactics, continued citation building, in-depth rank tracking, and your first full monthly report with real data. Most clients see 3-pack entry or significant upward movement at this stage.",
     deliverables: [
       "Monthly Ranking Report",
       "Competitor Gap Analysis",
-      "Link Building Report",
+      "Citation Status Review",
       "Strategy Call (30 min)",
       "3-Pack Entry Target",
     ],
