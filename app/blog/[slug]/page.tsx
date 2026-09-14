@@ -71,11 +71,13 @@ function PostBody({ post }: { post: ReturnType<typeof getPostBySlug> }) {
 
 const categoryTagMap: Record<string, "brand" | "accent" | "slate"> = {
   "Local SEO": "accent",
+  "Technical SEO": "accent",
   "Web Development": "brand",
 };
 
 const relatedServiceMap: Record<string, { label: string; href: string }> = {
   "Local SEO": { label: "Local SEO Services", href: "/services/local-seo" },
+  "Technical SEO": { label: "Technical SEO Services", href: "/services/technical-seo" },
   "Web Development": { label: "Web Development Services", href: "/services/web-development" },
 };
 

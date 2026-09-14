@@ -4,7 +4,6 @@ export const serviceLabels: Record<string, string> = {
   "local-seo": "Local SEO & Google Maps Ranking",
   "technical-seo": "Technical SEO Audit & Implementation",
   "web-development": "New Website or Redesign",
-  "saas-development": "SaaS / Web Application",
   "both": "Web Development + Local SEO (both)",
   "not-sure": "Not sure yet — need guidance",
 };

@@ -104,6 +104,7 @@ export const blogPosts: BlogPost[] = [
 export const blogCategories = [
   { label: "All Posts", slug: "all" },
   { label: "Local SEO", slug: "local-seo" },
+  { label: "Technical SEO", slug: "technical-seo" },
   { label: "Web Development", slug: "web-development" },
 ];
 

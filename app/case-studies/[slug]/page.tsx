@@ -111,7 +111,9 @@ export default async function CaseStudyPage({
         <div className="absolute inset-0 bg-gradient-mesh pointer-events-none" aria-hidden="true" />
         <div className="container mx-auto max-w-[900px] relative z-10">
           <div className="flex items-center gap-3 mb-5 flex-wrap">
-            <Tag variant={config.tagVariant}>{cs.serviceLabel}</Tag>
+            <Link href={`/services/${cs.service}`} className="inline-flex items-center">
+              <Tag variant={config.tagVariant}>{cs.serviceLabel}</Tag>
+            </Link>
             <span className="text-xs text-slate-400">{cs.location}</span>
             <span className="text-slate-300">·</span>
             <span className="text-xs text-slate-400">{cs.timeline} engagement</span>

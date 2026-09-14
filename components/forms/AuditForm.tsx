@@ -22,7 +22,6 @@ const serviceOptions = [
   { value: "local-seo", label: "Local SEO & Google Maps Ranking" },
   { value: "technical-seo", label: "Technical SEO Audit & Implementation" },
   { value: "web-development", label: "New Website or Redesign" },
-  { value: "saas-development", label: "SaaS / Web Application" },
   { value: "both", label: "Web Development + Local SEO (both)" },
   { value: "not-sure", label: "Not sure yet — need guidance" },
 ];

@@ -11,6 +11,7 @@ import { formatDate, cn } from "@/lib/utils";
 
 const categoryTagMap: Record<string, "brand" | "accent" | "slate"> = {
   "Local SEO": "accent",
+  "Technical SEO": "accent",
   "Web Development": "brand",
 };
 
