@@ -3,9 +3,6 @@ import type { Metadata } from "next";
 import {
   Mail,
   MapPin,
-  Clock,
-  MessageSquare,
-  Phone,
   Shield,
   CheckCircle,
 } from "lucide-react";
@@ -20,8 +17,8 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact LocalLeads — Free Growth Audit",
-  description:
-    "Get a free growth audit for your website and Google Business Profile. Book a strategy call or send us a message. We aim to reply within 24 hours.",
+    description:
+      "Get a free growth audit for your website and Google Business Profile. Send us a message — we aim to reply within 24 hours.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact LocalLeads",
@@ -39,25 +36,11 @@ const contactMethods = [
     detail: "We reply within 24 hours",
   },
   {
-    icon: MessageSquare,
-    label: "WhatsApp",
-    value: "Chat on WhatsApp",
-    href: "https://wa.me/1XXXXXXXXXX?text=Hi,%20I%20want%20to%20get%20a%20Free%20SEO%20Audit%20for%20my%20business.%20Can%20we%20discuss%3F",
-    detail: "Fastest response channel",
-  },
-  {
     icon: MapPin,
     label: "Based in",
     value: SITE_CONFIG.location,
     href: null,
     detail: "Serving clients worldwide",
-  },
-  {
-    icon: Clock,
-    label: "Working Hours",
-    value: "Mon – Fri, 9am – 6pm",
-    href: null,
-    detail: "BST (UTC+6)",
   },
 ];
 
@@ -100,7 +83,7 @@ export default function ContactPage() {
             Let&apos;s Grow Your Business <GradientText>Together</GradientText>
           </h1>
           <p className="text-lg text-slate-600 max-w-xl mx-auto">
-            Start with a free audit, send a general message, or book a call directly.
+            Start with a free audit or send us a message.
             We respond to every inquiry within 24 hours.
           </p>
         </div>
@@ -207,59 +190,23 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── Calendly / Book a Call Section ── */}
-      <section className="section-padding bg-white" aria-labelledby="book-call-heading">
-        <div className="container mx-auto max-w-[1200px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <RevealWrapper>
-              <Eyebrow>Book a Call</Eyebrow>
-              <h2
-                id="book-call-heading"
-                className="font-display font-bold text-slate-900 text-3xl leading-tight mb-4"
+      {/* ── General Contact Form ── */}
+      <section className="section-padding bg-white" aria-labelledby="contact-form-heading">
+        <div className="container mx-auto max-w-[600px] px-6">
+          <RevealWrapper>
+            <div className="card p-8">
+              <h3
+                id="contact-form-heading"
+                className="font-display font-bold text-slate-900 text-2xl mb-2 leading-tight"
               >
-                Prefer to Talk First?
-              </h2>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                Book a free 30-minute strategy call. No pitch, no pressure — just a
-                genuine conversation about your business and whether we&apos;re the right fit.
+                Send a Message
+              </h3>
+              <p className="text-slate-500 text-sm mb-6">
+                Prefer email? Fill in this form and we&apos;ll get back to you within 24 hours.
               </p>
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Discuss your goals and current challenges",
-                  "Get our initial read on what will move the needle",
-                  "Understand our process and timeline",
-                  "Ask us anything — no question is too basic",
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-2.5 text-sm text-slate-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-500 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://calendly.com/localleads/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-sm hover:shadow-md hover:-translate-y-px transition-all duration-200"
-              >
-                <Phone className="w-4 h-4" />
-                Book a Free 30-Min Call
-              </a>
-            </RevealWrapper>
-
-            {/* General Contact Form */}
-            <RevealWrapper delay={0.15}>
-              <div className="card p-8">
-                <h3 className="font-display font-bold text-slate-900 text-xl mb-2">
-                  Send a Message
-                </h3>
-                <p className="text-slate-500 text-sm mb-6">
-                  Prefer email? Fill in this form and we&apos;ll get back to you within 24 hours.
-                </p>
-                <ContactForm />
-              </div>
-            </RevealWrapper>
-          </div>
+              <ContactForm />
+            </div>
+          </RevealWrapper>
         </div>
       </section>
     </>

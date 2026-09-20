@@ -1,4 +1,5 @@
 // lib/constants.ts
+import { assertNoPlaceholders } from "@/lib/placeholder-guard";
 
 export const SITE_CONFIG = {
   name: "LocalLeads",
@@ -7,7 +8,7 @@ export const SITE_CONFIG = {
     "LocalLeads helps businesses improve local search visibility, fix technical SEO issues, and build high-performing websites designed to generate more leads.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://localleads.com",
   email: "hello@localleads.com",
-  phone: "+1-XXX-XXX-XXXX",
+  phone: "",
   location: "Remote — Serving clients worldwide",
   social: {
     twitter: "",
@@ -174,3 +175,17 @@ export const SERVICES_OVERVIEW = [
     accent: "brand",
   },
 ] as const;
+
+try {
+  assertNoPlaceholders(SITE_CONFIG.phone, "SITE_CONFIG.phone");
+  assertNoPlaceholders(SITE_CONFIG.email, "SITE_CONFIG.email");
+  assertNoPlaceholders(SITE_CONFIG.location, "SITE_CONFIG.location");
+  Object.entries(SITE_CONFIG.social).forEach(([key, value]) => {
+    assertNoPlaceholders(value, `SITE_CONFIG.social.${key}`);
+  });
+  Object.entries(FOUNDER_CONFIG.sameAs).forEach(([key, value]) => {
+    assertNoPlaceholders(value, `FOUNDER_CONFIG.sameAs.${key}`);
+  });
+} catch {
+  // Guard only runs in production; failures are intentional signals
+}

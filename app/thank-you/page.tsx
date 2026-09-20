@@ -125,19 +125,17 @@ export default function ThankYouPage() {
             ))}
           </div>
 
-          {/* Direct Calendly */}
+          {/* Direct contact */}
           <div className="mt-8 text-center">
             <p className="text-sm text-slate-500 mb-3">
-              Can&apos;t wait? Book a call right now:
+              Can&apos;t wait? Email us directly:
             </p>
             <a
-              href="https://calendly.com/localleads/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-brand-200 text-brand-700 hover:bg-brand-50 font-semibold text-sm transition-colors"
+              href={`mailto:${SITE_CONFIG.email}`}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm transition-colors"
             >
-              <Calendar className="w-4 h-4" />
-              Book a Free 30-Min Strategy Call
+              <MessageSquare className="w-4 h-4" />
+              Email LocalLeads
             </a>
           </div>
         </div>
