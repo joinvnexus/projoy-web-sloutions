@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
+import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
+import { createCollectionPageSchema, createBreadcrumbSchema } from "@/lib/schemas";
 import { industries } from "@/lib/data/industries";
 
 export const metadata: Metadata = {
@@ -12,7 +14,21 @@ export const metadata: Metadata = {
 };
 
 export default function IndustriesPage() {
+  const schemas = [
+    createCollectionPageSchema({
+      name: "Industries",
+      description: "Local SEO, technical SEO, and high-performance web development tailored to local service businesses.",
+      url: "/industries",
+    }),
+    createBreadcrumbSchema([
+      { name: "Home", href: "/" },
+      { name: "Industries", href: "/industries" },
+    ]),
+  ];
+
   return (
+    <>
+      <SchemaMarkup schema={schemas} />
     <main>
       <section className="px-6 py-20 lg:py-28 bg-slate-950 text-white">
         <div className="container mx-auto max-w-[1000px]">
@@ -45,5 +61,6 @@ export default function IndustriesPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

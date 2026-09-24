@@ -38,7 +38,7 @@ export const organizationSchema = {
   },
   founder: { "@id": PERSON_ID },
   // Organization-owned profiles only — see lib/constants.ts SITE_CONFIG.social.
-  sameAs: Object.values(SITE_CONFIG.social),
+  sameAs: Object.values(SITE_CONFIG.social).filter((value) => /^https?:\/\//.test(value)),
 };
 
 export const personSchema = {
@@ -52,7 +52,7 @@ export const personSchema = {
   worksFor: { "@id": ORGANIZATION_ID },
   knowsAbout: [...FOUNDER_CONFIG.knowsAbout],
   // Personal profiles only — see lib/constants.ts FOUNDER_CONFIG.sameAs.
-  sameAs: Object.values(FOUNDER_CONFIG.sameAs),
+  sameAs: Object.values(FOUNDER_CONFIG.sameAs).filter((value) => /^https?:\/\//.test(value)),
 };
 export const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -222,3 +222,54 @@ export const createArticleSchema = (post: {
     publisher: { "@id": ORGANIZATION_ID },
   };
 };
+
+
+/** Service schema with a canonical provider entity reference. */
+export const createServiceSchema = (service: {
+  name: string;
+  description: string;
+  url: string;
+  serviceType: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": SITE_CONFIG.url + service.url + "/#service",
+  name: service.name,
+  description: service.description,
+  serviceType: service.serviceType,
+  url: SITE_CONFIG.url + service.url,
+  provider: { "@id": ORGANIZATION_ID },
+  areaServed: "Worldwide",
+});
+
+/** WebPage schema for landing pages and topical silos. */
+export const createWebPageSchema = (page: {
+  name: string;
+  description: string;
+  url: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": SITE_CONFIG.url + page.url + "/#webpage",
+  name: page.name,
+  description: page.description,
+  url: SITE_CONFIG.url + page.url,
+  isPartOf: { "@id": WEBSITE_ID },
+  about: { "@id": ORGANIZATION_ID },
+});
+
+/** CollectionPage schema for the industry hub. */
+export const createCollectionPageSchema = (page: {
+  name: string;
+  description: string;
+  url: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": SITE_CONFIG.url + page.url + "/#collectionpage",
+  name: page.name,
+  description: page.description,
+  url: SITE_CONFIG.url + page.url,
+  isPartOf: { "@id": WEBSITE_ID },
+  about: { "@id": ORGANIZATION_ID },
+});
