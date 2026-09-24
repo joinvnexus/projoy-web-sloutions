@@ -9,10 +9,10 @@ import { BeforeAfterPanel } from "@/components/shared/BeforeAfterPanel";
 import { Tag, Eyebrow } from "@/components/shared/Typography";
 import { RevealWrapper, StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
 import { FinalServiceCTA } from "@/components/services/FinalServiceCTA";
-import { createBreadcrumbSchema, createArticleSchema } from "@/lib/schemas";
+import { createBreadcrumbSchema } from "@/lib/schemas";
 import { caseStudies, getCaseStudyBySlug } from "@/lib/data/case-studies";
 import { SITE_CONFIG } from "@/lib/constants";
-import { cn, formatDate } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 /* ─── Tag variant map ────────────────────────────────────── */
 const tagVariantMap: Record<string, "brand" | "accent" | "slate"> = {
@@ -52,7 +52,7 @@ export async function generateMetadata({
   if (!cs) return { title: "Case Study Not Found" };
 
   return {
-    title: `${cs.headline} | Case Study — LocalLeads`,
+    title: `${cs.headline} | Demo Case Study — LocalLeads`,
     description: cs.description,
     alternates: { canonical: `/case-studies/${slug}` },
     openGraph: {
@@ -87,17 +87,11 @@ export default async function CaseStudyPage({
     { name: cs.client, href: `/case-studies/${slug}` },
   ]);
 
-  const articleSchema = createArticleSchema({
-    title: cs.headline,
-    description: cs.description,
-    publishedAt: cs.publishedAt,
-    schemaType: "Article",
-    slug: `case-studies/${slug}`,
-  });
+
 
   return (
     <>
-      <SchemaMarkup schema={[breadcrumb, articleSchema]} />
+      <SchemaMarkup schema={breadcrumb} />
 
       <Breadcrumbs
         items={[
@@ -112,15 +106,13 @@ export default async function CaseStudyPage({
         <div className="container mx-auto max-w-[900px] relative z-10">
           <div className="flex items-center gap-3 mb-5 flex-wrap">
             <Link href={`/services/${cs.service}`} className="inline-flex items-center">
-              <Tag variant={config.tagVariant}>{cs.serviceLabel}</Tag>
+              <Tag variant={config.tagVariant}>{cs.serviceLabel} Demo</Tag>
             </Link>
             <span className="text-xs text-slate-400">{cs.location}</span>
             <span className="text-slate-300">·</span>
-            <span className="text-xs text-slate-400">{cs.timeline} engagement</span>
+            <span className="text-xs text-slate-400">{cs.timeline}</span>
             <span className="text-slate-300">·</span>
-            <time className="text-xs text-slate-400" dateTime={cs.publishedAt}>
-              {formatDate(cs.publishedAt)}
-            </time>
+            <span className="text-xs text-slate-400">Demo content</span>
           </div>
 
           <h1
@@ -140,7 +132,7 @@ export default async function CaseStudyPage({
       <section className="bg-slate-900 py-10" aria-label="Key results">
         <div className="container mx-auto max-w-[900px]">
           <p className="text-xs font-bold uppercase tracking-widest text-slate-500 text-center mb-8">
-            Key Results
+            Demo Signals
           </p>
           <StaggerContainer
             className={cn(
@@ -182,7 +174,7 @@ export default async function CaseStudyPage({
               <div>
                 <Eyebrow>The Challenge</Eyebrow>
                 <h2 className="font-display font-bold text-slate-900 text-2xl mb-4 leading-tight">
-                  Where {cs.client} Was Before We Started
+                  Example Starting Point
                 </h2>
                 <p className="text-slate-600 leading-relaxed">{cs.challenge}</p>
               </div>
@@ -202,9 +194,9 @@ export default async function CaseStudyPage({
             {/* Results */}
             <RevealWrapper>
               <div className="bg-slate-50 rounded-3xl border border-slate-100 p-8 lg:p-10">
-                <Eyebrow>The Results</Eyebrow>
+                <Eyebrow>Proof Placeholder</Eyebrow>
                 <h2 className="font-display font-bold text-slate-900 text-2xl mb-4 leading-tight">
-                  What We Achieved
+                  Verified Outcome Goes Here
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-7">{cs.result}</p>
 
@@ -276,7 +268,7 @@ export default async function CaseStudyPage({
             <RevealWrapper>
               <div>
                 <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">
-                  Services Used
+                  Example Services Used
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {cs.tags.map((tag) => (
@@ -312,18 +304,9 @@ export default async function CaseStudyPage({
                       <p className="text-slate-400 text-xs">{cs.testimonial.role}</p>
                     </div>
                   </div>
-                  <div className="flex gap-0.5 mt-5" aria-label="5 out of 5 stars">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <svg
-                        key={i}
-                        className="w-4 h-4 text-amber-400"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
+                  <div className="mt-5 inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 w-fit">
+                    <span className="w-1.5 h-1.5 rounded-full bg-slate-500" />
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Demo testimonial</span>
                   </div>
                 </div>
               </RevealWrapper>
