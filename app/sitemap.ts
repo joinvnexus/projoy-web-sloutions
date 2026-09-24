@@ -4,15 +4,18 @@ import { SITE_CONFIG } from "@/lib/constants";
 import { subServices } from "@/lib/data/sub-services";
 import { caseStudies } from "@/lib/data/case-studies";
 import { blogPosts } from "@/lib/data/blog";
+import { industries } from "@/lib/data/industries";
 
 const baseUrl = SITE_CONFIG.url;
 export default function sitemap(): MetadataRoute.Sitemap {
   const corePages: MetadataRoute.Sitemap = [
     { url: baseUrl, changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/services`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/industries`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/services/web-development`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/services/local-seo`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/services/technical-seo`, changeFrequency: "monthly", priority: 0.9 },
+    ...industries.map((industry) => ({ url: `${baseUrl}/industries/${industry.slug}`, changeFrequency: "monthly" as const, priority: 0.8 })),
     { url: `${baseUrl}/case-studies`, changeFrequency: "weekly", priority: 0.85 },
     { url: `${baseUrl}/about`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/about/projoy-naidu`, changeFrequency: "monthly", priority: 0.65 },
