@@ -4,6 +4,8 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { notFound } from "next/navigation";
 import { SITE_CONFIG } from "@/lib/constants";
+import { SchemaMarkup } from "@/components/shared/SchemaMarkup";
+import { createIndustrySchema, createBreadcrumbSchema } from "@/lib/schemas";
 import { getIndustry, industries } from "@/lib/data/industries";
 
 type Props = { params: Promise<{ slug: string }> };
