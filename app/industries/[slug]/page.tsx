@@ -30,8 +30,24 @@ export default async function IndustryPage({ params }: Props) {
   const industry = getIndustry(slug);
   if (!industry) notFound();
 
+  const pageUrl = `/industries/${industry.slug}`;
+  const schemas = [
+    createIndustrySchema({
+      name: industry.name,
+      description: industry.shortDescription,
+      url: pageUrl,
+    }),
+    createBreadcrumbSchema([
+      { name: "Home", href: "/" },
+      { name: "Industries", href: "/industries" },
+      { name: industry.name, href: pageUrl },
+    ]),
+  ];
+
   return (
-    <main>
+    <>
+      <SchemaMarkup schema={schemas} />
+      <main>
       <section className="px-6 py-20 lg:py-28 bg-slate-950 text-white">
         <div className="container mx-auto max-w-[1000px]">
           <p className="eyebrow text-brand-300">LOCAL BUSINESS • {industry.name.toUpperCase()}</p>
@@ -89,6 +105,7 @@ export default async function IndustryPage({ params }: Props) {
           </Link>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }
