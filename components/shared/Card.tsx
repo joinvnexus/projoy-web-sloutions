@@ -201,9 +201,9 @@ export function TestimonialCard({
 
       {/* Result stat badge */}
       {resultStat && (
-        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-100 w-fit">
-          <span className="w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" />
-          <span className="text-xs font-semibold text-brand-700">{resultStat}</span>
+        <div className={cn("inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border w-fit", isDemo ? "bg-slate-50 border-slate-200" : "bg-brand-50 border-brand-100")}>
+          <span className={cn("w-1.5 h-1.5 rounded-full flex-shrink-0", isDemo ? "bg-slate-400" : "bg-success")} />
+          <span className={cn("text-xs font-semibold", isDemo ? "text-slate-600" : "text-brand-700")}>{resultStat}</span>
         </div>
       )}
 
