@@ -14,14 +14,14 @@ import { SITE_CONFIG } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Real Results from Real Businesses | LocalLeads",
+  title: "Case Studies — LocalLeads",
   description:
-    "See how LocalLeads has helped local businesses, startups, and agencies rank higher, convert more visitors, and grow faster. Real metrics, real clients.",
+    "Explore LocalLeads case study layouts and see how verified client projects will be presented across local SEO and web development.",
   alternates: { canonical: "/case-studies" },
   openGraph: {
     title: "Case Studies — LocalLeads",
-    description: "Real results from real businesses. Local SEO rankings and Next.js builds.",
-    url: `${SITE_CONFIG.url}/case-studies`,
+    description: "Demo case study layouts for LocalLeads.",
+    url: \`\${SITE_CONFIG.url}/case-studies\`,
   },
 };
 
@@ -36,10 +36,10 @@ const tagVariantMap: Record<string, "brand" | "accent" | "slate"> = {
 };
 
 const aggregateStats = [
-  { value: "Selected", label: "Projects Shown" },
-  { value: "340%", label: "Best Profile View Increase" },
-  { value: "8.4%", label: "Best Conversion Rate" },
-  { value: "98", label: "Best PageSpeed Score" },
+  { value: "Demo", label: "Case Study Content" },
+  { value: "SEO", label: "Local Search Focus" },
+  { value: "Web", label: "Development Focus" },
+  { value: "Proof", label: "Add When Verified" },
 ];
 
 const VALID_FILTERS = ["all", "local-seo", "web-development"];
@@ -51,9 +51,7 @@ export default async function CaseStudiesPage({
 }) {
   const { filter } = await searchParams;
   const initialFilter = VALID_FILTERS.includes(filter ?? "") ? filter! : "all";
-
   const breadcrumb = createBreadcrumbSchema([{ name: "Case Studies", href: "/case-studies" }]);
-
   const featured = caseStudies.filter((cs) => cs.featured);
   const rest = caseStudies.filter((cs) => !cs.featured);
 
@@ -62,55 +60,36 @@ export default async function CaseStudiesPage({
       <SchemaMarkup schema={breadcrumb} />
       <Breadcrumbs items={[{ name: "Case Studies", href: "/case-studies" }]} />
 
-      {/* ── Hero ── */}
       <section className="relative bg-white px-8 pt-8 pb-16 overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.28]"
-          style={{
-            backgroundImage: "radial-gradient(circle, #CBD5E1 1px, transparent 1px)",
-            backgroundSize: "28px 28px",
-          }}
-          aria-hidden="true"
-        />
+        <div className="absolute inset-0 pointer-events-none opacity-[0.28]" style={{ backgroundImage: "radial-gradient(circle, #CBD5E1 1px, transparent 1px)", backgroundSize: "28px 28px" }} aria-hidden="true" />
         <div className="container mx-auto max-w-[1200px] relative z-10">
           <div className="max-w-2xl">
-            <Eyebrow>Proven Results</Eyebrow>
-            <h1
-              className="font-display font-extrabold text-slate-900 leading-tight tracking-tight mb-5"
-              style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}
-            >
-              Real Businesses.{" "}
-              <GradientText>Measurable Growth.</GradientText>
+            <Eyebrow>Case Study Layout</Eyebrow>
+            <h1 className="font-display font-extrabold text-slate-900 leading-tight tracking-tight mb-5" style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}>
+              Show the Work. <GradientText>Add the Proof Later.</GradientText>
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed">
-              Every case study below comes with real numbers, real clients, and real
-              strategies. No inflated claims — just documented outcomes.
+              These case studies are demo content for the current website layout. Replace the placeholders with verified project details, screenshots, metrics, and approved testimonials as real proof becomes available.
             </p>
           </div>
 
-          {/* Aggregate stats */}
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-2xl">
             {aggregateStats.map((stat) => (
               <div key={stat.label}>
-                <div className="text-3xl font-black font-display tracking-tight gradient-text leading-none mb-1">
-                  {stat.value}
-                </div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
-                  {stat.label}
-                </p>
+                <div className="text-2xl sm:text-3xl font-black font-display tracking-tight gradient-text leading-none mb-1">{stat.value}</div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Featured Case Studies ── */}
       <section className="section-padding bg-slate-50" aria-labelledby="featured-cs-heading">
         <div className="container mx-auto max-w-[1200px]">
           <SectionHeader
-            eyebrow="Featured"
-            heading="Our Best Results"
-            subheading="Hand-picked case studies showing the depth of strategy and measurable outcomes we deliver."
+            eyebrow="Featured Layouts"
+            heading="Case Study Templates Ready"
+            subheading="The structure is in place. Real client evidence can be dropped into the same layout later without redesigning the page."
             id="featured-cs-heading"
             align="left"
             maxWidth="xl"
@@ -124,38 +103,23 @@ export default async function CaseStudiesPage({
                     <div className={cn("h-1.5 bg-gradient-to-r flex-shrink-0", gradient)} />
                     <div className="p-8 flex flex-col flex-1">
                       <div className="flex items-center gap-2 mb-5 flex-wrap">
-                        <Tag variant={tagVariantMap[cs.service]}>{cs.serviceLabel}</Tag>
+                        <Tag variant={tagVariantMap[cs.service]}>{cs.serviceLabel} Demo</Tag>
                         <span className="text-xs text-slate-400">{cs.location}</span>
                         <span className="text-slate-300">·</span>
                         <span className="text-xs text-slate-400">{cs.timeline}</span>
                       </div>
-                      <h2 className="font-display font-bold text-slate-900 text-xl lg:text-2xl leading-snug mb-3">
-                        {cs.headline}
-                      </h2>
-                      <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1">
-                        {cs.description}
-                      </p>
+                      <h2 className="font-display font-bold text-slate-900 text-xl lg:text-2xl leading-snug mb-3">{cs.headline}</h2>
+                      <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1">{cs.description}</p>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-5 border-y border-slate-100 mb-6">
                         {cs.metrics.map((m) => (
                           <div key={m.label} className="text-center">
-                            <div className={cn(
-                              "text-xl lg:text-2xl font-black font-display tracking-tight leading-none mb-1",
-                              "bg-gradient-to-r bg-clip-text text-transparent",
-                              gradient
-                            )}>
-                              {m.value}
-                            </div>
-                            <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">
-                              {m.label}
-                            </div>
+                            <div className={cn("text-lg lg:text-xl font-black font-display tracking-tight leading-tight mb-1", "bg-gradient-to-r bg-clip-text text-transparent", gradient)}>{m.value}</div>
+                            <div className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">{m.label}</div>
                           </div>
                         ))}
                       </div>
-                      <Link
-                        href={`/case-studies/${cs.slug}`}
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700 transition-all duration-200 group-hover:gap-2.5"
-                      >
-                        Read the full case study
+                      <Link href={\`/case-studies/\${cs.slug}\`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 hover:text-brand-700 transition-all duration-200 group-hover:gap-2.5">
+                        View demo case study
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
@@ -165,27 +129,21 @@ export default async function CaseStudiesPage({
             })}
           </StaggerContainer>
 
-          {/* Filterable "More Results" — client island, supports ?filter= query param */}
           {rest.length > 0 && (
             <>
-              <h2 className="font-display font-bold text-slate-900 text-xl mb-5">
-                More Results
-              </h2>
+              <h2 className="font-display font-bold text-slate-900 text-xl mb-5">More Demo Layouts</h2>
               <CaseStudyFilterBar caseStudies={rest} initialFilter={initialFilter} />
             </>
           )}
         </div>
       </section>
 
-      {/* ── CTA ── */}
       <FinalServiceCTA
-        heading="Could Your Business Get These Results?"
-        subheading="Every case study started with a free audit. Let's identify what's holding your growth back and build a plan to fix it."
+        heading="Ready to Turn This Into Real Proof?"
+        subheading="Start with a free audit. Once real projects are completed, this section can be populated with verified outcomes and approved client stories."
         primaryCTA={{ label: "Get Your Free Growth Audit", href: "/contact#audit" }}
         secondaryCTA={{ label: "View Our Services", href: "/services" }}
         accentColor="brand"
-        testimonialQuote="The results they showed us in the audit were conservative — we ended up doing even better. Totally recommend."
-        testimonialAuthor="Karim Miah · Owner, KM Auto Repair, Sylhet"
       />
     </>
   );

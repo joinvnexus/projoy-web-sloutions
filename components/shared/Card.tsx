@@ -150,6 +150,7 @@ interface TestimonialCardProps {
   rating?: number;
   resultStat?: string;
   avatar?: string;
+  isDemo?: boolean;
   className?: string;
 }
 
@@ -161,12 +162,20 @@ export function TestimonialCard({
   location,
   rating = 5,
   resultStat,
+  isDemo = false,
   className,
 }: TestimonialCardProps) {
   return (
     <div className={cn("card p-6 flex flex-col gap-4", className)}>
-      {/* Stars */}
-      <div className="flex items-center gap-0.5" aria-label={`${rating} out of 5 stars`}>
+      {isDemo ? (
+        <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 w-fit">
+          <span className="w-1.5 h-1.5 rounded-full bg-slate-400" />
+          <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+            Demo testimonial
+          </span>
+        </div>
+      ) : (
+        <div className="flex items-center gap-0.5" aria-label={`${rating} out of 5 stars`}>
         {Array.from({ length: 5 }).map((_, i) => (
           <svg
             key={i}
@@ -183,6 +192,8 @@ export function TestimonialCard({
         ))}
       </div>
 
+      )}
+
       {/* Quote */}
       <blockquote className="text-sm text-slate-700 leading-relaxed flex-1">
         &ldquo;{quote}&rdquo;
@@ -190,9 +201,9 @@ export function TestimonialCard({
 
       {/* Result stat badge */}
       {resultStat && (
-        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-100 w-fit">
-          <span className="w-1.5 h-1.5 rounded-full bg-success flex-shrink-0" />
-          <span className="text-xs font-semibold text-brand-700">{resultStat}</span>
+        <div className={cn("inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border w-fit", isDemo ? "bg-slate-50 border-slate-200" : "bg-brand-50 border-brand-100")}>
+          <span className={cn("w-1.5 h-1.5 rounded-full flex-shrink-0", isDemo ? "bg-slate-400" : "bg-success")} />
+          <span className={cn("text-xs font-semibold", isDemo ? "text-slate-600" : "text-brand-700")}>{resultStat}</span>
         </div>
       )}
 
