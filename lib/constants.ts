@@ -2,9 +2,9 @@
 
 export const SITE_CONFIG = {
   name: "LocalLeads",
-  tagline: "Built to Rank. Designed to Convert.",
+  tagline: "Technical SEO. Local Growth. Better Websites.",
   description:
-    "LocalLeads builds high-performance Next.js websites and dominates local Google rankings. Get more traffic, leads, and revenue. Free growth audit available.",
+    "Technical SEO, local SEO, and high-performance web development for local businesses. Start with a free visibility audit.",
   // Reads from env so the same code works on preview deployments (*.vercel.app)
   // and the production custom domain without any hard-coded URLs.
   // Set NEXT_PUBLIC_SITE_URL in .env.local / hosting env vars.

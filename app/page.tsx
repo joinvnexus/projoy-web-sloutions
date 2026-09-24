@@ -8,6 +8,7 @@ import { createBreadcrumbSchema } from "@/lib/schemas";
 import { HeroSection }          from "@/components/home/HeroSection";
 import { SocialProofBar }       from "@/components/home/SocialProofBar";
 import { ServicesOverview }     from "@/components/home/ServicesOverview";
+import { IndustriesOverview }   from "@/components/home/IndustriesOverview";
 import { WhyLocalLeads }            from "@/components/home/WhyLocalLeads";
 import { FeaturedCaseStudies }  from "@/components/home/FeaturedCaseStudies";
 import { ProcessSection }       from "@/components/home/ProcessSection";
@@ -17,11 +18,11 @@ import { FinalCTA }             from "@/components/home/FinalCTA";
 
 /* ─── Page Metadata ─────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.name} — Get Found. Get Ranked. Get More Leads.`,
-  description: SITE_CONFIG.description,
+  title: `${SITE_CONFIG.name} — Your Website Should Bring You Customers.`,
+  description: "Technical SEO, local SEO, and high-performance web development for local businesses that need more qualified leads.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: `${SITE_CONFIG.name} — Get Found. Get Ranked. Get More Leads.`,
+    title: `${SITE_CONFIG.name} — Your Website Should Bring You Customers.`,
     description: SITE_CONFIG.description,
     url: SITE_CONFIG.url,
     type: "website",
@@ -39,6 +40,7 @@ export default function HomePage() {
       <SocialProofBar />
       <ServicesOverview />
       <WhyLocalLeads />
+      <IndustriesOverview />
       <FeaturedCaseStudies />
       <ProcessSection />
       <PricingSection />
