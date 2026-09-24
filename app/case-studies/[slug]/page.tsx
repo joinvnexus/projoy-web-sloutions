@@ -12,7 +12,7 @@ import { FinalServiceCTA } from "@/components/services/FinalServiceCTA";
 import { createBreadcrumbSchema, createArticleSchema } from "@/lib/schemas";
 import { caseStudies, getCaseStudyBySlug } from "@/lib/data/case-studies";
 import { SITE_CONFIG } from "@/lib/constants";
-import { cn, formatDate } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 /* ─── Tag variant map ────────────────────────────────────── */
 const tagVariantMap: Record<string, "brand" | "accent" | "slate"> = {
@@ -118,9 +118,7 @@ export default async function CaseStudyPage({
             <span className="text-slate-300">·</span>
             <span className="text-xs text-slate-400">{cs.timeline}</span>
             <span className="text-slate-300">·</span>
-            <span className="text-xs text-slate-400">Demo content</span>{/*
-              {formatDate(cs.publishedAt)}
-            */}
+            <span className="text-xs text-slate-400">Demo content</span>
           </div>
 
           <h1
@@ -140,7 +138,7 @@ export default async function CaseStudyPage({
       <section className="bg-slate-900 py-10" aria-label="Key results">
         <div className="container mx-auto max-w-[900px]">
           <p className="text-xs font-bold uppercase tracking-widest text-slate-500 text-center mb-8">
-            Key Results
+            Demo Signals
           </p>
           <StaggerContainer
             className={cn(
@@ -182,7 +180,7 @@ export default async function CaseStudyPage({
               <div>
                 <Eyebrow>The Challenge</Eyebrow>
                 <h2 className="font-display font-bold text-slate-900 text-2xl mb-4 leading-tight">
-                  Where {cs.client} Was Before We Started
+                  Example Starting Point
                 </h2>
                 <p className="text-slate-600 leading-relaxed">{cs.challenge}</p>
               </div>
@@ -204,7 +202,7 @@ export default async function CaseStudyPage({
               <div className="bg-slate-50 rounded-3xl border border-slate-100 p-8 lg:p-10">
                 <Eyebrow>Proof Placeholder</Eyebrow>
                 <h2 className="font-display font-bold text-slate-900 text-2xl mb-4 leading-tight">
-                  What We Achieved
+                  Verified Outcome Goes Here
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-7">{cs.result}</p>
 
@@ -276,7 +274,7 @@ export default async function CaseStudyPage({
             <RevealWrapper>
               <div>
                 <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">
-                  Services Used
+                  Example Services Used
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {cs.tags.map((tag) => (
