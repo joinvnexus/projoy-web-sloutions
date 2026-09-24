@@ -52,7 +52,7 @@ export async function generateMetadata({
   if (!cs) return { title: "Case Study Not Found" };
 
   return {
-    title: `${cs.headline} | Case Study — LocalLeads`,
+    title: `${cs.headline} | Demo Case Study — LocalLeads`,
     description: cs.description,
     alternates: { canonical: `/case-studies/${slug}` },
     openGraph: {
@@ -112,15 +112,15 @@ export default async function CaseStudyPage({
         <div className="container mx-auto max-w-[900px] relative z-10">
           <div className="flex items-center gap-3 mb-5 flex-wrap">
             <Link href={`/services/${cs.service}`} className="inline-flex items-center">
-              <Tag variant={config.tagVariant}>{cs.serviceLabel}</Tag>
+              <Tag variant={config.tagVariant}>{cs.serviceLabel} Demo</Tag>
             </Link>
             <span className="text-xs text-slate-400">{cs.location}</span>
             <span className="text-slate-300">·</span>
-            <span className="text-xs text-slate-400">{cs.timeline} engagement</span>
+            <span className="text-xs text-slate-400">{cs.timeline}</span>
             <span className="text-slate-300">·</span>
-            <time className="text-xs text-slate-400" dateTime={cs.publishedAt}>
+            <span className="text-xs text-slate-400">Demo content</span>{/*
               {formatDate(cs.publishedAt)}
-            </time>
+            */}
           </div>
 
           <h1
@@ -202,7 +202,7 @@ export default async function CaseStudyPage({
             {/* Results */}
             <RevealWrapper>
               <div className="bg-slate-50 rounded-3xl border border-slate-100 p-8 lg:p-10">
-                <Eyebrow>The Results</Eyebrow>
+                <Eyebrow>Proof Placeholder</Eyebrow>
                 <h2 className="font-display font-bold text-slate-900 text-2xl mb-4 leading-tight">
                   What We Achieved
                 </h2>
