@@ -159,8 +159,8 @@ export function HeroSection() {
               className="font-display font-extrabold text-slate-900 leading-[1.08] tracking-tight mb-5"
               style={{ fontSize: "clamp(2.25rem, 5vw, 3.75rem)" }}
             >
-              Get Found. Get Ranked.{" "}
-              <GradientText>Get More Leads.</GradientText>
+              Your website isn’t slow by accident.{" "}
+              <GradientText>It’s costing you customers.</GradientText>
             </motion.h1>
 
             {/* Subheadline */}
@@ -170,7 +170,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-slate-600 leading-relaxed mb-8 max-w-lg"
             >
-              LocalLeads helps businesses improve website quality, technical SEO, local search visibility, Google Maps presence, and lead generation.
+              We combine technical SEO, high-performance web development, and local search strategy to turn your website into a stronger customer acquisition channel.
             </motion.p>
 
             {/* CTAs */}
