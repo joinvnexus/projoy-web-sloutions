@@ -9,7 +9,7 @@ import { BeforeAfterPanel } from "@/components/shared/BeforeAfterPanel";
 import { Tag, Eyebrow } from "@/components/shared/Typography";
 import { RevealWrapper, StaggerContainer, StaggerItem } from "@/components/shared/RevealWrapper";
 import { FinalServiceCTA } from "@/components/services/FinalServiceCTA";
-import { createBreadcrumbSchema, createArticleSchema } from "@/lib/schemas";
+import { createBreadcrumbSchema } from "@/lib/schemas";
 import { caseStudies, getCaseStudyBySlug } from "@/lib/data/case-studies";
 import { SITE_CONFIG } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -87,17 +87,11 @@ export default async function CaseStudyPage({
     { name: cs.client, href: `/case-studies/${slug}` },
   ]);
 
-  const articleSchema = createArticleSchema({
-    title: cs.headline,
-    description: cs.description,
-    publishedAt: cs.publishedAt,
-    schemaType: "Article",
-    slug: `case-studies/${slug}`,
-  });
+
 
   return (
     <>
-      <SchemaMarkup schema={[breadcrumb, articleSchema]} />
+      <SchemaMarkup schema={breadcrumb} />
 
       <Breadcrumbs
         items={[
